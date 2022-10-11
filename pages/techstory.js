@@ -109,12 +109,12 @@ function techstory() {
                         </div>
                         <div className="contents text-lg tracking-wide text-gray-500">
                             <h3 className='hover:text-white hover:text-xl'>
-                                Raptee's Electric Drivetrain is a high-powered software driven
+                                Raptee&#39;s Electric Drivetrain is a high-powered software driven
                                 vehicle developed in house to adapt to various driving conditions for the Indian roads.
                             </h3>
                             <h3 className='hover:text-white hover:text-xl'>
                                 It is backed by the control logics of the VCU that can be adjusted to
-                                the rider's needs, be it ECO mode with enhanced range or the POWER mode
+                                the rider&#39;s needs, be it ECO mode with enhanced range or the POWER mode
                                 with quick acceleration.
                             </h3>
                             <h3 className='hover:text-white hover:text-xl'>
@@ -123,7 +123,7 @@ function techstory() {
                             </h3>
                         </div>
                     </div>
-                    <div className='w-2/3 h-full flex items-end'>
+                    <div className='w-2/3 h-full flex items-end relative'>
                         <Image
                             src="/images/3.png"
                             width={1920}
