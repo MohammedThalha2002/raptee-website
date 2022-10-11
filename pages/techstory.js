@@ -33,6 +33,108 @@ function techstory() {
                     <BottomLoader></BottomLoader>
                 </div>
             </section>
+            {/* VC SECTION */}
+            <section className='bg-black aspect-video snap-center relative'>
+                <div className="flex h-full">
+                    {/* SIDE CONTENTS */}
+                    <div className='w-2/6 flex flex-col justify-center pl-20 pr-4'>
+                        <div className="title mb-14">
+                            <h2 className=' font-oswald font-light text-4xl tracking-wide'>VCU</h2>
+                            <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
+                        </div>
+                        <div className="contents text-lg tracking-wide text-gray-500">
+                            <h3 className='hover:text-white hover:text-xl'>
+                                The VCU controls every other subsystem of the vehicle,
+                                and continuously monitors data received from it,
+                            </h3>
+                            <h3 className='hover:text-white hover:text-xl'>
+                                which is then optimized using ML algorithms to enable
+                                features like throttle mapping, fast charging and over-the-air updates.
+                            </h3>
+                        </div>
+                    </div>
+                    <div className='w-2/3 h-full flex items-end relative'>
+                        <Image
+                            src="/images/2.png"
+                            width={1920}
+                            height={1080}
+                            priority={true}
+                        />
+                    </div>
+                </div>
+                <SideActiveIndicator index={2}></SideActiveIndicator>
+                <BottomLoader></BottomLoader>
+            </section>
+            {/* BMS SECTION */}
+            <section className='bg-black aspect-video snap-center relative'>
+                <div className="flex h-full">
+                    {/* SIDE CONTENTS */}
+                    <div className='w-2/6 flex flex-col justify-center pl-20 pr-4'>
+                        <div className="title mb-14">
+                            <h2 className=' font-oswald font-light text-4xl tracking-wide'>BMU</h2>
+                            <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
+                        </div>
+                        <div className="contents text-lg tracking-wide text-gray-500">
+                            <h3 className='hover:text-white hover:text-xl'>
+                                Longer Distance on a Single Charge with Adaptive Charging
+                            </h3>
+                            <h3 className='hover:text-white hover:text-xl'>
+                                Charge Cycle Management: Safety is important to us.
+                                Yours as well as the battery's
+                            </h3>
+                            <h3 className='hover:text-white hover:text-xl'>
+                                Active balancing: Perfectly balanced, as everything should be.
+                            </h3>
+                        </div>
+                    </div>
+                    <div className='w-2/3 h-full flex items-end relative'>
+                        <Image
+                            src="/images/1.png"
+                            layout='fill'
+                            priority={true}
+                        />
+                    </div>
+                </div>
+                <SideActiveIndicator index={3}></SideActiveIndicator>
+                <BottomLoader></BottomLoader>
+            </section>
+            {/* MOTOR SECTION */}
+            <section className='bg-black aspect-video snap-center relative'>
+                <div className="flex h-full">
+                    {/* SIDE CONTENTS */}
+                    <div className='w-2/6 flex flex-col justify-center pl-20 pr-4'>
+                        <div className="title mb-14">
+                            <h2 className=' font-oswald font-light text-4xl tracking-wide'>MOTOR</h2>
+                            <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
+                        </div>
+                        <div className="contents text-lg tracking-wide text-gray-500">
+                            <h3 className='hover:text-white hover:text-xl'>
+                                Raptee's Electric Drivetrain is a high-powered software driven
+                                vehicle developed in house to adapt to various driving conditions for the Indian roads.
+                            </h3>
+                            <h3 className='hover:text-white hover:text-xl'>
+                                It is backed by the control logics of the VCU that can be adjusted to
+                                the rider's needs, be it ECO mode with enhanced range or the POWER mode
+                                with quick acceleration.
+                            </h3>
+                            <h3 className='hover:text-white hover:text-xl'>
+                                With a motor controller developed to suit our high voltage drivetrain,
+                                RED can extract the most out of the permanent magnet synchronous motor in the most efficient manner.
+                            </h3>
+                        </div>
+                    </div>
+                    <div className='w-2/3 h-full flex items-end'>
+                        <Image
+                            src="/images/3.png"
+                            width={1920}
+                            height={1080}
+                            priority={true}
+                        />
+                    </div>
+                </div>
+                <SideActiveIndicator index={3}></SideActiveIndicator>
+                <BottomLoader></BottomLoader>
+            </section>
         </div>
     )
 }
