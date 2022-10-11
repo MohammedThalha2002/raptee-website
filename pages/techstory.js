@@ -80,7 +80,7 @@ function techstory() {
                             </h3>
                             <h3 className='hover:text-white hover:text-xl'>
                                 Charge Cycle Management: Safety is important to us.
-                                Yours as well as the battery's
+                                Yours as well as the battery&#39;s
                             </h3>
                             <h3 className='hover:text-white hover:text-xl'>
                                 Active balancing: Perfectly balanced, as everything should be.
