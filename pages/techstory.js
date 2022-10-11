@@ -4,10 +4,9 @@ import ReserveBtn from '../components/ReserveBtn'
 import BottomLoader from '../components/BottomLoader'
 import SideActiveIndicator from '../components/SideActiveIndicator'
 import Image from 'next/image'
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 
 export default function techstory() {
-    const lazyRoot = useRef(null)
     return (
         <div>
             <main className='bg-black'>
@@ -16,7 +15,7 @@ export default function techstory() {
                 <section className='bg-black aspect-video snap-center relative' id='homepage-id'>
                     <div className=' h-20 '></div>
                     <div className=''>
-                        <Image lazyRoot={lazyRoot}
+                        <Image 
                             src="/images/7.png"
                             width="1920"
                             height="1080"
