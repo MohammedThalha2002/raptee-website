@@ -4,7 +4,7 @@ import Link from 'next/link'
 import NavBar from '../components/NavBar'
 import ReserveBtn from '../components/ReserveBtn'
 import BottomLoader from '../components/BottomLoader'
-import SideActiveIndicator from '../components/SideActiveIndicator'
+import SideActiveIndicator from '../components/SideActiveIndicatorHome'
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from "gsap/dist/gsap.js";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -31,34 +31,41 @@ export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
     const position = window.pageYOffset - window.innerWidth;
+    // console.log(position)
     setScrollPosition(position);
-    if (position < -600 && position >= -700) {
+    if (position < -800 && position >= -900) {
       // console.log("ONE")
       setAbout1('white')
       setAbout2('grey')
       setAbout3('grey')
       setAbout4('grey')
     }
-    else if (position < -500 && position >= -600) {
+    else if (position < -700 && position >= -800) {
       // console.log("TWO")
       setAbout1('grey')
       setAbout2('white')
       setAbout3('grey')
       setAbout4('grey')
     }
-    else if (position < -400 && position >= -500) {
+    else if (position < -600 && position >= -700) {
       // console.log("THREE")
       setAbout1('grey')
       setAbout2('grey')
       setAbout3('white')
       setAbout4('grey')
     }
-    else if (position < -300 && position >= -400) {
+    else if (position < -500 && position >= -600) {
       // console.log("FOUR")
       setAbout1('grey')
       setAbout2('grey')
       setAbout3('grey')
       setAbout4('white')
+    }
+    else {
+      setAbout1('grey')
+      setAbout2('grey')
+      setAbout3('grey')
+      setAbout4('grey')
     }
   };
 
@@ -155,19 +162,16 @@ export default function Home() {
         <section className='bg-black aspect-video snap-center relative' id='about-id' ref={aboutSection}>
           <div className="flex h-full">
             {/* SIDE CONTENTS */}
-            <div className='w-2/5 flex flex-col justify-center pl-20 pr-4'>
+            <div className='w-2/5 flex flex-col mt-16 pl-20 pr-20'>
               <div className="title mb-14">
                 <h2 className=' font-oswald font-light text-4xl tracking-wide'>About</h2>
                 <div className="underline w-10 h-0.5 rounded-xl my-2 bg-highlight"></div>
               </div>
               <div className="contents text-xl tracking-wide text-gray-500">
                 <span style={{ color: about1 }}>We at Raptee are driven by an innovative spirit to redefine electric mobility.</span>
-                <span style={{ color: about2 }}>We design and build motorcycles that prove that switching to electric is not
-                  a sacrifice.</span>
-                <span style={{ color: about3 }} >Our motorcycles are intuitive and engineered to outperform conventionally
-                  powered <br /> vehicles;</span>
-                <span style={{ color: about4 }}>they are intelligent, powerful, energy-efficient and loaded with cutting-edge
-                  technology to augment every single ride you take.</span>
+                <span style={{ color: about2 }}>We design and build motorcycles that prove that switching to electric is not a sacrifice.</span>
+                <span style={{ color: about3 }}>Our motorcycles are intuitive and engineered to outperform conventionally powered vehicles;</span>
+                <span style={{ color: about4 }}>they are intelligent, powerful, energy-efficient and loaded with cutting-edge technology to augment every single ride you take.</span>
               </div>
             </div>
             <div className='w-3/5'>
@@ -241,10 +245,11 @@ export default function Home() {
         {/* PERFORMANCE */}
         <section className='bg-black aspect-video snap-center relative' id='performance-id' ref={performSection}>
           <div className="flex h-full">
-            <div className='w-2/3 relative'>
+            <div className='w-2/3 relative flex items-end'>
               <Image
                 src="/images/6.png"
-                layout='fill'
+                width={1450}
+                height={1080}
                 priority={true}
               />
             </div>

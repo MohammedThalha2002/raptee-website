@@ -3,7 +3,7 @@ import { IoMdMenu } from 'react-icons/io'
 
 function NavBar() {
     return (
-        <nav className='pt-4 px-8 backdrop-blur-sm bg-black/30 z-10 h-20vh w-full shadow-md top-0 fixed'>
+        <nav className='pt-4 px-8 backdrop-blur-sm bg-black/30 z-50 h-20vh w-full shadow-md top-0 fixed'>
             <div className="flex justify-between">
                 <h1 className='font-nebula text-white text-2xl'>
                     RAPTEE

@@ -13,6 +13,9 @@ module.exports = {
       height: {
         '10vh': '10vh',
       },
+      width: {
+        '20vw': '20vw',
+      },
       fontFamily: {
         nebula: ['Nebula'],
         oswald: ['Oswald'],
