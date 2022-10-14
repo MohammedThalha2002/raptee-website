@@ -4,28 +4,120 @@ import NavBar from '../components/NavBar'
 import ReserveBtn from '../components/ReserveBtn'
 import BottomLoader from '../components/BottomLoader'
 import SideActiveIndicator from '../components/SideActiveIndicator'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { gsap } from "gsap/dist/gsap.js";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
 
 
 export default function Home() {
-  const evol = useRef(null)
+  const evolSection = useRef()
+  const aboutSection = useRef()
+  const zeroSection = useRef()
+  const performSection = useRef()
+  const [sectionIndex, setSectionIndex] = useState(1)
+  let observerOptions = {
+    rootMargin: '20px',
+    threshold: 0.4
+  }
   const lazyRoot = useRef(null)
+  //
+  const [about1, setAbout1] = useState('grey')
+  const [about2, setAbout2] = useState('grey')
+  const [about3, setAbout3] = useState('grey')
+  const [about4, setAbout4] = useState('grey')
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset - window.innerWidth;
+    setScrollPosition(position);
+    if (position < -600 && position >= -700) {
+      // console.log("ONE")
+      setAbout1('white')
+      setAbout2('grey')
+      setAbout3('grey')
+      setAbout4('grey')
+    }
+    else if (position < -500 && position >= -600) {
+      // console.log("TWO")
+      setAbout1('grey')
+      setAbout2('white')
+      setAbout3('grey')
+      setAbout4('grey')
+    }
+    else if (position < -400 && position >= -500) {
+      // console.log("THREE")
+      setAbout1('grey')
+      setAbout2('grey')
+      setAbout3('white')
+      setAbout4('grey')
+    }
+    else if (position < -300 && position >= -400) {
+      // console.log("FOUR")
+      setAbout1('grey')
+      setAbout2('grey')
+      setAbout3('grey')
+      setAbout4('white')
+    }
+  };
 
   useEffect(() => {
-    const EvolutionPage = evol.current
-    // gsap.fromTo(AboutPara,
+
+    // gsap.fromTo(about1.current,
     //   { opacity: 0, y: -100 },
     //   {
     //     opacity: 1, y: 0, duration: 2, ease: "ease-in",
     //     scrollTrigger: {
-    //       trigger: AboutPara,
+    //       trigger: about1.current,
     //     }
     //   },
     // )
+    // gsap.to(
+    //   about1.current,
+    //   {
+    //     color: 'white', 
+    //     scrollTrigger: {
+    //       trigger: about1.current,
+    //     }
+    //   }
+    // )
+
+    const sectionObserver = new IntersectionObserver(observerCallback, observerOptions)
+
+    function observerCallback(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (entry.target.id == 'homepage-id') {
+            // console.log("Homepage")
+            setSectionIndex(1)
+          } else if (entry.target.id == 'about-id') {
+            // console.log("About")
+            setSectionIndex(2)
+          } else if (entry.target.id == 'zero-id') {
+            // console.log("Zero")
+            setSectionIndex(3)
+          } else if (entry.target.id == 'performance-id') {
+            // console.log("Performance")
+            setSectionIndex(4)
+          } else {
+            // console.log("else")
+            setSectionIndex(1)
+          }
+        }
+      });
+    };
+    sectionObserver.observe(evolSection.current)
+    sectionObserver.observe(aboutSection.current)
+    sectionObserver.observe(zeroSection.current)
+    sectionObserver.observe(performSection.current)
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, [])
+
+  // console.log(scrollPosition)
 
   return (
     <div>
@@ -36,9 +128,10 @@ export default function Home() {
       </Head>
       <main className='bg-black'>
         <NavBar></NavBar>
+        <SideActiveIndicator index={sectionIndex}></SideActiveIndicator>
         {/* Evoloution SECTION */}
-        <section className='bg-black aspect-video snap-center relative' id='homepage-id'>
-          <div className=' h-20 '></div>
+        <section className='bg-black aspect-video snap-center relative' id='homepage-id' ref={evolSection}>
+          <div className=' h-12 '></div>
           <div className=''>
             <Image lazyRoot={lazyRoot}
               src="/images/4.png"
@@ -47,18 +140,18 @@ export default function Home() {
               priority={true}
             />
             <div className="absolute right-0 top-20 pr-14 pt-2">
-              <div className="content text-right">
+              <div className="content text-right flex flex-col items-end">
                 <h3 className='text-2xl font-oswald tracking-wide'>Join the</h3>
                 <h1 className='text-7xl font-oswald tracking-wide'>EVOLUTION</h1>
+                <div className="underline w-14 h-0.5 rounded-xl my-2 mx-1 bg-highlight"></div>
               </div>
             </div>
-            <ReserveBtn></ReserveBtn>
-            <SideActiveIndicator index={1}></SideActiveIndicator>
+            <ReserveBtn name={"Reserve Now"}></ReserveBtn>
             <BottomLoader></BottomLoader>
           </div>
         </section>
         {/* ABOUT SECTION */}
-        <section className='bg-black aspect-video snap-center relative' id='about-id'>
+        <section className='bg-black aspect-video snap-center relative' id='about-id' ref={aboutSection}>
           <div className="flex h-full">
             {/* SIDE CONTENTS */}
             <div className='w-2/5 flex flex-col justify-center pl-20 pr-4'>
@@ -66,20 +159,14 @@ export default function Home() {
                 <h2 className=' font-oswald font-light text-4xl tracking-wide'>About</h2>
                 <div className="underline w-10 h-0.5 rounded-xl my-2 bg-highlight"></div>
               </div>
-              <div className="contents text-lg tracking-wide text-gray-500">
-                <h3 className='hover:text-white hover:text-xl'>
-                  We at Raptee are driven by an innovative spirit to redefine electric mobility.
-                  We design and build motorcycles that prove that switching to electric is not
-                  a sacrifice.
-                </h3>
-                <h3 className='hover:text-white hover:text-xl'>
-                  Our motorcycles are intuitive and engineered to outperform conventionally
-                  powered <br /> vehicles;
-                </h3>
-                <h3 className='hover:text-white hover:text-xl'>
-                  they are intelligent, powerful, energy-efficient and loaded with cutting-edge
-                  technology to augment every single ride you take.
-                </h3>
+              <div className="contents text-xl tracking-wide text-gray-500">
+                <span style={{ color: about1 }}>We at Raptee are driven by an innovative spirit to redefine electric mobility.</span>
+                <span style={{ color: about2 }}>We design and build motorcycles that prove that switching to electric is not
+                  a sacrifice.</span>
+                <span style={{ color: about3 }} >Our motorcycles are intuitive and engineered to outperform conventionally
+                  powered <br /> vehicles;</span>
+                <span style={{ color: about4 }}>they are intelligent, powerful, energy-efficient and loaded with cutting-edge
+                  technology to augment every single ride you take.</span>
               </div>
             </div>
             <div className='w-3/5'>
@@ -91,11 +178,10 @@ export default function Home() {
               />
             </div>
           </div>
-          <SideActiveIndicator index={2}></SideActiveIndicator>
           <BottomLoader></BottomLoader>
         </section>
         {/* ZERO SECTIONS */}
-        <section className='bg-black aspect-video snap-center relative' id='zero-id'>
+        <section className='bg-black aspect-video snap-center relative' id='zero-id' ref={zeroSection}>
           <div className="flex h-full">
             <div className='w-2/6 flex flex-col justify-center pl-20 pr-28'>
               <div className="title mb-14 h-28">
@@ -149,11 +235,10 @@ export default function Home() {
               />
             </div>
           </div>
-          <SideActiveIndicator index={3}></SideActiveIndicator>
           <BottomLoader></BottomLoader>
         </section>
         {/* PERFORMANCE */}
-        <section className='bg-black aspect-video snap-center relative' id='performance-id'>
+        <section className='bg-black aspect-video snap-center relative' id='performance-id' ref={performSection}>
           <div className="flex h-full">
             <div className='w-2/3 relative'>
               <Image
@@ -179,8 +264,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <ReserveBtn></ReserveBtn>
-          <SideActiveIndicator index={4}></SideActiveIndicator>
+          <a href="/techstory">
+            <ReserveBtn name={'Tech Story'}></ReserveBtn>
+          </a>
         </section>
       </main>
     </div>

@@ -10,6 +10,9 @@ module.exports = {
         'highlight': '#E0B317',
         'highlight-low': '#5D4A0A',
       },
+      height: {
+        '10vh': '10vh',
+      },
       fontFamily: {
         nebula: ['Nebula'],
         oswald: ['Oswald'],
