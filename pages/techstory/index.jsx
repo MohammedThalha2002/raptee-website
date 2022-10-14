@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import SideActiveIndicatorTechStory from '../../components/SideActiveIndicatorTechStory'
 
-function techstory() {
+function Techstory() {
     const productsSection = useRef()
     const vcuSection = useRef()
     const bmsSection = useRef()
@@ -246,4 +246,4 @@ function techstory() {
     )
 }
 
-export default techstory
+export default Techstory
