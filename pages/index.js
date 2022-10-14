@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import NavBar from '../components/NavBar'
 import ReserveBtn from '../components/ReserveBtn'
 import BottomLoader from '../components/BottomLoader'
@@ -264,9 +265,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <a href="/techstory">
+          <Link href={'/techstory'}>
             <ReserveBtn name={'Tech Story'}></ReserveBtn>
-          </a>
+          </Link>
         </section>
       </main>
     </div>
