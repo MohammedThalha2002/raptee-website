@@ -88,7 +88,7 @@ function Techstory() {
             <section className='bg-black aspect-video snap-center relative' id='vcu-id' ref={vcuSection}>
                 <div className="flex h-full">
                     {/* SIDE CONTENTS */}
-                    <div className='w-2/6 flex flex-col justify-center pl-20 pr-4 z-20'>
+                    <div className='w-2/6 flex flex-col justify-center pl-20 pr-4'>
                         <div className="title mb-14">
                             <h2 className=' font-oswald font-light text-4xl tracking-wide'>VCU</h2>
                             <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
@@ -104,10 +104,10 @@ function Techstory() {
                             </h3>
                         </div>
                     </div>
-                    <div className='h-full absolute'>
+                    <div className='w-2/3 h-full flex items-end'>
                         <Image
                             src="/images/2.png"
-                            width={1920}
+                            width={1200}
                             height={1080}
                             priority={true}
                         />
@@ -215,7 +215,7 @@ function Techstory() {
             <section className='bg-black aspect-video snap-center relative' id='safety-id' ref={safetySection}>
                 <div className="flex h-full">
                     {/* SIDE CONTENTS */}
-                    <div className='w-2/6 flex flex-col justify-center pl-20 pr-4 z-20'>
+                    <div className='w-2/6 flex flex-col justify-center pl-20 pr-4 z-10'>
                         <div className="title mb-14">
                             <h2 className=' font-oswald font-light text-4xl tracking-wide'>Safety</h2>
                             <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>

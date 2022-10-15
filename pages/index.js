@@ -128,7 +128,7 @@ export default function Home() {
   // console.log(scrollPosition)
 
   return (
-    <div>
+    <div className='bg-black'>
       <Head>
         <title>Raptee | E-Vehicle</title>
         <meta name="description" content="An E-Vehicle website - RAPTEE" />
