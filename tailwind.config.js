@@ -34,7 +34,9 @@ module.exports = {
         spin_words: 'spin_words 15s infinite',
       },
       backgroundImage: {
-        'homebg': "url('/images/1.png')"
+        'zerobg1': "url('/images/9.png')",
+        'zerobg2': "url('/images/12.png')",
+        'zerobg3': "url('/images/8.png')",
       }
     },
   },

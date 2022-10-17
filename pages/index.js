@@ -22,6 +22,7 @@ export default function Home() {
   const zeroCont1 = useRef()
   const zeroCont2 = useRef()
   const zeroCont3 = useRef()
+  const zeroImg = useRef()
   const [sectionIndex, setSectionIndex] = useState(1)
   let observerOptions = {
     rootMargin: '20px',
@@ -81,6 +82,7 @@ export default function Home() {
       zeroCont1.current.style.transform = 'translateY(0%)';
       zeroCont2.current.style.transform = 'translateY(0%)';
       zeroCont3.current.style.transform = 'translateY(0%)';
+      zeroImg.current.style.backgroundImage = "url('/images/9.png')"
     } else if (position <= 420 && position > 300) {
       zeroWord1.current.style.transform = 'translateY(-100%)';
       zeroWord2.current.style.transform = 'translateY(-100%)';
@@ -88,6 +90,7 @@ export default function Home() {
       zeroCont1.current.style.transform = 'translateY(-100%)';
       zeroCont2.current.style.transform = 'translateY(-100%)';
       zeroCont3.current.style.transform = 'translateY(-100%)';
+      zeroImg.current.style.backgroundImage = "url('/images/12.png')"
     } else if (position <= 800 && position > 420) {
       zeroWord1.current.style.transform = 'translateY(-200%)';
       zeroWord2.current.style.transform = 'translateY(-200%)';
@@ -95,6 +98,7 @@ export default function Home() {
       zeroCont1.current.style.transform = 'translateY(-200%)';
       zeroCont2.current.style.transform = 'translateY(-200%)';
       zeroCont3.current.style.transform = 'translateY(-200%)';
+      zeroImg.current.style.backgroundImage = "url('/images/8.png')"
     }
   };
 
@@ -221,25 +225,25 @@ export default function Home() {
           <BottomLoader></BottomLoader>
         </section>
         {/* ZERO SECTION NEW */}
-        <section className='bg-black border-2 h-150vh relative' id='zero-id'>
-          <div className="h-full">
+        <section className='bg-black h-150vh relative' id='zero-id' ref={zeroSection}>
+          <div className="h-full flex">
             {/* titles and contents */}
-            <section className='h-100vh bg-black border sticky top-0'>
+            <section className='h-screen w-2/6 bg-black sticky top-0'>
               <div className="title mt-32 h-28 pl-20">
                 <h2 className=' font-oswald font-light text-4xl tracking-wide'>Zero</h2>
                 <div className="h-12 overflow-hidden">
-                  <span className='block h-full font-oswald ease-in duration-300 font-light text-4xl tracking-wide'
+                  <span className='block h-full font-oswald ease-in duration-500 font-light text-4xl tracking-wide'
                     ref={zeroWord1}>Hassle</span>
-                  <span className='block h-full font-oswald ease-in duration-300 font-light text-4xl tracking-wide'
+                  <span className='block h-full font-oswald ease-in duration-500 font-light text-4xl tracking-wide'
                     ref={zeroWord2}>Emissions</span>
-                  <span className='block h-full font-oswald ease-in duration-300 font-light text-4xl tracking-wide'
+                  <span className='block h-full font-oswald ease-in duration-500 font-light text-4xl tracking-wide'
                     ref={zeroWord3}>Maintenence</span>
                 </div>
                 <div className="underline w-10 h-0.5 rounded-xl my-2 bg-highlight"></div>
               </div>
               {/* CONTENTS */}
               <div className="h-60 w-96 mt-20 pl-20 overflow-hidden">
-                <span className="block h-full ease-in duration-300 text-lg tracking-wide text-gray-500 " ref={zeroCont1}>
+                <span className="block h-full ease-in duration-500 text-lg tracking-wide text-gray-500 " ref={zeroCont1}>
                   <h3>
                     Breakdowns, failures, and repairs are all things of the past.
                   </h3>
@@ -248,7 +252,7 @@ export default function Home() {
                     and hassle-free riding experience.
                   </h3>
                 </span>
-                <span className="block h-full ease-in duration-300 text-lg tracking-wide text-gray-500" ref={zeroCont2}>
+                <span className="block h-full ease-in duration-500 text-lg tracking-wide text-gray-500" ref={zeroCont2}>
                   <h3>
                     We believe in doing what is best for the environment.
                   </h3>
@@ -256,7 +260,7 @@ export default function Home() {
                     Electric is the future, and we are building for it right now.
                   </h3>
                 </span>
-                <span className="block h-full ease-in duration-300 text-lg tracking-wide text-gray-500" ref={zeroCont3}>
+                <span className="block h-full ease-in duration-500 text-lg tracking-wide text-gray-500" ref={zeroCont3}>
                   <br />
                   <h3>
                     No more needless part replacements. No more taking your vehicle to the
@@ -269,10 +273,12 @@ export default function Home() {
                 </span>
               </div>
             </section>
-            {/* Images */}
-            {/* <div className='w-2/3 h-full flex items-end relative'></div> */}
+            {/* Image section */}
+            <section className='h-screen w-4/6 sticky top-0
+            bg-zerobg1 bg-contain bg-no-repeat bg-center ease-in duration-500' ref={zeroImg}>
+            </section>
+            <BottomLoader></BottomLoader>
           </div>
-          <BottomLoader></BottomLoader>
         </section>
         {/* PERFORMANCE */}
         <section className='bg-black aspect-video snap-center relative' id='performance-id' ref={performSection}>
