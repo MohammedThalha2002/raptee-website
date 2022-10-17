@@ -1,10 +1,10 @@
-import NavBar from '../../components/NavBar'
-import ReserveBtn from '../../components/ReserveBtn'
-import BottomLoader from '../../components/BottomLoader'
-import SideActiveIndicator from '../../components/SideActiveIndicatorHome'
+import NavBar from '../components/NavBar'
+import ReserveBtn from '../components/ReserveBtn'
+import BottomLoader from '../components/BottomLoader'
+import SideActiveIndicator from '../components/SideActiveIndicatorHome'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
-import SideActiveIndicatorTechStory from '../../components/SideActiveIndicatorTechStory'
+import SideActiveIndicatorTechStory from '../components/SideActiveIndicatorTechStory'
 
 function Techstory() {
     const productsSection = useRef()

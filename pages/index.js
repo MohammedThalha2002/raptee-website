@@ -16,6 +16,9 @@ export default function Home() {
   const aboutSection = useRef()
   const zeroSection = useRef()
   const performSection = useRef()
+  const zeroWord1 = useRef()
+  const zeroWord2 = useRef()
+  const zeroWord3 = useRef()
   const [sectionIndex, setSectionIndex] = useState(1)
   let observerOptions = {
     rootMargin: '20px',
@@ -67,6 +70,20 @@ export default function Home() {
       setAbout3('grey')
       setAbout4('grey')
     }
+    // ZERO section - animations
+    if (position <= 350 && position > -700) {
+      zeroWord1.current.style.transform = 'translateY(0%)';
+      zeroWord2.current.style.transform = 'translateY(0%)';
+      zeroWord3.current.style.transform = 'translateY(0%)';
+    } else if (position <= 1200 && position > 350) {
+      zeroWord1.current.style.transform = 'translateY(-100%)';
+      zeroWord2.current.style.transform = 'translateY(-100%)';
+      zeroWord3.current.style.transform = 'translateY(-100%)';
+    } else if (position <= 2000 && position > 1200) {
+      zeroWord1.current.style.transform = 'translateY(-200%)';
+      zeroWord2.current.style.transform = 'translateY(-200%)';
+      zeroWord3.current.style.transform = 'translateY(-200%)';
+    }
   };
 
   useEffect(() => {
@@ -81,12 +98,18 @@ export default function Home() {
     //   },
     // )
     // gsap.to(
-    //   about1.current,
+    //   zeroHead.current,
     //   {
-    //     color: 'white', 
     //     scrollTrigger: {
-    //       trigger: about1.current,
-    //     }
+    //       trigger: zeroHead.current,
+    //       start: 'top center',
+    //       end: "top 100px",
+    //       markers: true,
+    //       scrub: true,
+    //       pin: zeroWords.current,
+    //       pinSpacing: true,
+    //     },
+    //     ease: "none",
     //   }
     // )
 
@@ -185,6 +208,31 @@ export default function Home() {
           </div>
           <BottomLoader></BottomLoader>
         </section>
+        {/* ZERO SECTION NEW */}
+        <section className='bg-black border-2 h-300vh relative' id='zero-id'>
+          <div className="h-full">
+            {/* titles and contents */}
+            <section className='h-100vh bg-black border sticky top-0'>
+              <div className="title mt-32 h-28 pl-20">
+                <h2 className=' font-oswald font-light text-4xl tracking-wide'>Zero</h2>
+                <div className="h-12 overflow-hidden">
+                  <span className='block h-full font-oswald ease-in duration-300 font-light text-4xl tracking-wide'
+                    ref={zeroWord1}>Hassle</span>
+                  <span className='block h-full font-oswald ease-in duration-300 font-light text-4xl tracking-wide'
+                    ref={zeroWord2}>Emissions</span>
+                  <span className='block h-full font-oswald ease-in duration-300 font-light text-4xl tracking-wide'
+                    ref={zeroWord3}>Maintenence</span>
+                </div>
+                <div className="underline w-10 h-0.5 rounded-xl my-2 bg-highlight"></div>
+              </div>
+            </section>
+            {/* Images */}
+            {/* <div className='w-2/3 h-full flex items-end relative'></div> */}
+          </div>
+          <BottomLoader></BottomLoader>
+        </section>
+
+
         {/* ZERO SECTIONS */}
         <section className='bg-black aspect-video snap-center relative' id='zero-id' ref={zeroSection}>
           <div className="flex h-full">
@@ -192,9 +240,9 @@ export default function Home() {
               <div className="title mb-14 h-28">
                 <h2 className=' font-oswald font-light text-4xl tracking-wide'>Zero</h2>
                 <div className="h-12 overflow-hidden">
-                  <span className='block h-full animate-spin_words font-oswald font-light text-4xl tracking-wide'>Hassle</span>
-                  <span className='block h-full animate-spin_words font-oswald font-light text-4xl tracking-wide'>Emissions</span>
-                  <span className='block h-full animate-spin_words font-oswald font-light text-4xl tracking-wide'>Maintenence</span>
+                  <span className='block h-full animate-spin_words font-oswald font-light text-4xl tracking-wide' >Hassle</span>
+                  <span className='block h-full animate-spin_words font-oswald font-light text-4xl tracking-wide' >Emissions</span>
+                  <span className='block h-full animate-spin_words font-oswald font-light text-4xl tracking-wide' >Maintenence</span>
                 </div>
                 <div className="underline w-10 h-0.5 rounded-xl my-2 bg-highlight"></div>
               </div>
@@ -233,7 +281,7 @@ export default function Home() {
             <div className='w-2/3 h-full flex items-end relative'>
               {/* <div className="slider"></div> */}
               <Image
-                src="/images/9.png"
+                src={`/images/9.png`}
                 width={1920}
                 height={1080}
                 priority={true}
@@ -273,6 +321,9 @@ export default function Home() {
           <Link href={'/techstory'}>
             <ReserveBtn name={'Tech Story'}></ReserveBtn>
           </Link>
+        </section>
+        <section>
+          <div className=' bg-homebg h-100vh'></div>
         </section>
       </main>
     </div>

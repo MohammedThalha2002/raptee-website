@@ -12,6 +12,8 @@ module.exports = {
       },
       height: {
         '10vh': '10vh',
+        '100vh': '100vh',
+        '300vh': '300vh',
       },
       width: {
         '20vw': '20vw',
@@ -30,6 +32,9 @@ module.exports = {
       },
       animation: {
         spin_words: 'spin_words 15s infinite',
+      },
+      backgroundImage: {
+        'homebg': "url('/images/1.png')"
       }
     },
   },
