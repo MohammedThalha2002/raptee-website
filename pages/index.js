@@ -37,7 +37,7 @@ export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
     const position = window.pageYOffset - window.innerWidth;
-    // console.log(position)
+    console.log(position)
     setScrollPosition(position);
     if (position < -800 && position >= -900) {
       // console.log("ONE")
@@ -74,21 +74,21 @@ export default function Home() {
       setAbout4('grey')
     }
     // ZERO section - animations
-    if (position <= 350 && position > -700) {
+    if (position <= 300 && position > -700) {
       zeroWord1.current.style.transform = 'translateY(0%)';
       zeroWord2.current.style.transform = 'translateY(0%)';
       zeroWord3.current.style.transform = 'translateY(0%)';
       zeroCont1.current.style.transform = 'translateY(0%)';
       zeroCont2.current.style.transform = 'translateY(0%)';
       zeroCont3.current.style.transform = 'translateY(0%)';
-    } else if (position <= 1200 && position > 350) {
+    } else if (position <= 420 && position > 300) {
       zeroWord1.current.style.transform = 'translateY(-100%)';
       zeroWord2.current.style.transform = 'translateY(-100%)';
       zeroWord3.current.style.transform = 'translateY(-100%)';
       zeroCont1.current.style.transform = 'translateY(-100%)';
       zeroCont2.current.style.transform = 'translateY(-100%)';
       zeroCont3.current.style.transform = 'translateY(-100%)';
-    } else if (position <= 2000 && position > 1200) {
+    } else if (position <= 800 && position > 420) {
       zeroWord1.current.style.transform = 'translateY(-200%)';
       zeroWord2.current.style.transform = 'translateY(-200%)';
       zeroWord3.current.style.transform = 'translateY(-200%)';
@@ -221,7 +221,7 @@ export default function Home() {
           <BottomLoader></BottomLoader>
         </section>
         {/* ZERO SECTION NEW */}
-        <section className='bg-black border-2 h-300vh relative' id='zero-id'>
+        <section className='bg-black border-2 h-150vh relative' id='zero-id'>
           <div className="h-full">
             {/* titles and contents */}
             <section className='h-100vh bg-black border sticky top-0'>
@@ -271,65 +271,6 @@ export default function Home() {
             </section>
             {/* Images */}
             {/* <div className='w-2/3 h-full flex items-end relative'></div> */}
-          </div>
-          <BottomLoader></BottomLoader>
-        </section>
-
-
-        {/* ZERO SECTIONS */}
-        <section className='bg-black aspect-video snap-center relative' id='zero-id' ref={zeroSection}>
-          <div className="flex h-full">
-            <div className='w-2/6 flex flex-col justify-center pl-20 pr-28'>
-              <div className="title mb-14 h-28">
-                <h2 className=' font-oswald font-light text-4xl tracking-wide'>Zero</h2>
-                <div className="h-12 overflow-hidden">
-                  <span className='block h-full animate-spin_words font-oswald font-light text-4xl tracking-wide' >Hassle</span>
-                  <span className='block h-full animate-spin_words font-oswald font-light text-4xl tracking-wide' >Emissions</span>
-                  <span className='block h-full animate-spin_words font-oswald font-light text-4xl tracking-wide' >Maintenence</span>
-                </div>
-                <div className="underline w-10 h-0.5 rounded-xl my-2 bg-highlight"></div>
-              </div>
-              {/* CONTENTS */}
-              <div className="h-60 overflow-hidden">
-                <span className="block h-full animate-spin_words text-lg tracking-wide text-gray-500 ">
-                  <h3 className='hover:text-white hover:text-xl'>
-                    Breakdowns, failures, and repairs are all things of the past.
-                  </h3>
-                  <h3 className='hover:text-white hover:text-xl'>
-                    We promise not only a futuristic motorcycle, but also a futuristic
-                    and hassle-free riding experience.
-                  </h3>
-                </span>
-                <span className="block h-full animate-spin_words text-lg tracking-wide text-gray-500">
-                  <h3 className='hover:text-white hover:text-xl'>
-                    We believe in doing what is best for the environment.
-                  </h3>
-                  <h3 className='hover:text-white hover:text-xl'>
-                    Electric is the future, and we are building for it right now.
-                  </h3>
-                </span>
-                <span className="block h-full animate-spin_words text-lg tracking-wide text-gray-500">
-                  <br />
-                  <h3 className='hover:text-white hover:text-xl'>
-                    No more needless part replacements. No more taking your vehicle to the
-                    service centre every few months.
-                  </h3>
-                  <h3 className='hover:text-white hover:text-xl'>
-                    Sit back and relax while we look after your motorcycle.
-                    Rather, while the motorcycle looks after itself.
-                  </h3>
-                </span>
-              </div>
-            </div>
-            <div className='w-2/3 h-full flex items-end relative'>
-              {/* <div className="slider"></div> */}
-              <Image
-                src={`/images/9.png`}
-                width={1920}
-                height={1080}
-                priority={true}
-              />
-            </div>
           </div>
           <BottomLoader></BottomLoader>
         </section>
