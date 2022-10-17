@@ -19,6 +19,9 @@ export default function Home() {
   const zeroWord1 = useRef()
   const zeroWord2 = useRef()
   const zeroWord3 = useRef()
+  const zeroCont1 = useRef()
+  const zeroCont2 = useRef()
+  const zeroCont3 = useRef()
   const [sectionIndex, setSectionIndex] = useState(1)
   let observerOptions = {
     rootMargin: '20px',
@@ -75,14 +78,23 @@ export default function Home() {
       zeroWord1.current.style.transform = 'translateY(0%)';
       zeroWord2.current.style.transform = 'translateY(0%)';
       zeroWord3.current.style.transform = 'translateY(0%)';
+      zeroCont1.current.style.transform = 'translateY(0%)';
+      zeroCont2.current.style.transform = 'translateY(0%)';
+      zeroCont3.current.style.transform = 'translateY(0%)';
     } else if (position <= 1200 && position > 350) {
       zeroWord1.current.style.transform = 'translateY(-100%)';
       zeroWord2.current.style.transform = 'translateY(-100%)';
       zeroWord3.current.style.transform = 'translateY(-100%)';
+      zeroCont1.current.style.transform = 'translateY(-100%)';
+      zeroCont2.current.style.transform = 'translateY(-100%)';
+      zeroCont3.current.style.transform = 'translateY(-100%)';
     } else if (position <= 2000 && position > 1200) {
       zeroWord1.current.style.transform = 'translateY(-200%)';
       zeroWord2.current.style.transform = 'translateY(-200%)';
       zeroWord3.current.style.transform = 'translateY(-200%)';
+      zeroCont1.current.style.transform = 'translateY(-200%)';
+      zeroCont2.current.style.transform = 'translateY(-200%)';
+      zeroCont3.current.style.transform = 'translateY(-200%)';
     }
   };
 
@@ -225,6 +237,37 @@ export default function Home() {
                 </div>
                 <div className="underline w-10 h-0.5 rounded-xl my-2 bg-highlight"></div>
               </div>
+              {/* CONTENTS */}
+              <div className="h-60 w-96 mt-20 pl-20 overflow-hidden">
+                <span className="block h-full ease-in duration-300 text-lg tracking-wide text-gray-500 " ref={zeroCont1}>
+                  <h3>
+                    Breakdowns, failures, and repairs are all things of the past.
+                  </h3>
+                  <h3>
+                    We promise not only a futuristic motorcycle, but also a futuristic
+                    and hassle-free riding experience.
+                  </h3>
+                </span>
+                <span className="block h-full ease-in duration-300 text-lg tracking-wide text-gray-500" ref={zeroCont2}>
+                  <h3>
+                    We believe in doing what is best for the environment.
+                  </h3>
+                  <h3>
+                    Electric is the future, and we are building for it right now.
+                  </h3>
+                </span>
+                <span className="block h-full ease-in duration-300 text-lg tracking-wide text-gray-500" ref={zeroCont3}>
+                  <br />
+                  <h3>
+                    No more needless part replacements. No more taking your vehicle to the
+                    service centre every few months.
+                  </h3>
+                  <h3>
+                    Sit back and relax while we look after your motorcycle.
+                    Rather, while the motorcycle looks after itself.
+                  </h3>
+                </span>
+              </div>
             </section>
             {/* Images */}
             {/* <div className='w-2/3 h-full flex items-end relative'></div> */}
@@ -321,9 +364,6 @@ export default function Home() {
           <Link href={'/techstory'}>
             <ReserveBtn name={'Tech Story'}></ReserveBtn>
           </Link>
-        </section>
-        <section>
-          <div className=' bg-homebg h-100vh'></div>
         </section>
       </main>
     </div>
