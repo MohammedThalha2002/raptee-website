@@ -4,18 +4,19 @@ import Link from 'next/link'
 import NavBar from '../components/NavBar'
 import ReserveBtn from '../components/ReserveBtn'
 import BottomLoader from '../components/BottomLoader'
+import BottomLoaderZeroSec from '../components/BottomLoaderZeroSec'
 import SideActiveIndicator from '../components/SideActiveIndicatorHome'
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from "gsap/dist/gsap.js";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
 
-
 export default function Home() {
   const evolSection = useRef()
   const aboutSection = useRef()
   const zeroSection = useRef()
   const performSection = useRef()
+  const performImg = useRef()
   const zeroWord1 = useRef()
   const zeroWord2 = useRef()
   const zeroWord3 = useRef()
@@ -104,15 +105,15 @@ export default function Home() {
 
   useEffect(() => {
 
-    // gsap.fromTo(about1.current,
-    //   { opacity: 0, y: -100 },
-    //   {
-    //     opacity: 1, y: 0, duration: 2, ease: "ease-in",
-    //     scrollTrigger: {
-    //       trigger: about1.current,
-    //     }
-    //   },
-    // )
+    gsap.fromTo(performImg.current,
+      { opacity: 0 },
+      {
+        opacity: 1, duration: 2, ease: "ease-in",
+        scrollTrigger: {
+          trigger: performImg.current,
+        }
+      },
+    )
     // gsap.to(
     //   zeroHead.current,
     //   {
@@ -198,7 +199,7 @@ export default function Home() {
           </div>
         </section>
         {/* ABOUT SECTION */}
-        <section className='bg-black aspect-video snap-center relative' id='about-id' ref={aboutSection}>
+        <section className='bg-black aspect-16/8 snap-center relative' id='about-id' ref={aboutSection}>
           <div className="flex h-full">
             {/* SIDE CONTENTS */}
             <div className='w-2/5 flex flex-col mt-16 pl-20 pr-20'>
@@ -217,7 +218,7 @@ export default function Home() {
               <Image
                 src="/images/5.png"
                 width={1204}
-                height={1052}
+                height={950}
                 priority={true}
               />
             </div>
@@ -276,14 +277,14 @@ export default function Home() {
             {/* Image section */}
             <section className='h-screen w-4/6 sticky top-0
             bg-zerobg1 bg-contain bg-no-repeat bg-center ease-in duration-500' ref={zeroImg}>
+              <BottomLoaderZeroSec></BottomLoaderZeroSec>
             </section>
-            <BottomLoader></BottomLoader>
           </div>
         </section>
         {/* PERFORMANCE */}
-        <section className='bg-black aspect-video snap-center relative' id='performance-id' ref={performSection}>
+        <section className='bg-black aspect-16/8 snap-center relative' id='performance-id' ref={performSection}>
           <div className="flex h-full">
-            <div className='w-2/3 relative flex items-end'>
+            <div className='w-2/3 relative flex items-end' ref={performImg}>
               <Image
                 src="/images/6.png"
                 width={1450}

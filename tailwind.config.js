@@ -18,20 +18,13 @@ module.exports = {
       width: {
         '20vw': '20vw',
       },
+      aspectRatio: {
+        '16/8': '16 / 8',
+      },
       fontFamily: {
         nebula: ['Nebula'],
         oswald: ['Oswald'],
         mont: ['Montserrat'],
-      },
-      keyframes: {
-        spin_words: {
-          '10%, 100%': { transform: 'translateY(0%)' },
-          '40%': { transform: 'translateY(-100%)' },
-          '80%': { transform: 'translateY(-212%)' },
-        }
-      },
-      animation: {
-        spin_words: 'spin_words 15s infinite',
       },
       backgroundImage: {
         'zerobg1': "url('/images/9.png')",
