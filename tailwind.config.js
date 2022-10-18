@@ -34,5 +34,14 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addBase }) {
+      addBase({
+        '@font-face': {
+          fontFamily: 'Nebula',
+          src: 'url(/fonts/Nebula-Regular.otf)'
+        }
+      })
+    }),
+  ],
 }
