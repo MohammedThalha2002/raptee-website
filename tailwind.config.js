@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         'highlight': '#E0B317',
         'highlight-low': '#5D4A0A',
+        'navlinksbg': '#424242',
       },
       height: {
         '10vh': '10vh',

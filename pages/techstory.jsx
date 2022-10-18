@@ -1,7 +1,5 @@
 import NavBar from '../components/NavBar'
-import ReserveBtn from '../components/ReserveBtn'
 import BottomLoader from '../components/BottomLoader'
-import SideActiveIndicator from '../components/SideActiveIndicatorHome'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import SideActiveIndicatorTechStory from '../components/SideActiveIndicatorTechStory'
@@ -60,7 +58,7 @@ function Techstory() {
             <NavBar></NavBar>
             <SideActiveIndicatorTechStory index={sectionIndex}></SideActiveIndicatorTechStory>
             {/* OUR PRODUCTS SECTION */}
-            <section className='bg-black aspect-video snap-center relative' id='products-id' ref={productsSection}>
+            <section className='bg-black aspect-16/8 snap-center relative' id='products-id' ref={productsSection}>
                 <div className=' h-12 '></div>
                 <div>
                     <Image
@@ -85,7 +83,7 @@ function Techstory() {
                 </div>
             </section>
             {/* VCU SECTION */}
-            <section className='bg-black aspect-video snap-center relative' id='vcu-id' ref={vcuSection}>
+            <section className='bg-black aspect-16/8 snap-center relative' id='vcu-id' ref={vcuSection}>
                 <div className="flex h-full">
                     {/* SIDE CONTENTS */}
                     <div className='w-2/6 flex flex-col justify-center pl-20 pr-4'>
@@ -108,7 +106,7 @@ function Techstory() {
                         <Image
                             src="/images/2.png"
                             width={1200}
-                            height={1080}
+                            height={950}
                             priority={true}
                         />
                     </div>
@@ -116,7 +114,7 @@ function Techstory() {
                 <BottomLoader></BottomLoader>
             </section>
             {/* BMS SECTION */}
-            <section className='bg-black aspect-video snap-center relative' id='bms-id' ref={bmsSection}>
+            <section className='bg-black aspect-16/8 snap-center relative' id='bms-id' ref={bmsSection}>
                 <div className="flex h-full">
                     {/* SIDE CONTENTS */}
                     <div className='w-2/6 flex flex-col justify-center pl-20 pr-4'>
@@ -149,7 +147,7 @@ function Techstory() {
                 <BottomLoader></BottomLoader>
             </section>
             {/* MOTOR SECTION */}
-            <section className='bg-black aspect-video snap-center relative' id='motor-id' ref={motorSection}>
+            <section className='bg-black aspect-16/8 snap-center relative' id='motor-id' ref={motorSection}>
                 <div className="flex h-full">
                     {/* SIDE CONTENTS */}
                     <div className='w-2/6 flex flex-col justify-center pl-20 pr-4'>
@@ -185,7 +183,7 @@ function Techstory() {
                 <BottomLoader></BottomLoader>
             </section>
             {/* CCS SECTION */}
-            <section className='bg-black aspect-video snap-center relative' id='ccs-id' ref={ccsSection}>
+            <section className='bg-black aspect-16/8 snap-center relative' id='ccs-id' ref={ccsSection}>
                 <div className="flex h-full">
                     {/* SIDE CONTENTS */}
                     <div className='w-2/6 flex flex-col justify-center pl-20 pr-4 z-20'>
@@ -212,7 +210,7 @@ function Techstory() {
                 <BottomLoader></BottomLoader>
             </section>
             {/* Saftey SECTION */}
-            <section className='bg-black aspect-video snap-center relative' id='safety-id' ref={safetySection}>
+            <section className='bg-black aspect-16/8 snap-center relative' id='safety-id' ref={safetySection}>
                 <div className="flex h-full">
                     {/* SIDE CONTENTS */}
                     <div className='w-2/6 flex flex-col justify-center pl-20 pr-4 z-10'>

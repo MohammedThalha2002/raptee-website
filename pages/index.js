@@ -194,7 +194,7 @@ export default function Home() {
                 <div className="underline w-14 h-0.5 rounded-xl my-2 mx-1 bg-highlight"></div>
               </div>
             </div>
-            <ReserveBtn name={"Reserve Now"}></ReserveBtn>
+            <ReserveBtn name={"Reserve Now"} route={'/techstory'}></ReserveBtn>
             <BottomLoader></BottomLoader>
           </div>
         </section>
@@ -309,9 +309,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <Link href={'/techstory'}>
-            <ReserveBtn name={'Tech Story'}></ReserveBtn>
-          </Link>
+          <ReserveBtn name={'Tech Story'} route={'/techstory'}></ReserveBtn>
         </section>
       </main>
     </div>
