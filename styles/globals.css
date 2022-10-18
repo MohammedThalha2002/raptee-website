@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap');
 @tailwind base;
 @tailwind components;
+/* npx tailwindcss build styles/globals.css -o public/tailwind.css */
+@font-face {
+  font-family: 'Nebula';
+  src: local('Nebula'), url('../public/fonts/Nebula-Regular.otf') format('otf');
+}
+
 @tailwind utilities;
 
 
@@ -29,20 +35,6 @@ a {
   padding: 0;
 }
 
-@font-face {
-  font-family: 'Nebula';
-  src: url('../public/fonts/Nebula-Regular.otf');
-}
-
-@font-face {
-  font-family: 'Acumin';
-  src: url('../public/fonts/Acumin.ttf');
-}
-
-@font-face {
-  font-family: 'Molde';
-  src: url('../public/fonts/Molde.ttf');
-}
 
 
 ::-webkit-scrollbar {

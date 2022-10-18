@@ -23,9 +23,9 @@ module.exports = {
         '16/8': '16 / 8',
       },
       fontFamily: {
-        nebula: ['Nebula'],
-        oswald: ['Oswald'],
-        mont: ['Montserrat'],
+        nebula: 'Nebula',
+        oswald: 'Oswald',
+        mont: 'Montserrat',
       },
       backgroundImage: {
         'zerobg1': "url('/images/9.png')",
