@@ -17,6 +17,7 @@ function Techstory() {
         rootMargin: '20px',
         threshold: 0.4
     }
+
     useEffect(() => {
         const techSectionObserver = new IntersectionObserver(observerCallback, observerOptions)
         function observerCallback(entries, observer) {
@@ -53,12 +54,20 @@ function Techstory() {
         techSectionObserver.observe(motorSection.current)
         techSectionObserver.observe(ccsSection.current)
         techSectionObserver.observe(safetySection.current)
+        window.addEventListener('resize', handleResize, { passive: true });
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+
     }, [])
+
     return (
         <div className='bg-black'>
             <NavBar></NavBar>
             <SideActiveIndicatorTechStory index={sectionIndex}></SideActiveIndicatorTechStory>
-            {/* OUR PRODUCTS SECTION */}
+            {/*  */}
+            {/* OUR PRODUCTS SECTION - DESKTOP*/}
             <section className='bg-black aspect-16/8 snap-center relative' id='products-id' ref={productsSection}>
                 <div className=' h-12 '></div>
                 <div>
@@ -71,7 +80,7 @@ function Techstory() {
                     <div className="absolute left-0 top-20 pl-20 pt-6 ">
                         <div className="content text-left">
                             <h3 className='text-4xl font-light font-oswald 
-                                tracking-widest mb-4'>Technology engineered beyond boundaries.</h3>
+                                    tracking-widest mb-4'>Technology engineered beyond boundaries.</h3>
                             <h4 className='text-2xl font-thin font-mont tracking-widest'>
                                 90% of our technology has been engineered in-house, <br />
                                 keeping in mind the conditions and requirements of our <br />

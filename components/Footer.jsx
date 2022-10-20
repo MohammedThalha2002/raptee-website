@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
     return (
-        <section className="bg-black h-72 flex justify-around">
+        <section className="bg-black h-72 flex justify-around sm:hidden">
             {/* ADDRESS */}
             <div className='py-10 w-52'>
                 <div className="title">
