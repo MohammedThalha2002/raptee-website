@@ -2,7 +2,7 @@ import { IconContext } from 'react-icons/lib'
 import { IoMdMenu } from 'react-icons/io'
 import NavLinks from './NavLinks'
 import { useRef } from 'react'
-import { useEffect } from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 
 
@@ -16,21 +16,27 @@ function NavBar(props) {
     function LogoComponent() {
         if (props.mobile) {
             return (
-                <Image
-                    src="/images/logo.png"
-                    width={110}
-                    height={17.5}
-                    priority={true}
-                />
+                <Link href={'/home'}>
+                    <Image
+                        src="/images/logo.png"
+                        width={110}
+                        height={17.5}
+                        priority={true}
+                        className=' cursor-pointer'
+                    />
+                </Link>
             )
         } else {
             return (
-                <Image
-                    src="/images/logo.png"
-                    width={108}
-                    height={28}
-                    priority={true}
-                />
+                <Link href={'/home'}>
+                    <Image
+                        src="/images/logo.png"
+                        width={108}
+                        height={28}
+                        priority={true}
+                        className=' cursor-pointer'
+                    />
+                </Link>
             )
         }
     }

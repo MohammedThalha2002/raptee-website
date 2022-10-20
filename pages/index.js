@@ -6,6 +6,7 @@ import BottomLoaderZeroSec from '../components/BottomLoaderZeroSec'
 import ReserveBtn from '../components/ReserveBtn'
 import BottomLoader from '../components/BottomLoader'
 import MobileHome from '../Mobile/MobileHome'
+import Footer from '../components/Footer'
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from "gsap/dist/gsap.js";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -30,16 +31,14 @@ export default function Home() {
     rootMargin: '20px',
     threshold: 0.4
   }
-  const lazyRoot = useRef(null)
-  //
   const [about1, setAbout1] = useState('grey')
   const [about2, setAbout2] = useState('grey')
   const [about3, setAbout3] = useState('grey')
   const [about4, setAbout4] = useState('grey')
-
   const [scrollPosition, setScrollPosition] = useState(0);
+
+
   const handleScroll = () => {
-    console.log("HANDLE SCROLL :", mobile)
     if (mobile === false) {
       const position = window.pageYOffset - window.innerWidth;
       // console.log(position)
@@ -202,7 +201,8 @@ export default function Home() {
                   <div className="underline w-14 h-0.5 rounded-xl my-2 mx-1 bg-highlight"></div>
                 </div>
               </div>
-              <ReserveBtn name={"Reserve Now"} route={'/techstory'}></ReserveBtn>
+              <ReserveBtn name={"Reserve Now"} route={false} link={'https://pages.razorpay.com/pl_EAjfop8xakIQaU/view'}>
+              </ReserveBtn>
               <BottomLoader></BottomLoader>
             </div>
           </section>
@@ -268,7 +268,7 @@ export default function Home() {
                       We believe in doing what is best for the environment.
                     </h3>
                     <h3>
-                      Electric is the future, and  we&#39re building for it right now.
+                      Electric is the future, and  we&#39;re building for it right now.
                     </h3>
                   </span>
                   <span className="block h-full ease-in duration-500 text-lg tracking-wide text-gray-500"
@@ -313,15 +313,17 @@ export default function Home() {
                   <h1 className='text-4xl font-light mb-8'>Electric is now fast.</h1>
                   <h2 className='text-white text-lg'>150 km Real World Range</h2>
                   <h1 className='text-4xl font-light mb-8'>Week long charge.</h1>
-                  <h2 className='text-white text-lg'>0-60 kmph in &#60 3 secs</h2>
+                  <h2 className='text-white text-lg'>0-60 kmph in &#60; 3 secs</h2>
                   <h1 className='text-4xl font-light mb-8'>First off the traffic line.</h1>
                   <h2 className='text-white text-lg'>0-80% charge in 25 mins</h2>
                   <h1 className='text-4xl font-light mb-8'>Get to your destination quicker.</h1>
                 </div>
               </div>
             </div>
-            <ReserveBtn name={'Tech Story'} route={'/techstory'}></ReserveBtn>
+            <ReserveBtn name={'Tech Story'} route={true} link={'/techstory'}></ReserveBtn>
           </section>
+          {/* FOOTER */}
+          <Footer></Footer>
         </main>
       </div>
     )

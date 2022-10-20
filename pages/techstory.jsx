@@ -1,6 +1,7 @@
 import NavBar from '../components/NavBar'
 import BottomLoader from '../components/BottomLoader'
 import Image from 'next/image'
+import Footer from '../components/Footer'
 import { useEffect, useRef, useState } from 'react'
 import SideActiveIndicatorTechStory from '../components/SideActiveIndicatorTechStory'
 
@@ -70,13 +71,11 @@ function Techstory() {
                     <div className="absolute left-0 top-20 pl-20 pt-6 ">
                         <div className="content text-left">
                             <h3 className='text-4xl font-light font-oswald 
-                                tracking-widest mb-4'>We Conceive and Create</h3>
-                            <h1 className='text-4xl font-thin font-mont tracking-widest'>Our Products</h1>
-                            <div className="underline w-10 h-0.5 rounded-xl my-2 bg-highlight"></div>
+                                tracking-widest mb-4'>Technology engineered beyond boundaries.</h3>
                             <h4 className='text-2xl font-thin font-mont tracking-widest'>
-                                We have developed 90% of the components <br />
-                                in-house which are best altered for our Indian <br />
-                                roads.</h4>
+                                90% of our technology has been engineered in-house, <br />
+                                keeping in mind the conditions and requirements of our <br />
+                                Indian roads.</h4>
                         </div>
                     </div>
                     <BottomLoader></BottomLoader>
@@ -88,7 +87,7 @@ function Techstory() {
                     {/* SIDE CONTENTS */}
                     <div className='w-2/6 flex flex-col justify-center pl-20 pr-4'>
                         <div className="title mb-14">
-                            <h2 className=' font-oswald font-light text-4xl tracking-wide'>VCU</h2>
+                            <h2 className=' font-oswald font-light text-4xl tracking-wide'>VCU: The Brain.</h2>
                             <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
                         </div>
                         <div className="contents text-lg tracking-wide text-gray-500">
@@ -119,19 +118,23 @@ function Techstory() {
                     {/* SIDE CONTENTS */}
                     <div className='w-2/6 flex flex-col justify-center pl-20 pr-4'>
                         <div className="title mb-14">
-                            <h2 className=' font-oswald font-light text-4xl tracking-wide'>BMS</h2>
+                            <h2 className=' font-oswald font-light text-4xl tracking-wide'>BMS: Zeus to the Batteries.</h2>
                             <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
                         </div>
                         <div className="contents text-lg tracking-wide text-gray-500">
                             <h3>
-                                Longer Distance on a Single Charge with Adaptive Charging
+                                State-of-the-art ML algorithms analyze variance in cell behaviour and choose the best
+                                charging approach to reduce loss and boost efficiency, thus extending your motorcycle&#39;s
+                                range.
                             </h3>
                             <h3>
-                                Charge Cycle Management: Safety is important to us.
-                                Yours as well as the battery&#39;s
+                                Effective Charge Cycle Management ensures top-notch safety - both yours, and your
+                                battery&#39;s. It protects cells against aggressive usage, and fast charging & discharging
+                                cycles, which results in a stable system providing many years of reliable service.
                             </h3>
                             <h3>
-                                Active balancing: Perfectly balanced, as everything should be.
+                                Active balancing directs excess current from a cell approaching its charging limit to the
+                                next cell with a lower charge, ensuring that all cells are charged to their maximum limit.
                             </h3>
                         </div>
                     </div>
@@ -152,22 +155,18 @@ function Techstory() {
                     {/* SIDE CONTENTS */}
                     <div className='w-2/6 flex flex-col justify-center pl-20 pr-4'>
                         <div className="title mb-14">
-                            <h2 className=' font-oswald font-light text-4xl tracking-wide'>MOTOR</h2>
+                            <h2 className=' font-oswald font-light text-4xl tracking-wide'>Motor and motor controller:</h2>
                             <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
                         </div>
                         <div className="contents text-lg tracking-wide text-gray-500">
                             <h3>
-                                Raptee&#39;s Electric Drivetrain is a high-powered software driven
-                                vehicle developed in house to adapt to various driving conditions for the Indian roads.
-                            </h3>
-                            <h3>
-                                It is backed by the control logics of the VCU that can be adjusted to
-                                the rider&#39;s needs, be it ECO mode with enhanced range or the POWER mode
-                                with quick acceleration.
-                            </h3>
-                            <h3>
-                                With a motor controller developed to suit our high voltage drivetrain,
-                                RED can extract the most out of the permanent magnet synchronous motor in the most efficient manner.
+                                Raptee&#39;s Electric Drivetrain (RED) is a high-powered software driven vehicle developed in
+                                house to adapt to various driving conditions for the Indian roads. It is backed by the
+                                control logics of the VCU that can be adjusted to the rider&#39;s needs, be it ECO mode with
+                                enhanced range or the POWER mode with quick acceleration.
+                                With a motor controller developed to suit our high voltage drivetrain, RED can extract the
+                                most out of the permanent magnet synchronous motor we use, in the most efficient
+                                manner
                             </h3>
                         </div>
                     </div>
@@ -188,13 +187,13 @@ function Techstory() {
                     {/* SIDE CONTENTS */}
                     <div className='w-2/6 flex flex-col justify-center pl-20 pr-4 z-20'>
                         <div className="title mb-14">
-                            <h2 className=' font-oswald font-light text-4xl tracking-wide'>CCS-2</h2>
+                            <h2 className=' font-oswald font-light text-4xl tracking-wide'>Charge anywhere.</h2>
                             <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
                         </div>
                         <div className="contents text-lg tracking-wide text-gray-500">
                             <h3>
-                                Our vehicles are the first two-wheelers that support the CCS 2 charging standard,
-                                which enables riders to use any existing public charging station to power their vehicles.
+                                Our motorcycles are the first two-wheelers to support the CCS 2 charging standard, which
+                                lets you use any existing public charging station to power your vehicle.
                             </h3>
                         </div>
                     </div>
@@ -210,22 +209,20 @@ function Techstory() {
                 <BottomLoader></BottomLoader>
             </section>
             {/* Saftey SECTION */}
-            <section className='bg-black aspect-16/8 snap-center relative' id='safety-id' ref={safetySection}>
+            <section className='bg-black aspect-video snap-center relative' id='safety-id' ref={safetySection}>
                 <div className="flex h-full">
                     {/* SIDE CONTENTS */}
                     <div className='w-2/6 flex flex-col justify-center pl-20 pr-4 z-10'>
                         <div className="title mb-14">
-                            <h2 className=' font-oswald font-light text-4xl tracking-wide'>Safety</h2>
+                            <h2 className=' font-oswald font-light text-4xl tracking-wide'>Safety, like never before.</h2>
                             <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
                         </div>
                         <div className="contents text-lg tracking-wide text-gray-500">
                             <h3>
-                                Safer rides with traction control that reduces vehicle slip and blind spot warning that avoids
-                                unexpected collisions.
-                            </h3>
-                            <h3>
-                                Over-the-air software upgrades to increase the efficiency of individual
-                                components and track factors that cause to efficiency reduction.
+                                Get safer rides with traction control that reduces vehicle slip and blind spot warning that
+                                helps avoid unexpected collisions. Over-the-air software upgrades increase the efficiency
+                                of individual components and track factors that cause a reduction in efficiency.
+
                             </h3>
                         </div>
                     </div>
@@ -240,6 +237,8 @@ function Techstory() {
                 </div>
                 <BottomLoader></BottomLoader>
             </section>
+            {/* FOOTER */}
+            <Footer></Footer>
         </div>
     )
 }
