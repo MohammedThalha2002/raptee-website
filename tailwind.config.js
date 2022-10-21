@@ -14,12 +14,14 @@ module.exports = {
       height: {
         '10vh': '10vh',
         '25vh': '25vh',
+        '30vh': '30vh',
         '40vh': '40vh',
         '50vh': '50vh',
         '60vh': '60vh',
         '75vh': '75vh',
         '100vh': '100vh',
         '150vh': '150vh',
+        '250vh': '250vh',
       },
       width: {
         '20vw': '20vw',

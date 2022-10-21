@@ -36,11 +36,20 @@ export default function Home() {
   const [about4, setAbout4] = useState('grey')
   const [scrollPosition, setScrollPosition] = useState(0);
 
+  // MOBILE
+  const MzeroWord1 = useRef()
+  const MzeroWord2 = useRef()
+  const MzeroWord3 = useRef()
+  const MzeroCont1 = useRef()
+  const MzeroCont2 = useRef()
+  const MzeroCont3 = useRef()
+  const MzeroImg = useRef()
+
 
   const handleScroll = () => {
 
     const position = window.pageYOffset - window.innerWidth;
-    // console.log(position)
+    console.log(position)
     setScrollPosition(position);
     if (position < -800 && position >= -900) {
       // console.log("ONE")
@@ -77,6 +86,7 @@ export default function Home() {
       setAbout4('grey')
     }
     // ZERO section - animations
+    // DESKTOP
     if (window.innerWidth > 639) {
       if (position <= 300 && position > -700) {
         zeroWord1.current.style.transform = 'translateY(0%)';
@@ -102,6 +112,34 @@ export default function Home() {
         zeroCont2.current.style.transform = 'translateY(-200%)';
         zeroCont3.current.style.transform = 'translateY(-200%)';
         zeroImg.current.style.backgroundImage = "url('/images/8.png')"
+      }
+    }
+    // MOBILE
+    else {
+      if (position <= 1100 && position > 700) {
+        MzeroWord1.current.style.transform = 'translateY(0%)';
+        MzeroWord2.current.style.transform = 'translateY(0%)';
+        MzeroWord3.current.style.transform = 'translateY(0%)';
+        MzeroCont1.current.style.transform = 'translateY(0%)';
+        MzeroCont2.current.style.transform = 'translateY(0%)';
+        MzeroCont3.current.style.transform = 'translateY(0%)';
+        MzeroImg.current.style.backgroundImage = "url('/images/9.png')"
+      } else if (position <= 1300 && position > 1100) {
+        MzeroWord1.current.style.transform = 'translateY(-100%)';
+        MzeroWord2.current.style.transform = 'translateY(-100%)';
+        MzeroWord3.current.style.transform = 'translateY(-100%)';
+        MzeroCont1.current.style.transform = 'translateY(-100%)';
+        MzeroCont2.current.style.transform = 'translateY(-100%)';
+        MzeroCont3.current.style.transform = 'translateY(-100%)';
+        MzeroImg.current.style.backgroundImage = "url('/images/12.png')"
+      } else if (position <= 1500 && position > 1300) {
+        MzeroWord1.current.style.transform = 'translateY(-200%)';
+        MzeroWord2.current.style.transform = 'translateY(-200%)';
+        MzeroWord3.current.style.transform = 'translateY(-200%)';
+        MzeroCont1.current.style.transform = 'translateY(-200%)';
+        MzeroCont2.current.style.transform = 'translateY(-200%)';
+        MzeroCont3.current.style.transform = 'translateY(-200%)';
+        MzeroImg.current.style.backgroundImage = "url('/images/8.png')"
       }
     }
   };
@@ -312,10 +350,58 @@ export default function Home() {
           </div>
         </section>
         {/* ZERO SECTION - MOBILE*/}
-        <section className='bg-black h-150vh border-2 hidden sm:block' id='zero-id' ref={zeroSection}>
-          {/* <section className='bg-red-400 h-100vh'></section>
-          <section className='bg-red-600 h-100vh'></section>
-          <section className='bg-red-900 h-100vh'></section> */}
+        <section className='bg-black h-150vh hidden sm:block'>
+          <div className="h-full flex">
+            {/* titles and contents */}
+            <section className='h-screen bg-black sticky top-0'>
+              <div className='h-60vh'>
+                <div className="title mt-10 h-28 pl-4">
+                  <h2 className=' font-oswald font-light text-4xl tracking-wide'>Zero</h2>
+                  <div className="h-10 overflow-hidden">
+                    <span className='block h-full font-oswald ease-in duration-500 font-light text-3xl tracking-wide'
+                      ref={MzeroWord1}>Hassle</span>
+                    <span className='block h-full font-oswald ease-in duration-500 font-light text-3xl tracking-wide'
+                      ref={MzeroWord2}>Emissions</span>
+                    <span className='block h-full font-oswald ease-in duration-500 font-light text-3xl tracking-wide'
+                      ref={MzeroWord3}>Maintenance</span>
+                  </div>
+                  <div className="underline w-10 h-0.5 rounded-xl my-2 bg-highlight"></div>
+                </div>
+                {/* CONTENTS */}
+                <div className="h-60 w-5/6 pl-4 overflow-hidden">
+                  <span className="block h-full ease-in duration-500 text-lg tracking-wide text-gray-500 "
+                    ref={MzeroCont1}>
+                    <h3>
+                      Breakdowns, failures, and repairs are all things of the past.
+                      We promise not only a futuristic motorcycle, but also a futuristic
+                      and hassle-free riding experience.
+                    </h3>
+                  </span>
+                  <span className="block h-full ease-in duration-500 text-lg tracking-wide text-gray-500"
+                    ref={MzeroCont2}>
+                    <h3>
+                      We believe in doing what is best for the environment.
+                      Electric is the future, and  we&#39;re building for it right now.
+                    </h3>
+                  </span>
+                  <span className="block h-full ease-in duration-500 text-lg tracking-wide text-gray-500"
+                    ref={MzeroCont3}>
+                    <br />
+                    <h3>
+                      No more needless part replacements. No more taking your vehicle to the
+                      service centre every few months.
+                      Sit back and relax while we look after your motorcycle.
+                      Rather, while the motorcycle looks after itself.
+                    </h3>
+                  </span>
+                </div>
+              </div>
+              {/* Image section */}
+              <section className='h-40vh sticky top-0
+                bg-zerobg1 bg-contain bg-no-repeat bg-center ease-in duration-500' ref={MzeroImg}>
+              </section>
+            </section>
+          </div>
         </section>
         {/* PERFORMANCE DESKTOP*/}
         <section className='bg-black aspect-16/8 snap-center relative sm:hidden' id='performance-id' ref={performSection}>
@@ -367,8 +453,10 @@ export default function Home() {
                   <h1 className='text-3xl font-light mb-3'>Get to your destination quicker.</h1>
                 </div>
               </div>
-              <div className='w-full h-40vh
-            bg-performbg bg-cover bg-no-repeat bg-left ease-in duration-500'>
+              <div className='overflow-hidden'>
+                <div className='w-full h-50vh
+                bg-performbg bg-cover bg-no-repeat bg-center scale-150 ease-in duration-500'>
+                </div>
               </div>
             </div>
             <ReserveBtn name={'Tech Story'} route={true} link={'/techstory'}></ReserveBtn>
