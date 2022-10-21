@@ -201,6 +201,7 @@ export default function Home() {
         <title>Raptee | E-Vehicle</title>
         <meta name="description" content="An E-Vehicle website - RAPTEE" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preload" href="/fonts/Nebula-Regular.otf" as="font" type="font/otf" crossorigin />
       </Head>
       <main className='bg-black'>
         <NavBar mobile={false}></NavBar>

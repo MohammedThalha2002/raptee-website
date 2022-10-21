@@ -13,41 +13,42 @@ function NavBar(props) {
         console.log("Clicked")
         btnRef.current.style.display = 'block'
     }
-    function LogoComponent() {
-        if (props.mobile) {
-            return (
-                <Link href={'/home'}>
-                    <Image
-                        src="/images/logo.png"
-                        width={110}
-                        height={17.5}
-                        priority={true}
-                        className=' cursor-pointer'
-                    />
-                </Link>
-            )
-        } else {
-            return (
-                <Link href={'/home'}>
-                    <Image
-                        src="/images/logo.png"
-                        width={108}
-                        height={28}
-                        priority={true}
-                        className=' cursor-pointer'
-                    />
-                </Link>
-            )
-        }
-    }
+
+    // function LogoComponent() {
+    //     if (props.mobile) {
+    //         return (
+    //             <Link href={'/home'}>
+    //                 <Image
+    //                     src="/images/logo.png"
+    //                     width={110}
+    //                     height={17.5}
+    //                     priority={true}
+    //                     className=' cursor-pointer'
+    //                 />
+    //             </Link>
+    //         )
+    //     } else {
+    //         return (
+    //             <Link href={'/home'}>
+    //                 <Image
+    //                     src="/images/logo.png"
+    //                     width={108}
+    //                     height={28}
+    //                     priority={true}
+    //                     className=' cursor-pointer'
+    //                 />
+    //             </Link>
+    //         )
+    //     }
+    // }
+
     return (
         <div>
             <nav className='pt-4 px-8 backdrop-blur-sm
             bg-black/30 z-50 h-20vh w-full shadow-md top-0 fixed 
             sm:pt-1 sm:px-4'>
                 <div className="flex justify-between">
-
-                    <LogoComponent></LogoComponent>
+                    <h1 className='font-nebula text-3xl'>RAPTEE</h1>
                     <IconContext.Provider value={{
                         color: 'white',
                         size: '2rem'
