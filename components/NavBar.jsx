@@ -2,6 +2,7 @@ import { IconContext } from 'react-icons/lib'
 import { IoMdMenu } from 'react-icons/io'
 import NavLinks from './NavLinks'
 import { useRef } from 'react'
+import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -48,7 +49,7 @@ function NavBar(props) {
             bg-black/30 z-50 h-20vh w-full shadow-md top-0 fixed 
             sm:pt-1 sm:px-4'>
                 <div className="flex justify-between">
-                    <h1 style={{ fontFamily: 'Nebula' }} className='text-3xl'>RAPTEE</h1>
+                    <h1 className={styles.logo}>RAPTEE</h1>
                     <IconContext.Provider value={{
                         color: 'white',
                         size: '2rem'
