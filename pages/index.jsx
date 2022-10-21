@@ -204,7 +204,7 @@ export default function Home() {
         <link rel="preload" href="/fonts/Nebula-Regular.otf" as="font" type="font/otf" crossorigin />
       </Head>
       <main className='bg-black'>
-        <NavBar mobile={false}></NavBar>
+        <NavBar mobile={mobile}></NavBar>
         <SideActiveIndicator index={sectionIndex}></SideActiveIndicator>
         {/*  */}
         {/* Evoloution SECTION  - DESKTOP*/}
