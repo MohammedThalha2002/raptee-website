@@ -48,7 +48,7 @@ function NavBar(props) {
             bg-black/30 z-50 h-20vh w-full shadow-md top-0 fixed 
             sm:pt-1 sm:px-4'>
                 <div className="flex justify-between">
-                    <h1 className='font-nebula text-3xl'>RAPTEE</h1>
+                    <h1 style={{ fontFamily: 'Nebula' }} className='text-3xl'>RAPTEE</h1>
                     <IconContext.Provider value={{
                         color: 'white',
                         size: '2rem'
