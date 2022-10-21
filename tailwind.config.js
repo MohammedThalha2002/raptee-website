@@ -12,6 +12,7 @@ module.exports = {
         'navlinksbg': '#424242',
       },
       height: {
+        '40rem': '40rem',
         '10vh': '10vh',
         '25vh': '25vh',
         '30vh': '30vh',

@@ -231,18 +231,20 @@ export default function Home() {
         </section>
         {/* Evoloution SECTION  - MOBILE */}
         <section className='bg-black hidden sm:block'>
-          <div className='h-screen w-full
-                bg-homebg bg-cover bg-no-repeat bg-left ease-in duration-500'>
-            <div className="absolute left-4 top-20 pt-2">
-              <div className="content text-left flex flex-col items-start">
-                <h3 className='text-xl font-oswald tracking-wide'>Join the</h3>
-                <h1 className='text-4xl font-oswald tracking-wide'>EVOLUTION</h1>
-                <div className="underline w-14 h-0.5 rounded-xl my-2 mx-1 bg-highlight"></div>
+          <div className='relative'>
+            <div className='h-40rem w-full
+                bg-homebg bg-cover bg-no-repeat bg-left ease-in duration-500 '>
+              <div className="absolute left-4 top-20 pt-2">
+                <div className="content text-left flex flex-col items-start">
+                  <h3 className='text-xl font-oswald tracking-wide'>Join the</h3>
+                  <h1 className='text-4xl font-oswald tracking-wide'>EVOLUTION</h1>
+                  <div className="underline w-14 h-0.5 rounded-xl my-2 mx-1 bg-highlight"></div>
+                </div>
               </div>
             </div>
+            <ReserveBtn name={"Reserve Now"} route={false} link={'https://pages.razorpay.com/pl_EAjfop8xakIQaU/view'}>
+            </ReserveBtn>
           </div>
-          <ReserveBtn name={"Reserve Now"} route={false} link={'https://pages.razorpay.com/pl_EAjfop8xakIQaU/view'}>
-          </ReserveBtn>
         </section>
         {/*  */}
         {/*  */}
@@ -286,7 +288,7 @@ export default function Home() {
               <span style={{ color: 'white' }}>Our motorcycles are intuitive and engineered to outperform conventionally powered vehicles;</span>
               <span style={{ color: 'white' }}>they are intelligent, powerful, energy-efficient and loaded with cutting-edge technology to augment every single ride you take.</span>
             </div>
-            <div className='h-50vh bg-aboutbg bg-cover bg-no-repeat bg-center ease-in duration-500'>
+            <div className='h-72 bg-aboutbg bg-cover bg-no-repeat bg-center ease-in duration-500'>
             </div>
           </div>
         </section>
@@ -455,7 +457,7 @@ export default function Home() {
                 </div>
               </div>
               <div className='overflow-hidden'>
-                <div className='w-full h-50vh
+                <div className='w-full h-96
                 bg-performbg bg-cover bg-no-repeat bg-center scale-150 ease-in duration-500'>
                 </div>
               </div>
