@@ -77,30 +77,32 @@ export default function Home() {
       setAbout4('grey')
     }
     // ZERO section - animations
-    if (position <= 300 && position > -700) {
-      zeroWord1.current.style.transform = 'translateY(0%)';
-      zeroWord2.current.style.transform = 'translateY(0%)';
-      zeroWord3.current.style.transform = 'translateY(0%)';
-      zeroCont1.current.style.transform = 'translateY(0%)';
-      zeroCont2.current.style.transform = 'translateY(0%)';
-      zeroCont3.current.style.transform = 'translateY(0%)';
-      zeroImg.current.style.backgroundImage = "url('/images/9.png')"
-    } else if (position <= 420 && position > 300) {
-      zeroWord1.current.style.transform = 'translateY(-100%)';
-      zeroWord2.current.style.transform = 'translateY(-100%)';
-      zeroWord3.current.style.transform = 'translateY(-100%)';
-      zeroCont1.current.style.transform = 'translateY(-100%)';
-      zeroCont2.current.style.transform = 'translateY(-100%)';
-      zeroCont3.current.style.transform = 'translateY(-100%)';
-      zeroImg.current.style.backgroundImage = "url('/images/12.png')"
-    } else if (position <= 800 && position > 420) {
-      zeroWord1.current.style.transform = 'translateY(-200%)';
-      zeroWord2.current.style.transform = 'translateY(-200%)';
-      zeroWord3.current.style.transform = 'translateY(-200%)';
-      zeroCont1.current.style.transform = 'translateY(-200%)';
-      zeroCont2.current.style.transform = 'translateY(-200%)';
-      zeroCont3.current.style.transform = 'translateY(-200%)';
-      zeroImg.current.style.backgroundImage = "url('/images/8.png')"
+    if (window.innerWidth > 639) {
+      if (position <= 300 && position > -700) {
+        zeroWord1.current.style.transform = 'translateY(0%)';
+        zeroWord2.current.style.transform = 'translateY(0%)';
+        zeroWord3.current.style.transform = 'translateY(0%)';
+        zeroCont1.current.style.transform = 'translateY(0%)';
+        zeroCont2.current.style.transform = 'translateY(0%)';
+        zeroCont3.current.style.transform = 'translateY(0%)';
+        zeroImg.current.style.backgroundImage = "url('/images/9.png')"
+      } else if (position <= 420 && position > 300) {
+        zeroWord1.current.style.transform = 'translateY(-100%)';
+        zeroWord2.current.style.transform = 'translateY(-100%)';
+        zeroWord3.current.style.transform = 'translateY(-100%)';
+        zeroCont1.current.style.transform = 'translateY(-100%)';
+        zeroCont2.current.style.transform = 'translateY(-100%)';
+        zeroCont3.current.style.transform = 'translateY(-100%)';
+        zeroImg.current.style.backgroundImage = "url('/images/12.png')"
+      } else if (position <= 800 && position > 420) {
+        zeroWord1.current.style.transform = 'translateY(-200%)';
+        zeroWord2.current.style.transform = 'translateY(-200%)';
+        zeroWord3.current.style.transform = 'translateY(-200%)';
+        zeroCont1.current.style.transform = 'translateY(-200%)';
+        zeroCont2.current.style.transform = 'translateY(-200%)';
+        zeroCont3.current.style.transform = 'translateY(-200%)';
+        zeroImg.current.style.backgroundImage = "url('/images/8.png')"
+      }
     }
   };
 
@@ -243,8 +245,8 @@ export default function Home() {
           </div>
           <BottomLoader></BottomLoader>
         </section>
-        {/* ABOUT PAGE */}
-        <section className='h-100vh bg-black hidden sm:block'>
+        {/* ABOUT PAGE - MOBILE */}
+        <section className='bg-black hidden sm:block'>
           <div className='flex flex-col'>
             <div className="title mb-8 mt-16 pl-4">
               <h2 className=' font-oswald font-light text-4xl tracking-wide'>About</h2>
@@ -320,6 +322,12 @@ export default function Home() {
             </section>
           </div>
         </section>
+        {/* ZERO SECTION - MOBILE*/}
+        <section className='bg-black h-150vh border-2 hidden sm:block' id='zero-id' ref={zeroSection}>
+          {/* <section className='bg-red-400 h-100vh'></section>
+          <section className='bg-red-600 h-100vh'></section>
+          <section className='bg-red-900 h-100vh'></section> */}
+        </section>
         {/* PERFORMANCE DESKTOP*/}
         <section className='bg-black aspect-16/8 snap-center relative sm:hidden' id='performance-id' ref={performSection}>
           <div className="flex h-full">
@@ -349,6 +357,31 @@ export default function Home() {
             </div>
           </div>
           <ReserveBtn name={'Tech Story'} route={true} link={'/techstory'}></ReserveBtn>
+        </section>
+        {/* PERFORMANCE MOBILE */}
+        <section className='bg-black snap-center hidden sm:block' id='performance-id' ref={performSection}>
+          <div className="flex flex-col h-full">
+            <div className='mt-8 flex flex-col justify-start items-end pr-4'>
+              <div className="title mb-8">
+                <h2 className=' font-oswald font-light text-4xl tracking-wide'>Performance</h2>
+                <div className="underline w-10 h-0.5 rounded-xl my-2 ml-32 bg-highlight"></div>
+              </div>
+              <div className="contents tracking-wide text-right text-gray-500">
+                <h2 className='text-white text-lg'>Top Speed of 135 kmph</h2>
+                <h1 className='text-3xl font-light mb-3'>Electric is now fast.</h1>
+                <h2 className='text-white text-lg'>150 km Real World Range</h2>
+                <h1 className='text-3xl font-light mb-3'>Week long charge.</h1>
+                <h2 className='text-white text-lg'>0-60 kmph in &#60; 3 secs</h2>
+                <h1 className='text-3xl font-light mb-3'>First off the traffic line.</h1>
+                <h2 className='text-white text-lg'>0-80% charge in 25 mins</h2>
+                <h1 className='text-3xl font-light mb-3'>Get to your destination quicker.</h1>
+              </div>
+            </div>
+            <div className='w-full h-40vh
+            bg-performbg bg-cover bg-no-repeat bg-left ease-in duration-500'>
+            </div>
+          </div>
+          {/* <ReserveBtn name={'Tech Story'} route={true} link={'/techstory'}></ReserveBtn> */}
         </section>
         {/* FOOTER */}
         <Footer></Footer>

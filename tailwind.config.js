@@ -13,7 +13,11 @@ module.exports = {
       },
       height: {
         '10vh': '10vh',
+        '25vh': '25vh',
+        '40vh': '40vh',
         '50vh': '50vh',
+        '60vh': '60vh',
+        '75vh': '75vh',
         '100vh': '100vh',
         '150vh': '150vh',
       },
@@ -34,6 +38,7 @@ module.exports = {
         'zerobg3': "url('/images/8.png')",
         'homebg': "url('/images/4.png')",
         'aboutbg': "url('/images/5.png')",
+        'performbg': "url('/images/6.png')",
       }
     },
     screens: {
