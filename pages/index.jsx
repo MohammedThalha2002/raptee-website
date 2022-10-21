@@ -237,7 +237,7 @@ export default function Home() {
               <div className="absolute left-4 top-20 pt-2">
                 <div className="content text-left flex flex-col items-start">
                   <h3 className='text-xl font-oswald tracking-wide'>Join the</h3>
-                  <h1 className='text-4xl font-oswald tracking-wide'>EVOLUTION</h1>
+                  <h1 className='text-4xl font-oswald tracking-wide'>EV-olution</h1>
                   <div className="underline w-14 h-0.5 rounded-xl my-2 mx-1 bg-highlight"></div>
                 </div>
               </div>
@@ -279,7 +279,7 @@ export default function Home() {
         <section className='bg-black hidden sm:block'>
           <div className='flex flex-col'>
             <div className="title mb-8 mt-16 pl-4">
-              <h2 className=' font-oswald font-light text-4xl tracking-wide'>About</h2>
+              <h2 className=' font-oswald font-light text-4xl tracking-wide'>Our Story</h2>
               <div className="underline w-10 h-0.5 rounded-xl my-2 bg-highlight"></div>
             </div>
             <div className="text-base w-10/12 pl-4">
