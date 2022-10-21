@@ -106,15 +106,6 @@ export default function Home() {
     }
   };
 
-  const handleResize = () => {
-    const width = window.innerWidth
-    if (width < 600) {
-      setMobile(true)
-    } else {
-      setMobile(false)
-    }
-  }
-
   useEffect(() => {
     const width = window.innerWidth
     if (width < 600) {
@@ -160,11 +151,9 @@ export default function Home() {
     sectionObserver.observe(zeroSection.current)
     sectionObserver.observe(performSection.current)
     window.addEventListener('scroll', handleScroll, { passive: true });
-    window.addEventListener('resize', handleResize, { passive: true });
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleResize);
     }
   }, [])
 
@@ -203,7 +192,7 @@ export default function Home() {
         </section>
         {/* Evoloution SECTION  - MOBILE */}
         <section className='bg-black hidden sm:block'>
-          <div className='h-screen w-full sticky top-0
+          <div className='h-screen w-full
                 bg-homebg bg-cover bg-no-repeat bg-left ease-in duration-500'>
             <div className="absolute left-4 top-20 pt-2">
               <div className="content text-left flex flex-col items-start">
@@ -359,29 +348,31 @@ export default function Home() {
           <ReserveBtn name={'Tech Story'} route={true} link={'/techstory'}></ReserveBtn>
         </section>
         {/* PERFORMANCE MOBILE */}
-        <section className='bg-black snap-center hidden sm:block' id='performance-id' ref={performSection}>
-          <div className="flex flex-col h-full">
-            <div className='mt-8 flex flex-col justify-start items-end pr-4'>
-              <div className="title mb-8">
-                <h2 className=' font-oswald font-light text-4xl tracking-wide'>Performance</h2>
-                <div className="underline w-10 h-0.5 rounded-xl my-2 ml-32 bg-highlight"></div>
+        <section className='bg-black hidden sm:block' id='performance-id' ref={performSection}>
+          <div className='relative'>
+            <div className="flex flex-col h-full">
+              <div className='mt-8 flex flex-col justify-start items-end pr-4'>
+                <div className="title mb-8">
+                  <h2 className=' font-oswald font-light text-4xl tracking-wide'>Performance</h2>
+                  <div className="underline w-10 h-0.5 rounded-xl my-2 ml-32 bg-highlight"></div>
+                </div>
+                <div className="contents tracking-wide text-right text-gray-500">
+                  <h2 className='text-white text-lg'>Top Speed of 135 kmph</h2>
+                  <h1 className='text-3xl font-light mb-3'>Electric is now fast.</h1>
+                  <h2 className='text-white text-lg'>150 km Real World Range</h2>
+                  <h1 className='text-3xl font-light mb-3'>Week long charge.</h1>
+                  <h2 className='text-white text-lg'>0-60 kmph in &#60; 3 secs</h2>
+                  <h1 className='text-3xl font-light mb-3'>First off the traffic line.</h1>
+                  <h2 className='text-white text-lg'>0-80% charge in 25 mins</h2>
+                  <h1 className='text-3xl font-light mb-3'>Get to your destination quicker.</h1>
+                </div>
               </div>
-              <div className="contents tracking-wide text-right text-gray-500">
-                <h2 className='text-white text-lg'>Top Speed of 135 kmph</h2>
-                <h1 className='text-3xl font-light mb-3'>Electric is now fast.</h1>
-                <h2 className='text-white text-lg'>150 km Real World Range</h2>
-                <h1 className='text-3xl font-light mb-3'>Week long charge.</h1>
-                <h2 className='text-white text-lg'>0-60 kmph in &#60; 3 secs</h2>
-                <h1 className='text-3xl font-light mb-3'>First off the traffic line.</h1>
-                <h2 className='text-white text-lg'>0-80% charge in 25 mins</h2>
-                <h1 className='text-3xl font-light mb-3'>Get to your destination quicker.</h1>
-              </div>
-            </div>
-            <div className='w-full h-40vh
+              <div className='w-full h-40vh
             bg-performbg bg-cover bg-no-repeat bg-left ease-in duration-500'>
+              </div>
             </div>
+            <ReserveBtn name={'Tech Story'} route={true} link={'/techstory'}></ReserveBtn>
           </div>
-          {/* <ReserveBtn name={'Tech Story'} route={true} link={'/techstory'}></ReserveBtn> */}
         </section>
         {/* FOOTER */}
         <Footer></Footer>

@@ -54,21 +54,16 @@ function Techstory() {
         techSectionObserver.observe(motorSection.current)
         techSectionObserver.observe(ccsSection.current)
         techSectionObserver.observe(safetySection.current)
-        window.addEventListener('resize', handleResize, { passive: true });
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
 
     }, [])
 
     return (
         <div className='bg-black'>
-            <NavBar></NavBar>
+            <NavBar mobile={false}></NavBar>
             <SideActiveIndicatorTechStory index={sectionIndex}></SideActiveIndicatorTechStory>
             {/*  */}
             {/* OUR PRODUCTS SECTION - DESKTOP*/}
-            <section className='bg-black aspect-16/8 snap-center relative' id='products-id' ref={productsSection}>
+            <section className='bg-black aspect-16/8 snap-center relative sm:hidden' id='products-id' ref={productsSection}>
                 <div className=' h-12 '></div>
                 <div>
                     <Image
@@ -81,7 +76,7 @@ function Techstory() {
                         <div className="content text-left">
                             <h3 className='text-4xl font-light font-oswald 
                                     tracking-widest mb-4'>Technology engineered beyond boundaries.</h3>
-                            <h4 className='text-2xl font-thin font-mont tracking-widest'>
+                            <h4 className='text-2xl font-thin tracking-widest'>
                                 90% of our technology has been engineered in-house, <br />
                                 keeping in mind the conditions and requirements of our <br />
                                 Indian roads.</h4>
@@ -90,8 +85,26 @@ function Techstory() {
                     <BottomLoader></BottomLoader>
                 </div>
             </section>
+            {/* OUR PRODUCTS SECTION - MOBILE*/}
+            <section className='bg-black hidden sm:block' id='products-id' ref={productsSection}>
+                <div className=' h-12 '></div>
+                <div>
+                    <div className='h-screen w-full top-0
+                    bg-techstorybg bg-cover bg-no-repeat bg-techstorybp ease-in duration-500'>
+                        <div className="text-left pl-4 pr-8">
+                            <h3 className='text-3xl font-light font-oswald 
+                                    tracking-wide my-4'>Technology engineered beyond boundaries.</h3>
+                            <h4 className='text-xl font-thin tracking-wide'>
+                                90% of our technology has been engineered in-house, <br />
+                                keeping in mind the conditions and requirements of our <br />
+                                Indian roads.</h4>
+                        </div>
+                    </div>
+                    {/* <BottomLoader></BottomLoader> */}
+                </div>
+            </section>
             {/* VCU SECTION */}
-            <section className='bg-black aspect-16/8 snap-center relative' id='vcu-id' ref={vcuSection}>
+            <section className='bg-black aspect-16/8 snap-center relative sm:hidden' id='vcu-id' ref={vcuSection}>
                 <div className="flex h-full">
                     {/* SIDE CONTENTS */}
                     <div className='w-2/6 flex flex-col justify-center pl-20 pr-4'>
@@ -121,8 +134,35 @@ function Techstory() {
                 </div>
                 <BottomLoader></BottomLoader>
             </section>
+            {/* VCU SECTION - MOBILE*/}
+            <section className='bg-black hidden sm:block'>
+                <div className='flex relative flex-col'>
+                    <div className='my-8'>
+                        <div className="text-left pl-4 pr-8">
+                            <h3 className='text-3xl font-light font-oswald 
+                                    tracking-wide my-4'>VCU: The Brain.</h3>
+                            <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
+                            <div className="contents text-lg tracking-wide text-gray-500">
+                                <h3>
+                                    The VCU controls every other subsystem of the vehicle,
+                                    and continuously monitors data received from it,
+                                </h3>
+                                <h3>
+                                    which is then optimized using ML algorithms to enable
+                                    features like throttle mapping, fast charging and over-the-air updates.
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='overflow-hidden'>
+                        <div className='h-60 w-full top-0
+                        bg-vcubg bg-cover bg-no-repeat bg-center scale-125 ease-in duration-500'></div>
+                    </div>
+                    {/* <BottomLoader></BottomLoader> */}
+                </div>
+            </section>
             {/* BMS SECTION */}
-            <section className='bg-black aspect-16/8 snap-center relative' id='bms-id' ref={bmsSection}>
+            <section className='bg-black aspect-16/8 snap-center relative sm:hidden' id='bms-id' ref={bmsSection}>
                 <div className="flex h-full">
                     {/* SIDE CONTENTS */}
                     <div className='w-2/6 flex flex-col justify-center pl-20 pr-4'>
@@ -147,7 +187,7 @@ function Techstory() {
                             </h3>
                         </div>
                     </div>
-                    <div className='w-2/3 h-full flex items-end relative'>
+                    <div className='w-2/3 h-full flex items-end relative sm:hidden'>
                         <Image
                             src="/images/1.png"
                             width={1205}
@@ -158,8 +198,41 @@ function Techstory() {
                 </div>
                 <BottomLoader></BottomLoader>
             </section>
-            {/* MOTOR SECTION */}
-            <section className='bg-black aspect-16/8 snap-center relative' id='motor-id' ref={motorSection}>
+            {/* BMS SECTION - MOBILE*/}
+            <section className='bg-black hidden sm:block'>
+                <div className='flex relative flex-col'>
+                    <div className='my-8'>
+                        <div className="text-left pl-4 pr-8">
+                            <h3 className='text-3xl font-light font-oswald 
+                                    tracking-wide my-4'>BMS: Zeus to the Batteries.</h3>
+                            <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
+                            <div className="contents text-lg tracking-wide text-gray-500">
+                                <h3>
+                                    State-of-the-art ML algorithms analyze variance in cell behaviour and choose the best
+                                    charging approach to reduce loss and boost efficiency, thus extending your motorcycle&#39;s
+                                    range.
+                                </h3>
+                                <h3>
+                                    Effective Charge Cycle Management ensures top-notch safety - both yours, and your
+                                    battery&#39;s. It protects cells against aggressive usage, and fast charging & discharging
+                                    cycles, which results in a stable system providing many years of reliable service.
+                                </h3>
+                                <h3>
+                                    Active balancing directs excess current from a cell approaching its charging limit to the
+                                    next cell with a lower charge, ensuring that all cells are charged to their maximum limit.
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='overflow-hidden'>
+                        <div className='h-64 w-full top-0
+                        bg-bmsbg bg-cover bg-no-repeat bg-center ease-in duration-500'></div>
+                    </div>
+                    {/* <BottomLoader></BottomLoader> */}
+                </div>
+            </section>
+            {/* MOTOR SECTION - DESKTOP*/}
+            <section className='bg-black aspect-16/8 snap-center relative sm:hidden' id='motor-id' ref={motorSection}>
                 <div className="flex h-full">
                     {/* SIDE CONTENTS */}
                     <div className='w-2/6 flex flex-col justify-center pl-20 pr-4'>
@@ -179,7 +252,7 @@ function Techstory() {
                             </h3>
                         </div>
                     </div>
-                    <div className='w-2/3 h-full flex items-end relative'>
+                    <div className='w-2/3 h-full flex items-end relative sm:hidden'>
                         <Image
                             src="/images/3.png"
                             width={1920}
@@ -190,8 +263,36 @@ function Techstory() {
                 </div>
                 <BottomLoader></BottomLoader>
             </section>
-            {/* CCS SECTION */}
-            <section className='bg-black aspect-16/8 snap-center relative' id='ccs-id' ref={ccsSection}>
+            {/* MOTOR SECTION - MOBILE*/}
+            <section className='bg-black hidden sm:block'>
+                <div className='flex relative flex-col'>
+                    <div className='my-8'>
+                        <div className="text-left pl-4 pr-8">
+                            <h3 className='text-3xl font-light font-oswald 
+                                    tracking-wide my-4'>Motor and motor controller:</h3>
+                            <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
+                            <div className="contents text-lg tracking-wide text-gray-500">
+                                <h3>
+                                    Raptee&#39;s Electric Drivetrain (RED) is a high-powered software driven vehicle developed in
+                                    house to adapt to various driving conditions for the Indian roads. It is backed by the
+                                    control logics of the VCU that can be adjusted to the rider&#39;s needs, be it ECO mode with
+                                    enhanced range or the POWER mode with quick acceleration.
+                                    With a motor controller developed to suit our high voltage drivetrain, RED can extract the
+                                    most out of the permanent magnet synchronous motor we use, in the most efficient
+                                    manner
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='overflow-hidden'>
+                        <div className='h-64 w-full top-0
+                        bg-motorbg bg-cover bg-no-repeat bg-center ease-in duration-500'></div>
+                    </div>
+                    {/* <BottomLoader></BottomLoader> */}
+                </div>
+            </section>
+            {/* CCS SECTION -DESKTOP */}
+            <section className='bg-black aspect-16/8 snap-center relative sm:hidden' id='ccs-id' ref={ccsSection}>
                 <div className="flex h-full">
                     {/* SIDE CONTENTS */}
                     <div className='w-2/6 flex flex-col justify-center pl-20 pr-4 z-20'>
@@ -217,8 +318,31 @@ function Techstory() {
                 </div>
                 <BottomLoader></BottomLoader>
             </section>
+            {/* CCS SECTION - MOBILE*/}
+            <section className='bg-black hidden sm:block'>
+                <div className='flex relative flex-col'>
+                    <div className='mb-8'>
+                        <div className="text-left pl-4 pr-8">
+                            <h3 className='text-3xl font-light font-oswald 
+                                    tracking-wide my-4'>Charge anywhere.</h3>
+                            <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
+                            <div className="contents text-lg tracking-wide text-gray-500">
+                                <h3>
+                                    Our motorcycles are the first two-wheelers to support the CCS 2 charging standard, which
+                                    lets you use any existing public charging station to power your vehicle.
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='overflow-hidden shadow-edgeBlur'>
+                        <div className='h-64 w-full top-0
+                        bg-ccsbg bg-cover bg-no-repeat bg-right scale-125 ease-in duration-500'></div>
+                    </div>
+                    {/* <BottomLoader></BottomLoader> */}
+                </div>
+            </section>
             {/* Saftey SECTION */}
-            <section className='bg-black aspect-video snap-center relative' id='safety-id' ref={safetySection}>
+            <section className='bg-black aspect-video snap-center relative sm:hidden' id='safety-id' ref={safetySection}>
                 <div className="flex h-full">
                     {/* SIDE CONTENTS */}
                     <div className='w-2/6 flex flex-col justify-center pl-20 pr-4 z-10'>
@@ -245,6 +369,30 @@ function Techstory() {
                     </div>
                 </div>
                 <BottomLoader></BottomLoader>
+            </section>
+            {/* Safety SECTION - MOBILE*/}
+            <section className='bg-black hidden sm:block'>
+                <div className='flex relative flex-col'>
+                    <div className='mb-8'>
+                        <div className="text-left pl-4 pr-8">
+                            <h3 className='text-3xl font-light font-oswald 
+                                    tracking-wide my-4'>Safety, like never before.</h3>
+                            <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
+                            <div className="contents text-lg tracking-wide text-gray-500">
+                                <h3>
+                                    Get safer rides with traction control that reduces vehicle slip and blind spot warning that
+                                    helps avoid unexpected collisions. Over-the-air software upgrades increase the efficiency
+                                    of individual components and track factors that cause a reduction in efficiency.
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='overflow-hidden shadow-edgeBlur'>
+                        <div className='h-64 w-full top-0
+                        bg-safetybg bg-cover bg-no-repeat bg-right scale-125 ease-in duration-500'></div>
+                    </div>
+                    {/* <BottomLoader></BottomLoader> */}
+                </div>
             </section>
             {/* FOOTER */}
             <Footer></Footer>

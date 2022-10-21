@@ -39,6 +39,15 @@ module.exports = {
         'homebg': "url('/images/4.png')",
         'aboutbg': "url('/images/5.png')",
         'performbg': "url('/images/6.png')",
+        'techstorybg': "url('/images/7.png')",
+        'vcubg': "url('/images/2.png')",
+        'bmsbg': "url('/images/1.png')",
+        'motorbg': "url('/images/3.png')",
+        'ccsbg': "url('/images/11.png')",
+        'safetybg': "url('/images/10.png')",
+      },
+      boxShadow: {
+        'edgeBlur': '0 0 5px 10px #000;',
       }
     },
     screens: {
@@ -47,6 +56,20 @@ module.exports = {
 
       'sm': { 'max': '639px' },
       // => @media (max-width: 639px) { ... }
+    },
+    backgroundPosition: {
+      bottom: 'bottom',
+      'bottom-4': 'center bottom 1rem',
+      center: 'center',
+      left: 'left',
+      'left-bottom': 'left bottom',
+      'left-top': 'left top',
+      'techstorybp': '25%',
+      right: 'right',
+      'right-bottom': 'right bottom',
+      'right-top': 'right top',
+      top: 'top',
+      'top-4': 'center top 1rem',
     }
   },
   plugins: [],
