@@ -45,6 +45,12 @@ export default function Home() {
   const MzeroCont3 = useRef()
   const MzeroImg = useRef()
 
+  //animations
+  const titlesAnim = useRef([])
+  const parasAnim = useRef([])
+  const performanceAnim = useRef([])
+  const titleMovementGsapList = [-100, -100, -100, -100]
+
 
   const handleScroll = () => {
 
@@ -151,15 +157,47 @@ export default function Home() {
     } else {
       setMobile(false)
     }
-    gsap.fromTo(performImg.current,
-      { opacity: 0 },
-      {
-        opacity: 1, duration: 2, ease: "ease-in",
-        scrollTrigger: {
-          trigger: performImg.current,
-        }
-      },
-    )
+
+    // titles animation
+    titlesAnim.current.forEach((val, index) => {
+      gsap.fromTo(titlesAnim.current[index],
+        { opacity: 0, x: -100 },
+        {
+          opacity: 1, x: 0, duration: 2, ease: "ease-in",
+          scrollTrigger: {
+            trigger: titlesAnim.current[index],
+            toggleActions: 'restart none none none'
+          }
+        },
+      )
+    })
+    //paras animations
+    parasAnim.current.forEach((val, index) => {
+      gsap.fromTo(parasAnim.current[index],
+        { opacity: 0, y: 100 },
+        {
+          opacity: 1, y: 0, duration: 2, ease: "ease-in",
+          scrollTrigger: {
+            trigger: parasAnim.current[index],
+            toggleActions: 'restart none none none'
+          }
+        },
+      )
+    })
+    //performance animations
+    performanceAnim.current.forEach((val, index) => {
+      gsap.fromTo(performanceAnim.current[index],
+        { opacity: 0, x: 100 },
+        {
+          opacity: 1, x: 0, duration: 2, ease: "ease-in",
+          scrollTrigger: {
+            trigger: performanceAnim.current[index],
+            toggleActions: 'restart none none none'
+          }
+        },
+      )
+    })
+
     const sectionObserver = new IntersectionObserver(observerCallback, observerOptions)
 
     function observerCallback(entries, observer) {
@@ -218,7 +256,7 @@ export default function Home() {
               priority={true}
             />
             <div className="absolute right-0 top-20 pr-14 pt-2">
-              <div className="content text-right flex flex-col items-end">
+              <div className="content text-right flex flex-col items-end" ref={(el) => (titlesAnim.current[0] = el)}>
                 <h3 className='text-2xl font-oswald tracking-wide'>Join the</h3>
                 <h1 className='text-7xl font-oswald tracking-wide'>EV-olution</h1>
                 <div className="underline w-14 h-0.5 rounded-xl my-2 mx-1 bg-highlight"></div>
@@ -253,15 +291,17 @@ export default function Home() {
           <div className="flex h-full">
             {/* SIDE CONTENTS */}
             <div className='w-2/5 flex flex-col mt-16 pl-20 pr-20'>
-              <div className="title mb-14">
+              <div className="title mb-14" ref={(el) => (titlesAnim.current[1] = el)}>
                 <h2 className=' font-oswald font-light text-4xl tracking-wide'>Our Story</h2>
                 <div className="underline w-10 h-0.5 rounded-xl my-2 bg-highlight"></div>
               </div>
-              <div className="contents text-xl tracking-wide text-gray-500">
-                <span style={{ color: about1 }}>We at Raptee are driven by an innovative spirit to redefine electric mobility.</span>
-                <span style={{ color: about2 }}>Our motorcycles are intuitive and engineered to outperform conventionally powered vehicles</span>
-                <span style={{ color: about3 }}>- proving that switching to electric is not a sacrifice.</span>
-                <span style={{ color: about4 }}>They are intelligent, powerful, energy-efficient and loaded with cutting-edge technology to augment every single ride you take.</span>
+              <div ref={(el) => (parasAnim.current[0] = el)}>
+                <div className="contents text-2xl tracking-wide text-gray-500">
+                  <span style={{ color: about1 }}>We at Raptee are driven by an innovative spirit to redefine electric mobility.</span>
+                  <span style={{ color: about2 }}>Our motorcycles are intuitive and engineered to outperform conventionally powered vehicles</span>
+                  <span style={{ color: about3 }}>- proving that switching to electric is not a sacrifice.</span>
+                  <span style={{ color: about4 }}>They are intelligent, powerful, energy-efficient and loaded with cutting-edge technology to augment every single ride you take.</span>
+                </div>
               </div>
             </div>
             <div className='w-3/5'>
@@ -298,7 +338,7 @@ export default function Home() {
           <div className="h-full flex">
             {/* titles and contents */}
             <section className='h-screen w-2/6 bg-black sticky top-0'>
-              <div className="title mt-32 h-28 pl-20">
+              <div className="title mt-32 h-28 pl-20" ref={(el) => (titlesAnim.current[2] = el)}>
                 <h2 className=' font-oswald font-light text-4xl tracking-wide'>Zero</h2>
                 <div className="h-12 overflow-hidden">
                   <span className='block h-full font-oswald ease-in duration-500 font-light text-4xl tracking-wide'
@@ -311,7 +351,7 @@ export default function Home() {
                 <div className="underline w-10 h-0.5 rounded-xl my-2 bg-highlight"></div>
               </div>
               {/* CONTENTS */}
-              <div className="h-60 w-96 mt-20 pl-20 overflow-hidden">
+              <div className="h-60 w-96 mt-20 pl-20 overflow-hidden" ref={(el) => (parasAnim.current[1] = el)}>
                 <span className="block h-full ease-in duration-500 text-lg tracking-wide text-gray-500 "
                   ref={zeroCont1}>
                   <h3>
@@ -418,26 +458,26 @@ export default function Home() {
               />
             </div>
             <div className='w-2/6 flex flex-col justify-center items-end pl-12 pr-20'>
-              <div className="title mb-14">
+              <div className="title mb-14" ref={(el) => (titlesAnim.current[3] = el)}>
                 <h2 className=' font-oswald font-light text-4xl tracking-wide'>Performance</h2>
                 <div className="underline w-10 h-0.5 rounded-xl my-2 ml-32 bg-highlight"></div>
               </div>
               <div className="contents tracking-wide text-right text-gray-500">
-                <h2 className='text-white text-lg'>Top Speed of 135 kmph</h2>
-                <h1 className='text-4xl font-light mb-8'>Electric is now fast.</h1>
-                <h2 className='text-white text-lg'>150 km Real World Range</h2>
-                <h1 className='text-4xl font-light mb-8'>Week long charge.</h1>
-                <h2 className='text-white text-lg'>0-60 kmph in &#60; 3 secs</h2>
-                <h1 className='text-4xl font-light mb-8'>First off the traffic line.</h1>
-                <h2 className='text-white text-lg'>0-80% charge in 25 mins</h2>
-                <h1 className='text-4xl font-light mb-8'>Get to your destination quicker.</h1>
+                <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[4] = el)}>Top Speed of 135 kmph</h2>
+                <h1 className='text-4xl font-light mb-8' ref={(el) => (performanceAnim.current[0] = el)}>Electric is now fast.</h1>
+                <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[5] = el)}>150 km Real World Range</h2>
+                <h1 className='text-4xl font-light mb-8' ref={(el) => (performanceAnim.current[1] = el)}>Week long charge.</h1>
+                <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[6] = el)}>0-60 kmph in &#60; 3 secs</h2>
+                <h1 className='text-4xl font-light mb-8' ref={(el) => (performanceAnim.current[2] = el)}>First off the traffic line.</h1>
+                <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[7] = el)}>0-80% charge in 25 mins</h2>
+                <h1 className='text-4xl font-light mb-8' ref={(el) => (performanceAnim.current[3] = el)}>Get to your destination quicker.</h1>
               </div>
             </div>
           </div>
           <ReserveBtn name={'Tech Story'} route={true} link={'/techstory'}></ReserveBtn>
         </section>
         {/* PERFORMANCE MOBILE */}
-        <section className='bg-black hidden sm:block' id='performance-id' ref={performSection}>
+        <section className='bg-black hidden sm:block'>
           <div className='relative'>
             <div className="flex flex-col h-full">
               <div className='mt-8 flex flex-col justify-start items-end pr-4'>
