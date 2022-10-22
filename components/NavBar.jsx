@@ -1,7 +1,8 @@
 import { IconContext } from 'react-icons/lib'
 import { IoLogoWindows, IoMdMenu } from 'react-icons/io'
 import NavLinks from './NavLinks'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
+import { gsap } from "gsap/dist/gsap.js";
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -12,7 +13,12 @@ function NavBar(props) {
     const btnRef = useRef()
     function openNavLinks() {
         console.log("Clicked")
-        btnRef.current.style.display = 'block'
+        gsap.fromTo(btnRef.current,
+            { opacity: 0, x: 0 },
+            {
+                opacity: 1, x: -384, duration: 0.5, ease: "ease-in",
+            },
+        )
     }
 
     function LogoComponent() {

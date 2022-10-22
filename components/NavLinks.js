@@ -2,15 +2,21 @@ import React from 'react'
 import { IconContext } from 'react-icons/lib'
 import { IoMdClose } from 'react-icons/io'
 import Link from 'next/link'
+import { gsap } from "gsap/dist/gsap.js";
 
 function NavLinks(props) {
     function cloaseNavLinks() {
         console.log("Closed the NAVLINK")
-        props.reference.current.style.display = 'none'
+        gsap.fromTo(props.reference.current,
+            { opacity: 1, x: -384 },
+            {
+                opacity: 0, x: 0, duration: 0.5, ease: "ease-in",
+            },
+        )
     }
     return (
         <nav className='pt-4 px-8 backdrop-blur-lg
-        bg-gray-400/50 z-50 h-100vh w-2/6 shadow-md top-0 right-0 fixed hidden
+        bg-gray-400/50 z-50 h-100vh w-96 shadow-md top-0 -right-96 fixed 
         sm:w-2/3' ref={props.reference}>
             <div className="flex flex-col items-end">
                 <div className='flex items-center'>

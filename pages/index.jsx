@@ -351,8 +351,8 @@ export default function Home() {
                 <div className="underline w-10 h-0.5 rounded-xl my-2 bg-highlight"></div>
               </div>
               {/* CONTENTS */}
-              <div className="h-60 w-96 mt-20 pl-20 overflow-hidden" ref={(el) => (parasAnim.current[1] = el)}>
-                <span className="block h-full ease-in duration-500 text-lg tracking-wide text-gray-500 "
+              <div className="h-72 w-96 mt-20 pl-20 overflow-hidden text-xl" ref={(el) => (parasAnim.current[1] = el)}>
+                <span className="block h-full ease-in duration-500 tracking-wide text-gray-500 "
                   ref={zeroCont1}>
                   <h3>
                     Breakdowns, failures, and repairs are all things of the past.
@@ -362,7 +362,7 @@ export default function Home() {
                     and hassle-free riding experience.
                   </h3>
                 </span>
-                <span className="block h-full ease-in duration-500 text-lg tracking-wide text-gray-500"
+                <span className="block h-full ease-in duration-500 tracking-wide text-gray-500"
                   ref={zeroCont2}>
                   <h3>
                     We believe in doing what is best for the environment.
@@ -371,7 +371,7 @@ export default function Home() {
                     Electric is the future, and  we&#39;re building for it right now.
                   </h3>
                 </span>
-                <span className="block h-full ease-in duration-500 text-lg tracking-wide text-gray-500"
+                <span className="block h-full ease-in duration-500 tracking-wide text-gray-500"
                   ref={zeroCont3}>
                   <br />
                   <h3>
