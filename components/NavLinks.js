@@ -29,22 +29,22 @@ function NavLinks(props) {
                     </IconContext.Provider>
                 </div>
                 <Link href={'/home'}>
-                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl'>Home</h1>
+                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl'>Home</h1>
                 </Link>
                 <Link href={'/techstory'}>
-                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl'>Tech Story</h1>
+                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl'>Tech Story</h1>
                 </Link>
                 <Link href={'/home'}>
-                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl'>OEM Solutions</h1>
+                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl'>OEM Solutions</h1>
                 </Link>
                 <Link href={'/culture'}>
-                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl'>Culture</h1>
+                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl'>Culture</h1>
                 </Link>
                 <Link href={'/home'}>
-                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl'>Contact</h1>
+                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl'>Contact</h1>
                 </Link>
                 <Link href={'/home'}>
-                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl'>Career</h1>
+                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl'>Career</h1>
                 </Link>
             </div>
         </nav>
