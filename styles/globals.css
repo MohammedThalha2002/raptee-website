@@ -47,6 +47,21 @@ a {
   border-radius: 4rem;
 }
 
+#img-slider::-webkit-scrollbar {
+  padding-top: 2rem;
+  height: 5px;
+  width: 5px;
+}
+
+#img-slider::-webkit-scrollbar-track {
+  background: black;
+}
+
+#img-slider::-webkit-scrollbar-thumb {
+  background: #E0B317;
+  border-radius: 4rem;
+}
+
 .loader-line {
   width: 3px;
   height: 70px;

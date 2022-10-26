@@ -29,22 +29,22 @@ function NavLinks(props) {
                     </IconContext.Provider>
                 </div>
                 <Link href={'/home'}>
-                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer hover:font-medium'>Home</h1>
+                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl'>Home</h1>
                 </Link>
                 <Link href={'/techstory'}>
-                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer hover:font-medium'>Tech Story</h1>
+                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl'>Tech Story</h1>
                 </Link>
                 <Link href={'/home'}>
-                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer hover:font-medium'>OEM Solutions</h1>
+                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl'>OEM Solutions</h1>
                 </Link>
                 <Link href={'/culture'}>
-                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer hover:font-medium'>Culture</h1>
+                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl'>Culture</h1>
                 </Link>
                 <Link href={'/home'}>
-                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer hover:font-medium'>Contact</h1>
+                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl'>Contact</h1>
                 </Link>
                 <Link href={'/home'}>
-                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer hover:font-medium'>Career</h1>
+                    <h1 className='text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl'>Career</h1>
                 </Link>
             </div>
         </nav>

@@ -187,7 +187,7 @@ export default function Home() {
     //performance animations
     performanceAnim.current.forEach((val, index) => {
       gsap.fromTo(performanceAnim.current[index],
-        { opacity: 0, x: 100 },
+        { opacity: 0, x: 50 },
         {
           opacity: 1, x: 0, duration: 2, ease: "ease-in",
           scrollTrigger: {
@@ -351,13 +351,11 @@ export default function Home() {
                 <div className="underline w-10 h-0.5 rounded-xl my-2 bg-highlight"></div>
               </div>
               {/* CONTENTS */}
-              <div className="h-72 w-96 mt-20 pl-20 overflow-hidden text-xl" ref={(el) => (parasAnim.current[1] = el)}>
+              <div className="h-72 w-96 mt-10 pl-20 overflow-hidden text-2xl" ref={(el) => (parasAnim.current[1] = el)}>
                 <span className="block h-full ease-in duration-500 tracking-wide text-gray-500 "
                   ref={zeroCont1}>
                   <h3>
                     Breakdowns, failures, and repairs are all things of the past.
-                  </h3>
-                  <h3>
                     We promise not only a futuristic motorcycle, but also a futuristic
                     and hassle-free riding experience.
                   </h3>
@@ -366,8 +364,6 @@ export default function Home() {
                   ref={zeroCont2}>
                   <h3>
                     We believe in doing what is best for the environment.
-                  </h3>
-                  <h3>
                     Electric is the future, and  we&#39;re building for it right now.
                   </h3>
                 </span>
@@ -377,8 +373,6 @@ export default function Home() {
                   <h3>
                     No more needless part replacements. No more taking your vehicle to the
                     service centre every few months.
-                  </h3>
-                  <h3>
                     Sit back and relax while we look after your motorcycle.
                     Rather, while the motorcycle looks after itself.
                   </h3>
@@ -397,7 +391,7 @@ export default function Home() {
           <div className="h-full flex">
             {/* titles and contents */}
             <section className='h-screen bg-black sticky top-0'>
-              <div className='h-60vh'>
+              <div className='h-40vh'>
                 <div className="title mt-10 h-28 pl-4">
                   <h2 className=' font-oswald font-light text-4xl tracking-wide'>Zero</h2>
                   <div className="h-10 overflow-hidden">
@@ -440,8 +434,8 @@ export default function Home() {
                 </div>
               </div>
               {/* Image section */}
-              <section className='h-40vh sticky top-0
-                bg-zerobg1 bg-contain bg-no-repeat bg-center ease-in duration-500' ref={MzeroImg}>
+              <section className='h-60vh sticky top-0
+                bg-zerobg1 bg-cover bg-no-repeat bg-center ease-in duration-500' ref={MzeroImg}>
               </section>
             </section>
           </div>
@@ -463,14 +457,14 @@ export default function Home() {
                 <div className="underline w-10 h-0.5 rounded-xl my-2 ml-32 bg-highlight"></div>
               </div>
               <div className="contents tracking-wide text-right text-gray-500">
-                <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[4] = el)}>Top Speed of 135 kmph</h2>
-                <h1 className='text-4xl font-light mb-8' ref={(el) => (performanceAnim.current[0] = el)}>Electric is now fast.</h1>
-                <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[5] = el)}>150 km Real World Range</h2>
-                <h1 className='text-4xl font-light mb-8' ref={(el) => (performanceAnim.current[1] = el)}>Week long charge.</h1>
-                <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[6] = el)}>0-60 kmph in &#60; 3 secs</h2>
-                <h1 className='text-4xl font-light mb-8' ref={(el) => (performanceAnim.current[2] = el)}>First off the traffic line.</h1>
-                <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[7] = el)}>0-80% charge in 25 mins</h2>
-                <h1 className='text-4xl font-light mb-8' ref={(el) => (performanceAnim.current[3] = el)}>Get to your destination quicker.</h1>
+                <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[4] = el)}>Electric is now fast.</h2>
+                <h1 className='text-4xl font-light mb-8' ref={(el) => (performanceAnim.current[0] = el)}>Top Speed of 135 kmph</h1>
+                <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[5] = el)}>Week long charge.</h2>
+                <h1 className='text-4xl font-light mb-8' ref={(el) => (performanceAnim.current[1] = el)}>150 km Real World Range</h1>
+                <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[6] = el)}>First off the traffic line.</h2>
+                <h1 className='text-4xl font-light mb-8' ref={(el) => (performanceAnim.current[2] = el)}>0-60 kmph in &#60; 3 secs</h1>
+                <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[7] = el)}>Get to your destination quicker.</h2>
+                <h1 className='text-4xl font-light mb-8' ref={(el) => (performanceAnim.current[3] = el)}>0-80% charge in 25 mins</h1>
               </div>
             </div>
           </div>
@@ -486,14 +480,14 @@ export default function Home() {
                   <div className="underline w-10 h-0.5 rounded-xl my-2 ml-32 bg-highlight"></div>
                 </div>
                 <div className="contents tracking-wide text-right text-gray-500">
-                  <h2 className='text-white text-lg'>Top Speed of 135 kmph</h2>
-                  <h1 className='text-3xl font-light mb-3'>Electric is now fast.</h1>
-                  <h2 className='text-white text-lg'>150 km Real World Range</h2>
-                  <h1 className='text-3xl font-light mb-3'>Week long charge.</h1>
-                  <h2 className='text-white text-lg'>0-60 kmph in &#60; 3 secs</h2>
-                  <h1 className='text-3xl font-light mb-3'>First off the traffic line.</h1>
-                  <h2 className='text-white text-lg'>0-80% charge in 25 mins</h2>
-                  <h1 className='text-3xl font-light mb-3'>Get to your destination quicker.</h1>
+                  <h2 className='text-white text-lg'>Electric is now fast.</h2>
+                  <h1 className='text-3xl font-light mb-3'>Top Speed of 135 kmph</h1>
+                  <h2 className='text-white text-lg'>Week long charge.</h2>
+                  <h1 className='text-3xl font-light mb-3'>150 km Real World Range</h1>
+                  <h2 className='text-white text-lg'>First off the traffic line.</h2>
+                  <h1 className='text-3xl font-light mb-3'>0-60 kmph in &#60; 3 secs</h1>
+                  <h2 className='text-white text-lg'>Get to your destination quicker.</h2>
+                  <h1 className='text-3xl font-light mb-3'>0-80% charge in 25 mins</h1>
                 </div>
               </div>
               <div className='overflow-hidden'>
