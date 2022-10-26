@@ -53,7 +53,7 @@ function culture() {
                                     path. What we power is mobility. It strengthens us. It trickles through us.
                                     It forces us to continually think of new ways to move more effectively.
                                     For each and every location you desire. For anything you wish to acquire.
-                                    In the future. at the present's breath-taking speed. Till then we'll stop
+                                    In the future. at the present&#39;s breath-taking speed. Till then we&#39;ll stop
                                     at nothing less.
                                 </h3>
                             </div>
@@ -69,7 +69,7 @@ function culture() {
                     <div className='pl-1/5'>
                         <div id='img-slider' className='flex gap-1 w-full overflow-x-scroll overflow-y-hidden'>
                             {caurosel.map((items) => (
-                                <div>
+                                <div key={items.id}>
                                     <Image
                                         src={items.img}
                                         layout='fixed'
