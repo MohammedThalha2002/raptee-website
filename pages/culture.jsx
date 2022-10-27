@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import NavBar from '../components/NavBar'
 import Image from 'next/image'
 import { caurosel } from '../components/carousel'
