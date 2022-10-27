@@ -267,7 +267,7 @@ function Techstory() {
                         <div className='w-2/6 flex flex-col justify-center pl-20 pr-4'>
                             <div className="title mb-14">
                                 <h2 className=' font-oswald font-light text-4xl tracking-wide' ref={(el) => (titlesAnim.current[3] = el)}>
-                                    Motor and motor controller:
+                                    Motor and Motor Controller:
                                 </h2>
                                 <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
                             </div>
@@ -300,7 +300,7 @@ function Techstory() {
                         <div className='my-8'>
                             <div className="text-left pl-4 pr-8">
                                 <h3 className='text-3xl font-light font-oswald 
-                                    tracking-wide my-4'>Motor and motor controller:</h3>
+                                    tracking-wide my-4'>Motor and Motor Controller:</h3>
                                 <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
                                 <div className="contents text-lg tracking-wide text-gray-500">
                                     <h3>
@@ -328,8 +328,8 @@ function Techstory() {
                         {/* SIDE CONTENTS */}
                         <div className='w-2/6 flex flex-col justify-center pl-20 pr-4 z-20'>
                             <div className="title mb-14">
-                                <h2 className=' font-oswald font-light text-4xl tracking-wide' 
-                                ref={(el) => (titlesAnim.current[4] = el)}>
+                                <h2 className=' font-oswald font-light text-4xl tracking-wide'
+                                    ref={(el) => (titlesAnim.current[4] = el)}>
                                     Charge anywhere.
                                 </h2>
                                 <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
@@ -381,8 +381,8 @@ function Techstory() {
                         {/* SIDE CONTENTS */}
                         <div className='w-2/6 flex flex-col justify-center pl-20 pr-4 z-10'>
                             <div className="title mb-14">
-                                <h2 className=' font-oswald font-light text-4xl tracking-wide' 
-                                ref={(el) => (titlesAnim.current[5] = el)}>
+                                <h2 className=' font-oswald font-light text-4xl tracking-wide'
+                                    ref={(el) => (titlesAnim.current[5] = el)}>
                                     Safety, like never before.
                                 </h2>
                                 <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>

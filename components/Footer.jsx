@@ -26,7 +26,7 @@ function Footer() {
                 </div>
                 <div className='mt-6 tracking-wide sm:text-sm'>
                     <h3>Ph. No - +1 765 426 3072</h3>
-                    <h3>Ph. No - +91 89250 61646</h3>
+                    <h3>Ph. No - +91 8925061646</h3>
                     <h3>contact@rapteemotors.com</h3>
                 </div>
                 <div className="flex justify-between mt-4">

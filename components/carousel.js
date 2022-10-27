@@ -30,7 +30,7 @@ export const caurosel = [
     },
     {
         id: 3,
-        img: "https://i.postimg.cc/9Qdcb9Lc/3.jpg"
+        img: "https://i.postimg.cc/tRwz9Cn6/Microsoft-Teams-image-Rp.png"
     },
     {
         id: 4,
@@ -94,7 +94,7 @@ export const caurosel = [
     },
     {
         id: 19,
-        img: "https://i.postimg.cc/RhxBwVwW/19.jpg"
+        img: "https://i.postimg.cc/9Qdcb9Lc/3.jpg"
     },
     {
         id: 20,

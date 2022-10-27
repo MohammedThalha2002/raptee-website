@@ -1,10 +1,33 @@
-import React from 'react'
+import { useEffect, useRef, useState } from 'react'
 import NavBar from '../components/NavBar'
 import Image from 'next/image'
 import { caurosel } from '../components/carousel'
 import Footer from '../components/Footer'
+import { gsap } from "gsap/dist/gsap.js";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger)
 
 function culture() {
+    const titlesAnim = useRef([])
+
+    useEffect(() => {
+        // titles animation
+        titlesAnim.current.forEach((val, index) => {
+            gsap.fromTo(titlesAnim.current[index],
+                { opacity: 0, x: -100 },
+                {
+                    opacity: 1, x: 0, duration: 2, ease: "ease-in",
+                    scrollTrigger: {
+                        trigger: titlesAnim.current[index],
+                        toggleActions: 'restart none none none'
+                    }
+                },
+            )
+        })
+
+    }, [])
+
+
     return (
         <div className='w-full'>
             <NavBar mobile={false}></NavBar>
@@ -12,7 +35,7 @@ function culture() {
                 <section className='bg-black relative'>
                     <div className='aspect-video bg-culturebg bg-cover bg-center'></div>
                     <div className='absolute z-10 top-96 pl-1/10 w-3/4 sm:top-60'>
-                        <div className='text-left flex flex-col items-start'>
+                        <div className='text-left flex flex-col items-start' ref={(el) => (titlesAnim.current[0] = el)}>
                             <h3 className='text-2xl sm:text-lg font-oswald tracking-wide'>The</h3>
                             <h1 className='text-7xl sm:text-4xl font-oswald tracking-wide'>CULTURE</h1>
                             <div className="underline w-14 h-0.5 rounded-xl my-2 mx-1 bg-highlight"></div>
@@ -46,7 +69,8 @@ function culture() {
                         </div>
                         <div className='w-2/3 sm:w-4/5 mt-16 pl-1/5'>
                             <div className='text-left flex flex-col items-start'>
-                                <h1 className='text-5xl sm:text-3xl font-oswald font-light tracking-wide'>Who Are We</h1>
+                                <h1 className='text-5xl sm:text-3xl font-oswald font-light tracking-wide'
+                                    ref={(el) => (titlesAnim.current[1] = el)}>Who Are We</h1>
                                 <div className="underline w-14 h-0.5 rounded-xl my-2 mx-1 bg-highlight"></div>
                                 <h3 className='text-2xl sm:text-sm tracking-wide text-gray-500'>
                                     We are Raptee. Effortless. Individuals that are tenacious in their pursuit of
@@ -64,7 +88,8 @@ function culture() {
                 <section className='h-50rem bg-black'></section>
                 <section className='h-30rem bg-black'>
                     <div className='pl-1/13'>
-                        <h1 className='text-5xl font-oswald font-light tracking-wide'>Our Team</h1>
+                        <h1 className='text-5xl font-oswald font-light tracking-wide'
+                            ref={(el) => (titlesAnim.current[2] = el)}>Our Team</h1>
                         <div className="underline w-14 h-0.5 rounded-xl my-2 mx-1 bg-highlight"></div>
                     </div>
                     <div className='pl-1/5 mt-8'>
@@ -85,18 +110,19 @@ function culture() {
                 <section className='bg-black relative'>
                     <div className='absolute w-1/25 sm:w-1/5 z-10 bottom-7rem sm:bottom-10 left-1/5 ease-in duration-200 hover:scale-110'>
                         <Image
-                            src={'/images/Artboard4.jpg'}
+                            src={'/images/Artboard5.png'}
                             layout='responsive'
                             height={1080}
                             width={1920}
                         />
                     </div>
                     <div className='pl-1/13 ease-in duration-200 hover:scale-110'>
-                        <h1 className='text-5xl font-oswald font-light tracking-wide'>What Are We</h1>
+                        <h1 className='text-5xl font-oswald font-light tracking-wide'
+                            ref={(el) => (titlesAnim.current[3] = el)}>What Are We</h1>
                         <div className="underline w-14 h-0.5 rounded-xl my-2 mx-1 bg-highlight"></div>
                     </div>
                     {/* 1st row */}
-                    <div className='relative mx-12 flex items-end'>
+                    <div className='relative mx-12 sm:mx-4 flex items-end'>
                         <div className='w-1/35 ease-in duration-200 hover:scale-110'>
                             <Image
                                 src={'/images/Artboard1.jpg'}
@@ -119,7 +145,7 @@ function culture() {
                         </div>
                     </div>
                     {/* 2nd row */}
-                    <div className='relative mx-12 flex '>
+                    <div className='relative mx-12 sm:mx-4 flex '>
                         <div className='w-1/20 h-40 sm:h-2 bg-black flex flex-col justify-end p-2'></div>
                         <div className='w-1/15 h-28 sm:h-10 bg-highlight flex flex-col justify-end p-2 sm:pl-1 ease-in duration-200 hover:scale-110'>
                             <h3 className='text-xl sm:text-mml sm:leading-normal font-bold sm:font-normal text-white'>We are</h3>
@@ -141,7 +167,7 @@ function culture() {
                         </div>
                     </div>
                     {/* 3rd row */}
-                    <div className='relative mx-12 flex '>
+                    <div className='relative mx-12 sm:mx-4 flex bg-black'>
                         <div className='w-1/25 h-40 sm:h-2 bg-black flex flex-col justify-end p-2'></div>
                         <div className='w-1/15 aspect-video flex items-end'>
                             <div className='w-full h-28 sm:h-10 bg-highlight flex flex-col justify-end p-2 sm:pl-1 ease-in duration-200 hover:scale-110'>

@@ -297,10 +297,9 @@ export default function Home() {
               </div>
               <div ref={(el) => (parasAnim.current[0] = el)}>
                 <div className="contents text-2xl tracking-wide text-gray-500">
-                  <span style={{ color: about1 }}>We at Raptee are driven by an innovative spirit to redefine electric mobility.</span>
-                  <span style={{ color: about2 }}>Our motorcycles are intuitive and engineered to outperform conventionally powered vehicles</span>
-                  <span style={{ color: about3 }}>- proving that switching to electric is not a sacrifice.</span>
-                  <span style={{ color: about4 }}>They are intelligent, powerful, energy-efficient and loaded with cutting-edge technology to augment every single ride you take.</span>
+                  <h2 style={{ color: about1 }}>We at Raptee are driven by an innovative spirit to redefine electric mobility.</h2>
+                  <h2 style={{ color: about2 }}>Our motorcycles are intuitive and engineered to outperform conventionally powered vehicles - proving that switching to electric is not a sacrifice.</h2>
+                  <h2 style={{ color: about3 }}>They are intelligent, powerful, energy-efficient and loaded with cutting-edge technology to augment every single ride you take.</h2>
                 </div>
               </div>
             </div>
@@ -324,9 +323,9 @@ export default function Home() {
             </div>
             <div className="text-base w-10/12 pl-4">
               <span style={{ color: 'white' }}>We at Raptee are driven by an innovative spirit to redefine electric mobility.</span>
-              <span style={{ color: 'white' }}>We design and build motorcycles that prove that switching to electric is not a sacrifice.</span>
-              <span style={{ color: 'white' }}>Our motorcycles are intuitive and engineered to outperform conventionally powered vehicles;</span>
-              <span style={{ color: 'white' }}>they are intelligent, powerful, energy-efficient and loaded with cutting-edge technology to augment every single ride you take.</span>
+              <span style={{ color: 'white' }}>Our motorcycles are intuitive and engineered to outperform conventionally powered vehicles</span>
+              <span style={{ color: 'white' }}>- proving that switching to electric is not a sacrifice.</span>
+              <span style={{ color: 'white' }}>They are intelligent, powerful, energy-efficient and loaded with cutting-edge technology to augment every single ride you take.</span>
             </div>
             <div className='h-72 bg-aboutbg bg-cover bg-no-repeat bg-center ease-in duration-500'>
             </div>
