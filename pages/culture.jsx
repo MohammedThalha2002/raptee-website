@@ -7,9 +7,8 @@ import { gsap } from "gsap/dist/gsap.js";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
 
-function culture() {
+function Culture() {
     const titlesAnim = useRef([])
-
     useEffect(() => {
         // titles animation
         titlesAnim.current.forEach((val, index) => {
@@ -24,7 +23,6 @@ function culture() {
                 },
             )
         })
-
     }, [])
 
 
@@ -197,4 +195,4 @@ function culture() {
     )
 }
 
-export default culture
+export default Culture
