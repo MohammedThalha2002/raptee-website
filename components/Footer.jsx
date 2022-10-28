@@ -6,7 +6,7 @@ function Footer() {
     return (
         <section className="bg-black w-screen flex justify-around flex-wrap">
             {/* ADDRESS */}
-            <div className='py-10 px-2 w-52'>
+            <div className='py-10 px-2 w-56'>
                 <div className="title">
                     <h2 className=' font-oswald font-light text-2xl tracking-wide sm:text-xl'>HEAD OFFICE</h2>
                     <div className="underline w-10 h-0.5 rounded-xl my-2 mr-32 bg-highlight"></div>
