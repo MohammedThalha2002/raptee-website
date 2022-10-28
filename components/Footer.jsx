@@ -12,8 +12,8 @@ function Footer() {
                     <div className="underline w-10 h-0.5 rounded-xl my-2 mr-32 bg-highlight"></div>
                 </div>
                 <div className='mt-6 tracking-wide sm:text-sm'>
-                    <h3>NO 9, Ganapathy Nagar 1st </h3>
-                    <h3>St, Navarathna Garden,</h3>
+                    <h3>NO 9, Ganapathy Nagar</h3>
+                    <h3>1st St, Navarathna Garden,</h3>
                     <h3>Ekkatuthangal, Chennai,</h3>
                     <h3>Tamil Nadu 600032</h3>
                 </div>
