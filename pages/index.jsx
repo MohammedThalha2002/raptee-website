@@ -139,12 +139,12 @@ export default function Home() {
         MzeroCont3.current.style.transform = 'translateY(-100%)';
         MzeroImg.current.style.backgroundImage = "url('/images/12.png')"
       } else if (position <= 1500 && position > 1300) {
-        MzeroWord1.current.style.transform = 'translateY(-200%)';
-        MzeroWord2.current.style.transform = 'translateY(-200%)';
-        MzeroWord3.current.style.transform = 'translateY(-200%)';
-        MzeroCont1.current.style.transform = 'translateY(-200%)';
-        MzeroCont2.current.style.transform = 'translateY(-200%)';
-        MzeroCont3.current.style.transform = 'translateY(-200%)';
+        MzeroWord1.current.style.transform = 'translateY(-210%)';
+        MzeroWord2.current.style.transform = 'translateY(-210%)';
+        MzeroWord3.current.style.transform = 'translateY(-210%)';
+        MzeroCont1.current.style.transform = 'translateY(-210%)';
+        MzeroCont2.current.style.transform = 'translateY(-210%)';
+        MzeroCont3.current.style.transform = 'translateY(-210%)';
         MzeroImg.current.style.backgroundImage = "url('/images/8.png')"
       }
     }
@@ -350,7 +350,7 @@ export default function Home() {
                 <div className="underline w-10 h-0.5 rounded-xl my-2 bg-highlight"></div>
               </div>
               {/* CONTENTS */}
-              <div className="h-72 w-96 mt-10 pl-20 overflow-hidden text-2xl" ref={(el) => (parasAnim.current[1] = el)}>
+              <div className="h-80 w-96 mt-10 pl-20 overflow-hidden text-2xl" ref={(el) => (parasAnim.current[1] = el)}>
                 <span className="block h-full ease-in duration-500 tracking-wide text-gray-500 "
                   ref={zeroCont1}>
                   <h3>
@@ -405,7 +405,7 @@ export default function Home() {
                 </div>
                 {/* CONTENTS */}
                 <div className="h-60 w-5/6 pl-4 overflow-hidden">
-                  <span className="block h-full ease-in duration-500 text-lg tracking-wide text-gray-500 "
+                  <span className="block h-full ease-in duration-500 text-base tracking-wide text-gray-500 "
                     ref={MzeroCont1}>
                     <h3>
                       Breakdowns, failures, and repairs are all things of the past.
@@ -413,20 +413,19 @@ export default function Home() {
                       and hassle-free riding experience.
                     </h3>
                   </span>
-                  <span className="block h-full ease-in duration-500 text-lg tracking-wide text-gray-500"
+                  <span className="block h-full ease-in duration-500 text-base tracking-wide text-gray-500"
                     ref={MzeroCont2}>
                     <h3>
                       We believe in doing what is best for the environment.
                       Electric is the future, and  we&#39;re building for it right now.
                     </h3>
                   </span>
-                  <span className="block h-full ease-in duration-500 text-lg tracking-wide text-gray-500"
+                  <span className="block h-full ease-in duration-500 text-base tracking-wide text-gray-500"
                     ref={MzeroCont3}>
                     <br />
                     <h3>
                       No more needless part replacements. No more taking your vehicle to the
-                      service centre every few months.
-                      Sit back and relax while we look after your motorcycle.
+                      service centre every few months. Sit back and relax while we look after your motorcycle.
                       Rather, while the motorcycle looks after itself.
                     </h3>
                   </span>
