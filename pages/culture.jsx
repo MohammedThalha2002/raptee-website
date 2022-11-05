@@ -5,10 +5,16 @@ import { caurosel } from '../components/carousel'
 import Footer from '../components/Footer'
 import { gsap } from "gsap/dist/gsap.js";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import scrollLock from 'scroll-lock';
 gsap.registerPlugin(ScrollTrigger)
 
 function Culture() {
     const titlesAnim = useRef([])
+
+    useEffect(() => {
+        scrollLock.enablePageScroll()
+    }, [])
+
     useEffect(() => {
         // titles animation
         titlesAnim.current.forEach((val, index) => {

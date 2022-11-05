@@ -2,11 +2,14 @@ import React from 'react'
 import { IconContext } from 'react-icons/lib'
 import { IoMdClose } from 'react-icons/io'
 import Link from 'next/link'
+import scrollLock from 'scroll-lock';
 import { gsap } from "gsap/dist/gsap.js";
 
 function NavLinks(props) {
+
     function cloaseNavLinks() {
         console.log("Closed the NAVLINK")
+        scrollLock.enablePageScroll()
         gsap.fromTo(props.reference.current,
             { opacity: 1, x: -384 },
             {

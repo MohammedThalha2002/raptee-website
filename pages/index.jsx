@@ -7,6 +7,7 @@ import ReserveBtn from '../components/ReserveBtn'
 import BottomLoader from '../components/BottomLoader'
 import Footer from '../components/Footer'
 import CommingSoon from '../components/CommingSoon'
+import scrollLock from 'scroll-lock';
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from "gsap/dist/gsap.js";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -15,6 +16,9 @@ gsap.registerPlugin(ScrollTrigger)
 export default function Home() {
   const evolSection = useRef()
   const aboutSection = useRef()
+  const about1Ref = useRef()
+  const about2Ref = useRef()
+  const about3Ref = useRef()
   const zeroSection = useRef()
   const performSection = useRef()
   const performImg = useRef()
@@ -25,6 +29,7 @@ export default function Home() {
   const zeroCont2 = useRef()
   const zeroCont3 = useRef()
   const zeroImg = useRef()
+  const NavRef = useRef()
   const [sectionIndex, setSectionIndex] = useState(1)
   const [mobile, setMobile] = useState(false)
   let observerOptions = {
@@ -50,47 +55,46 @@ export default function Home() {
   const titlesAnim = useRef([])
   const parasAnim = useRef([])
   const performanceAnim = useRef([])
-  const titleMovementGsapList = [-100, -100, -100, -100]
+
+  function elementsOverlap(el1, el2) {
+    const domRect1 = el1.current.getBoundingClientRect();
+    const domRect2 = el2.current.getBoundingClientRect();
+
+    return !(
+      domRect1.top > domRect2.bottom ||
+      domRect1.right < domRect2.left ||
+      domRect1.bottom < domRect2.top ||
+      domRect1.left > domRect2.right
+    );
+  }
 
 
   const handleScroll = () => {
 
     const position = window.pageYOffset - window.innerWidth;
-    console.log(position)
     setScrollPosition(position);
-    if (position < -800 && position >= -900) {
+    if (elementsOverlap(NavRef, about1Ref)) {
       // console.log("ONE")
       setAbout1('white')
       setAbout2('grey')
       setAbout3('grey')
-      setAbout4('grey')
     }
-    else if (position < -700 && position >= -800) {
+    else if (elementsOverlap(NavRef, about2Ref)) {
       // console.log("TWO")
       setAbout1('grey')
       setAbout2('white')
       setAbout3('grey')
-      setAbout4('grey')
     }
-    else if (position < -600 && position >= -700) {
+    else if (elementsOverlap(NavRef, about3Ref)) {
       // console.log("THREE")
       setAbout1('grey')
       setAbout2('grey')
       setAbout3('white')
-      setAbout4('grey')
-    }
-    else if (position < -500 && position >= -600) {
-      // console.log("FOUR")
-      setAbout1('grey')
-      setAbout2('grey')
-      setAbout3('grey')
-      setAbout4('white')
     }
     else {
       setAbout1('grey')
       setAbout2('grey')
       setAbout3('grey')
-      setAbout4('grey')
     }
     // ZERO section - animations
     // DESKTOP
@@ -150,6 +154,11 @@ export default function Home() {
       }
     }
   };
+
+  useEffect(() => {
+    scrollLock.enablePageScroll()
+  }, [])
+
 
   useEffect(() => {
     const width = window.innerWidth
@@ -229,13 +238,13 @@ export default function Home() {
     sectionObserver.observe(performSection.current)
     window.addEventListener('scroll', handleScroll, { passive: true });
 
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     }
   }, [])
 
   return (
-    // <CommingSoon></CommingSoon>
     <div className='bg-black'>
       <Head>
         <title>Raptee | E-Vehicle</title>
@@ -246,11 +255,14 @@ export default function Home() {
       <main className='bg-black'>
         <NavBar mobile={mobile}></NavBar>
         <SideActiveIndicator index={sectionIndex}></SideActiveIndicator>
+        <section className='sticky top-35rem z-50 ml-32'>
+          <div className='h-24 w-4 bg-transparent absolute pointer-events-none' ref={NavRef}></div>
+        </section>
         {/*  */}
         {/* Evoloution SECTION  - DESKTOP*/}
-        <section className='bg-black aspect-video snap-center relative sm:hidden' id='homepage-id' ref={evolSection}>
+        <section className='bg-black h-screen snap-center relative sm:hidden' id='homepage-id' ref={evolSection}>
           <div className=' h-12 '></div>
-          <div className=''>
+          <div>
             <Image
               src="/images/4.png"
               width="1920"
@@ -299,9 +311,9 @@ export default function Home() {
               </div>
               <div ref={(el) => (parasAnim.current[0] = el)}>
                 <div className="contents text-2xl tracking-wide text-gray-500">
-                  <h2 style={{ color: about1 }}>We at Raptee are driven by an innovative spirit to redefine electric mobility.</h2>
-                  <h2 style={{ color: about2 }}>Our motorcycles are intuitive and engineered to outperform conventionally powered vehicles - proving that switching to electric is not a sacrifice.</h2>
-                  <h2 style={{ color: about3 }}>They are intelligent, powerful, energy-efficient and loaded with cutting-edge technology to augment every single ride you take.</h2>
+                  <h2 style={{ color: about1 }} ref={about1Ref} >We at Raptee are driven by an innovative spirit to redefine electric mobility.</h2>
+                  <h2 style={{ color: about2 }} ref={about2Ref} >Our motorcycles are intuitive and engineered to outperform conventionally powered vehicles - proving that switching to electric is not a sacrifice.</h2>
+                  <h2 style={{ color: about3 }} ref={about3Ref} >They are intelligent, powerful, energy-efficient and loaded with cutting-edge technology to augment every single ride you take.</h2>
                 </div>
               </div>
             </div>
@@ -458,13 +470,13 @@ export default function Home() {
               </div>
               <div className="contents tracking-wide text-right text-gray-500">
                 <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[4] = el)}>Electric is now fast.</h2>
-                <h1 className='text-4xl font-light mb-8' ref={(el) => (performanceAnim.current[0] = el)}>Top Speed of 135 kmph</h1>
+                <h1 className='text-3xl font-light mb-8' ref={(el) => (performanceAnim.current[0] = el)}>Top Speed of <span className='font-medium'>135</span> kmph</h1>
                 <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[5] = el)}>Week long charge.</h2>
-                <h1 className='text-4xl font-light mb-8' ref={(el) => (performanceAnim.current[1] = el)}>150 km Real World Range</h1>
+                <h1 className='text-3xl font-light mb-8' ref={(el) => (performanceAnim.current[1] = el)}><span className='font-medium'>150</span> km Real World Range</h1>
                 <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[6] = el)}>First off the traffic line.</h2>
-                <h1 className='text-4xl font-light mb-8' ref={(el) => (performanceAnim.current[2] = el)}>0-60 kmph in &#60; 3.5 secs<span className='text-2xl'>*</span></h1>
+                <h1 className='text-3xl font-light mb-8' ref={(el) => (performanceAnim.current[2] = el)}>0-60 kmph in &#60; <span className='font-medium'>3.5</span> secs<span className='text-2xl'>*</span></h1>
                 <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[7] = el)}>Get to your destination quicker.</h2>
-                <h1 className='text-4xl font-light mb-8' ref={(el) => (performanceAnim.current[3] = el)}>0-80% charge in 45 mins<span className='text-2xl'>*</span></h1>
+                <h1 className='text-3xl font-light mb-8' ref={(el) => (performanceAnim.current[3] = el)}>0-80% charge in <span className='font-medium'>45</span> mins<span className='text-2xl'>*</span></h1>
               </div>
             </div>
           </div>
@@ -481,13 +493,13 @@ export default function Home() {
                 </div>
                 <div className="contents tracking-wide text-right text-gray-500">
                   <h2 className='text-white text-lg'>Electric is now fast.</h2>
-                  <h1 className='text-3xl font-light mb-3'>Top Speed of 135 kmph</h1>
+                  <h1 className='text-2xl font-light mb-3'>Top Speed of 135 kmph</h1>
                   <h2 className='text-white text-lg'>Week long charge.</h2>
-                  <h1 className='text-3xl font-light mb-3'>150 km Real World Range</h1>
+                  <h1 className='text-2xl font-light mb-3'>150 km Real World Range</h1>
                   <h2 className='text-white text-lg'>First off the traffic line.</h2>
-                  <h1 className='text-3xl font-light mb-3'>0-60 kmph in &#60; 3.5* secs</h1>
+                  <h1 className='text-2xl font-light mb-3'>0-60 kmph in &#60; 3.5 secs<span className='text-xl'>*</span></h1>
                   <h2 className='text-white text-lg'>Get to your destination quicker.</h2>
-                  <h1 className='text-3xl font-light mb-3'>0-80% charge in 45 mins<span className='text-xl'>*</span></h1>
+                  <h1 className='text-2xl font-light mb-3'>0-80% charge in 45 mins<span className='text-xl'>*</span></h1>
                 </div>
               </div>
               <div className='overflow-hidden'>

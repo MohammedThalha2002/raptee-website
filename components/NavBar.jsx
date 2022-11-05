@@ -1,18 +1,18 @@
 import { IconContext } from 'react-icons/lib'
-import { IoLogoWindows, IoMdMenu } from 'react-icons/io'
+import { IoMdMenu } from 'react-icons/io'
 import NavLinks from './NavLinks'
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
+import scrollLock from 'scroll-lock';
 import { gsap } from "gsap/dist/gsap.js";
-import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-import Image from 'next/image'
 
 
 function NavBar(props) {
 
     const btnRef = useRef()
     function openNavLinks() {
-        console.log("Clicked")
+        scrollLock.disablePageScroll()
+        console.log("Opened the Navlinks")
         gsap.fromTo(btnRef.current,
             { opacity: 0, x: 0 },
             {

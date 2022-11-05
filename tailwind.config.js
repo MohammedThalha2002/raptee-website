@@ -63,6 +63,7 @@ module.exports = {
         '7rem': '7rem',
         '10rem': '10rem',
         '30rem': '30rem',
+        '35rem': '35rem',
         '40rem': '40rem',
         '45rem': '45rem',
         '50rem': '50rem',

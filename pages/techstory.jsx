@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Footer from '../components/Footer'
 import { useEffect, useRef, useState } from 'react'
 import SideActiveIndicatorTechStory from '../components/SideActiveIndicatorTechStory'
+import scrollLock from 'scroll-lock';
 import { gsap } from "gsap/dist/gsap.js";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
@@ -24,6 +25,10 @@ function Techstory() {
     //animations
     const titlesAnim = useRef([])
     const parasAnim = useRef([])
+
+    useEffect(() => {
+        scrollLock.enablePageScroll()
+    }, [])
 
     useEffect(() => {
         // titles animation
@@ -97,7 +102,7 @@ function Techstory() {
             {/*  */}
             {/* OUR PRODUCTS SECTION - DESKTOP*/}
             <div >
-                <section className='bg-black aspect-16/8 snap-center relative sm:hidden' id='products-id' ref={productsSection}>
+                <section className='bg-black aspect-16/8 relative sm:hidden' id='products-id' ref={productsSection}>
                     <div className=' h-12 '></div>
                     <div>
                         <Image
@@ -122,7 +127,7 @@ function Techstory() {
                     </div>
                 </section>
                 {/* OUR PRODUCTS SECTION - MOBILE*/}
-                <section className='bg-black hidden sm:block' id='products-id' ref={productsSection}>
+                <section className='bg-black hidden sm:block'>
                     <div className=' h-12 '></div>
                     <div>
                         <div className='h-screen w-full top-0
@@ -163,7 +168,7 @@ function Techstory() {
                             <Image
                                 src="/images/2.png"
                                 width={1200}
-                                height={950}
+                                height={900}
                                 priority={true}
                             />
                         </div>
@@ -267,7 +272,7 @@ function Techstory() {
                         <div className='w-2/6 flex flex-col justify-center pl-20 pr-4'>
                             <div className="title mb-14">
                                 <h2 className=' font-oswald font-light text-4xl tracking-wide' ref={(el) => (titlesAnim.current[3] = el)}>
-                                    Motor and Motor Controller:
+                                    Motor and Motor Controller: The Hercules.
                                 </h2>
                                 <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
                             </div>
@@ -300,7 +305,7 @@ function Techstory() {
                         <div className='my-8'>
                             <div className="text-left pl-4 pr-8">
                                 <h3 className='text-3xl font-light font-oswald 
-                                    tracking-wide my-4'>Motor and Motor Controller:</h3>
+                                    tracking-wide my-4'>Motor and Motor Controller: The Hercules.</h3>
                                 <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
                                 <div className="contents text-lg tracking-wide text-gray-500">
                                     <h3>
