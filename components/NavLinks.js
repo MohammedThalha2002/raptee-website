@@ -43,7 +43,7 @@ function NavLinks(props) {
                 <Link href={'/home'}>
                     <h1 className='text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl'>Contact</h1>
                 </Link>
-                <Link href={'/home'}>
+                <Link href={'https://apply.workable.com/raptee-energy/'}>
                     <h1 className='text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl'>Career</h1>
                 </Link>
             </div>

@@ -116,7 +116,7 @@ function Culture() {
                     </div>
                     <div className='pl-1/13 ease-in duration-200 hover:scale-110'>
                         <h1 className='text-5xl font-oswald font-light tracking-wide'
-                            ref={(el) => (titlesAnim.current[3] = el)}>What Are We</h1>
+                            ref={(el) => (titlesAnim.current[3] = el)}>Our Tenets</h1>
                         <div className="underline w-14 h-0.5 rounded-xl my-2 mx-1 bg-highlight"></div>
                     </div>
                     {/* 1st row */}

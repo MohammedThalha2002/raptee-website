@@ -25,8 +25,7 @@ function Footer() {
                     <div className="underline w-10 h-0.5 rounded-xl my-2 mr-32 bg-highlight"></div>
                 </div>
                 <div className='mt-6 tracking-wide sm:text-sm'>
-                    <h3>Ph. No - +1 765 426 3072</h3>
-                    <h3>Ph. No - +91 8925061646</h3>
+                    <h3>Ph. No: +91 8925061646</h3>
                     <h3>contact@rapteemotors.com</h3>
                 </div>
                 <div className="flex justify-between mt-4">

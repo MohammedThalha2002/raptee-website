@@ -22,7 +22,7 @@
 export const caurosel = [
     {
         id: 1,
-        img: "https://i.postimg.cc/prSdNtjx/1.jpg"
+        img: "https://i.postimg.cc/7LXw8kvc/6.jpg"
     },
     {
         id: 2,
@@ -42,7 +42,7 @@ export const caurosel = [
     },
     {
         id: 6,
-        img: "https://i.postimg.cc/7LXw8kvc/6.jpg"
+        img: "https://i.postimg.cc/prSdNtjx/1.jpg"
     },
     {
         id: 7,

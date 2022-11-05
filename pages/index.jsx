@@ -6,6 +6,7 @@ import BottomLoaderZeroSec from '../components/BottomLoaderZeroSec'
 import ReserveBtn from '../components/ReserveBtn'
 import BottomLoader from '../components/BottomLoader'
 import Footer from '../components/Footer'
+import CommingSoon from '../components/CommingSoon'
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from "gsap/dist/gsap.js";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -139,12 +140,12 @@ export default function Home() {
         MzeroCont3.current.style.transform = 'translateY(-100%)';
         MzeroImg.current.style.backgroundImage = "url('/images/12.png')"
       } else if (position <= 1500 && position > 1300) {
-        MzeroWord1.current.style.transform = 'translateY(-210%)';
-        MzeroWord2.current.style.transform = 'translateY(-210%)';
-        MzeroWord3.current.style.transform = 'translateY(-210%)';
-        MzeroCont1.current.style.transform = 'translateY(-210%)';
-        MzeroCont2.current.style.transform = 'translateY(-210%)';
-        MzeroCont3.current.style.transform = 'translateY(-210%)';
+        MzeroWord1.current.style.transform = 'translateY(-200%)';
+        MzeroWord2.current.style.transform = 'translateY(-200%)';
+        MzeroWord3.current.style.transform = 'translateY(-200%)';
+        MzeroCont1.current.style.transform = 'translateY(-200%)';
+        MzeroCont2.current.style.transform = 'translateY(-200%)';
+        MzeroCont3.current.style.transform = 'translateY(-200%)';
         MzeroImg.current.style.backgroundImage = "url('/images/8.png')"
       }
     }
@@ -234,6 +235,7 @@ export default function Home() {
   }, [])
 
   return (
+    // <CommingSoon></CommingSoon>
     <div className='bg-black'>
       <Head>
         <title>Raptee | E-Vehicle</title>
@@ -371,8 +373,7 @@ export default function Home() {
                   <br />
                   <h3>
                     No more needless part replacements. No more taking your vehicle to the
-                    service centre every few months.
-                    Sit back and relax while we look after your motorcycle.
+                    service centre every few months.Sit back and relax while we look after your motorcycle.
                     Rather, while the motorcycle looks after itself.
                   </h3>
                 </span>
@@ -405,7 +406,7 @@ export default function Home() {
                 </div>
                 {/* CONTENTS */}
                 <div className="h-60 w-5/6 pl-4 overflow-hidden">
-                  <span className="block h-full ease-in duration-500 text-base tracking-wide text-gray-500 "
+                  <span className="block h-full ease-in duration-500 text-lg tracking-wide text-gray-500 "
                     ref={MzeroCont1}>
                     <h3>
                       Breakdowns, failures, and repairs are all things of the past.
@@ -413,19 +414,20 @@ export default function Home() {
                       and hassle-free riding experience.
                     </h3>
                   </span>
-                  <span className="block h-full ease-in duration-500 text-base tracking-wide text-gray-500"
+                  <span className="block h-full ease-in duration-500 text-lg tracking-wide text-gray-500"
                     ref={MzeroCont2}>
                     <h3>
                       We believe in doing what is best for the environment.
                       Electric is the future, and  we&#39;re building for it right now.
                     </h3>
                   </span>
-                  <span className="block h-full ease-in duration-500 text-base tracking-wide text-gray-500"
+                  <span className="block h-full ease-in duration-500 text-lg tracking-wide text-gray-500"
                     ref={MzeroCont3}>
                     <br />
                     <h3>
                       No more needless part replacements. No more taking your vehicle to the
-                      service centre every few months. Sit back and relax while we look after your motorcycle.
+                      service centre every few months.
+                      Sit back and relax while we look after your motorcycle.
                       Rather, while the motorcycle looks after itself.
                     </h3>
                   </span>
@@ -449,7 +451,7 @@ export default function Home() {
                 priority={true}
               />
             </div>
-            <div className='w-2/6 flex flex-col justify-center items-end pl-12 pr-20'>
+            <div className='w-2/5 flex flex-col justify-center items-end pl-0 pr-20'>
               <div className="title mb-14" ref={(el) => (titlesAnim.current[3] = el)}>
                 <h2 className=' font-oswald font-light text-4xl tracking-wide'>Performance</h2>
                 <div className="underline w-10 h-0.5 rounded-xl my-2 ml-32 bg-highlight"></div>
@@ -460,9 +462,9 @@ export default function Home() {
                 <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[5] = el)}>Week long charge.</h2>
                 <h1 className='text-4xl font-light mb-8' ref={(el) => (performanceAnim.current[1] = el)}>150 km Real World Range</h1>
                 <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[6] = el)}>First off the traffic line.</h2>
-                <h1 className='text-4xl font-light mb-8' ref={(el) => (performanceAnim.current[2] = el)}>0-60 kmph in &#60; 3 secs</h1>
+                <h1 className='text-4xl font-light mb-8' ref={(el) => (performanceAnim.current[2] = el)}>0-60 kmph in &#60; 3.5 secs<span className='text-2xl'>*</span></h1>
                 <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[7] = el)}>Get to your destination quicker.</h2>
-                <h1 className='text-4xl font-light mb-8' ref={(el) => (performanceAnim.current[3] = el)}>0-80% charge in 25 mins</h1>
+                <h1 className='text-4xl font-light mb-8' ref={(el) => (performanceAnim.current[3] = el)}>0-80% charge in 45 mins<span className='text-2xl'>*</span></h1>
               </div>
             </div>
           </div>
@@ -483,9 +485,9 @@ export default function Home() {
                   <h2 className='text-white text-lg'>Week long charge.</h2>
                   <h1 className='text-3xl font-light mb-3'>150 km Real World Range</h1>
                   <h2 className='text-white text-lg'>First off the traffic line.</h2>
-                  <h1 className='text-3xl font-light mb-3'>0-60 kmph in &#60; 3 secs</h1>
+                  <h1 className='text-3xl font-light mb-3'>0-60 kmph in &#60; 3.5* secs</h1>
                   <h2 className='text-white text-lg'>Get to your destination quicker.</h2>
-                  <h1 className='text-3xl font-light mb-3'>0-80% charge in 25 mins</h1>
+                  <h1 className='text-3xl font-light mb-3'>0-80% charge in 45 mins<span className='text-xl'>*</span></h1>
                 </div>
               </div>
               <div className='overflow-hidden'>

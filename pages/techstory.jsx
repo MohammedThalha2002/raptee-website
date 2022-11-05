@@ -112,10 +112,10 @@ function Techstory() {
                                     tracking-widest mb-4' ref={(el) => (titlesAnim.current[0] = el)}>
                                     Technology engineered beyond boundaries.
                                 </h3>
-                                <h4 className='text-2xl font-thin tracking-widest' ref={(el) => (parasAnim.current[0] = el)}>
-                                    90% of our technology has been engineered in-house, <br />
-                                    keeping in mind the conditions and requirements of our <br />
-                                    Indian roads.</h4>
+                                <h4 className='text-2xl font-thin tracking-widest w-2/3' ref={(el) => (parasAnim.current[0] = el)}>
+                                    With innovation in engineering being a crucial component of our mission,
+                                    we&#39;ve ideated and developed almost all of the technology that goes
+                                    into our vehicle in-house, which are strongly patent-backed.</h4>
                             </div>
                         </div>
                         <BottomLoader></BottomLoader>
@@ -127,13 +127,13 @@ function Techstory() {
                     <div>
                         <div className='h-screen w-full top-0
                     bg-techstorybg bg-cover bg-no-repeat bg-techstorybp ease-in duration-500'>
-                            <div className="text-left pl-4 pr-8">
+                            <div className="text-left pl-4 pr-4">
                                 <h3 className='text-3xl font-light font-oswald 
                                     tracking-wide my-4'>Technology engineered beyond boundaries.</h3>
-                                <h4 className='text-xl font-thin tracking-wide'>
-                                    90% of our technology has been engineered in-house, <br />
-                                    keeping in mind the conditions and requirements of our <br />
-                                    Indian roads.</h4>
+                                <h4 className='text-base font-thin tracking-wide'>
+                                    With innovation in engineering being a crucial component of our mission,
+                                    we&#39;ve ideated and developed almost all of the technology that goes
+                                    into our vehicle in-house, which are strongly patent-backed.</h4>
                             </div>
                         </div>
                         {/* <BottomLoader></BottomLoader> */}
