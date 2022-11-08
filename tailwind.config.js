@@ -11,6 +11,7 @@ module.exports = {
         'highlight-low': '#5D4A0A',
         'navlinksbg': '#424242',
         'greydiv': '#999999',
+        'greytext': '#626262',
       },
       height: {
         '30rem': '30rem',
@@ -74,6 +75,8 @@ module.exports = {
         '1/5': '5%',
         '1/70': '70%',
         '1/90': '90%',
+        '1/80': '80%',
+        '1/96': '96%',
         '1/13': '13%',
       },
       aspectRatio: {

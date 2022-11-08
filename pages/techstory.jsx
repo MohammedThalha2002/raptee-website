@@ -155,7 +155,7 @@ function Techstory() {
                                 </h2>
                                 <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
                             </div>
-                            <div className="contents text-base tracking-wide text-gray-500">
+                            <div className="contents text-base tracking-wide text-greytext">
                                 <h3 className='text-xl' ref={(el) => (parasAnim.current[1] = el)}>
                                     The VCU controls every other subsystem of the vehicle,
                                     and continuously monitors data received from it,
@@ -183,7 +183,7 @@ function Techstory() {
                                 <h3 className='text-3xl font-light font-oswald 
                                     tracking-wide my-4'>VCU: The Brain.</h3>
                                 <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
-                                <div className="contents text-lg tracking-wide text-gray-500">
+                                <div className="contents text-lg tracking-wide text-greytext">
                                     <h3>
                                         The VCU controls every other subsystem of the vehicle,
                                         and continuously monitors data received from it,
@@ -212,7 +212,7 @@ function Techstory() {
                                 </h2>
                                 <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
                             </div>
-                            <div className="contents text-xl tracking-wide text-gray-500">
+                            <div className="contents text-xl tracking-wide text-greytext">
                                 <h3 ref={(el) => (parasAnim.current[2] = el)}>
                                     State-of-the-art ML algorithms analyze variance in cell behaviour and choose the best
                                     charging approach to reduce loss and boost efficiency, thus extending your motorcycle&#39;s
@@ -244,7 +244,7 @@ function Techstory() {
                                 <h3 className='text-3xl font-light font-oswald 
                                     tracking-wide my-4'>BMS: Zeus to the Batteries.</h3>
                                 <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
-                                <div className="contents text-lg tracking-wide text-gray-500">
+                                <div className="contents text-lg tracking-wide text-greytext">
                                     <h3>
                                         State-of-the-art ML algorithms analyze variance in cell behaviour and choose the best
                                         charging approach to reduce loss and boost efficiency, thus extending your motorcycle&#39;s
@@ -276,7 +276,7 @@ function Techstory() {
                                 </h2>
                                 <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
                             </div>
-                            <div className="contents text-xl tracking-wide text-gray-500">
+                            <div className="contents text-xl tracking-wide text-greytext">
                                 <h3 ref={(el) => (parasAnim.current[3] = el)}>
                                     Raptee&#39;s Electric Drivetrain (RED) is a high-powered software driven vehicle developed in
                                     house to adapt to various driving conditions for the Indian roads. It is backed by the
@@ -307,7 +307,7 @@ function Techstory() {
                                 <h3 className='text-3xl font-light font-oswald 
                                     tracking-wide my-4'>Motor and Motor Controller: The Hercules.</h3>
                                 <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
-                                <div className="contents text-lg tracking-wide text-gray-500">
+                                <div className="contents text-lg tracking-wide text-greytext">
                                     <h3>
                                         Raptee&#39;s Electric Drivetrain (RED) is a high-powered software driven vehicle developed in
                                         house to adapt to various driving conditions for the Indian roads. It is backed by the
@@ -339,7 +339,7 @@ function Techstory() {
                                 </h2>
                                 <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
                             </div>
-                            <div className="contents text-xl tracking-wide text-gray-500">
+                            <div className="contents text-xl tracking-wide text-greytext">
                                 <h3 ref={(el) => (parasAnim.current[4] = el)}>
                                     Our motorcycles are the first two-wheelers to support the CCS 2 charging standard, which
                                     lets you use any existing public charging station to power your vehicle.
@@ -365,7 +365,7 @@ function Techstory() {
                                 <h3 className='text-3xl font-light font-oswald 
                                     tracking-wide my-4'>Charge anywhere.</h3>
                                 <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
-                                <div className="contents text-lg tracking-wide text-gray-500">
+                                <div className="contents text-lg tracking-wide text-greytext">
                                     <h3>
                                         Our motorcycles are the first two-wheelers to support the CCS 2 charging standard, which
                                         lets you use any existing public charging station to power your vehicle.
@@ -392,7 +392,7 @@ function Techstory() {
                                 </h2>
                                 <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
                             </div>
-                            <div className="contents text-xl tracking-wide text-gray-500">
+                            <div className="contents text-xl tracking-wide text-greytext">
                                 <h3 ref={(el) => (parasAnim.current[5] = el)}>
                                     Get safer rides with traction control that reduces vehicle slip and blind spot warning that
                                     helps avoid unexpected collisions. Over-the-air software upgrades increase the efficiency
@@ -419,7 +419,7 @@ function Techstory() {
                                 <h3 className='text-3xl font-light font-oswald 
                                     tracking-wide my-4'>Safety, like never before.</h3>
                                 <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
-                                <div className="contents text-lg tracking-wide text-gray-500">
+                                <div className="contents text-lg tracking-wide text-greytext">
                                     <h3>
                                         Get safer rides with traction control that reduces vehicle slip and blind spot warning that
                                         helps avoid unexpected collisions. Over-the-air software upgrades increase the efficiency

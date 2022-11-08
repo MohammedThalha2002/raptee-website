@@ -44,16 +44,16 @@ function Culture() {
                             <h1 className='text-7xl sm:text-4xl font-oswald tracking-wide'>CULTURE</h1>
                             <div className="underline w-14 h-0.5 rounded-xl my-2 mx-1 bg-highlight"></div>
                         </div>
-                        <div className=''>
+                        <div className='w-4/5'>
                             <Image
                                 src="/images/Artboard6.jpg"
                                 layout='responsive'
-                                height={9}
+                                height={12}
                                 width={16}
                                 priority={true}
                             />
                         </div>
-                        <div className='absolute w-1/3 top-44rem sm:top-10rem left-1/90 sm:left-1/70'>
+                        <div className='absolute w-1/30 top-30rem sm:top-60 left-1/80 sm:left-1/90'>
                             <Image
                                 src="/images/Artborad8.jpg"
                                 layout='responsive'
@@ -62,7 +62,7 @@ function Culture() {
                                 priority={true}
                             />
                         </div>
-                        <div className='absolute w-1/30 top-96 sm:top-60 left-3/4 sm:left-1/90'>
+                        <div className='absolute w-1/3 top-44rem sm:top-10rem left-1/96 sm:left-1/70'>
                             <Image
                                 src="/images/Artborad7.jpg"
                                 layout='responsive'
@@ -93,7 +93,7 @@ function Culture() {
                 <section className='h-30rem bg-black'>
                     <div className='pl-1/13'>
                         <h1 className='text-5xl font-oswald font-light tracking-wide'
-                            ref={(el) => (titlesAnim.current[2] = el)}>Our Team</h1>
+                            ref={(el) => (titlesAnim.current[2] = el)}>Our Tenets</h1>
                         <div className="underline w-14 h-0.5 rounded-xl my-2 mx-1 bg-highlight"></div>
                     </div>
                     <div className='pl-1/5 mt-8'>
@@ -105,6 +105,7 @@ function Culture() {
                                         layout='fixed'
                                         height={240}
                                         width={160}
+                                        alt='images'
                                     />
                                 </div>
                             ))}
@@ -120,7 +121,7 @@ function Culture() {
                             width={1920}
                         />
                     </div>
-                    <div className='pl-1/13 ease-in duration-200 hover:scale-110'>
+                    <div className='pl-1/13 ease-in duration-200'>
                         <h1 className='text-5xl font-oswald font-light tracking-wide'
                             ref={(el) => (titlesAnim.current[3] = el)}>Our Tenets</h1>
                         <div className="underline w-14 h-0.5 rounded-xl my-2 mx-1 bg-highlight"></div>

@@ -365,7 +365,7 @@ export default function Home() {
               </div>
               {/* CONTENTS */}
               <div className="h-80 w-96 mt-10 pl-20 overflow-hidden text-2xl" ref={(el) => (parasAnim.current[1] = el)}>
-                <span className="block h-full ease-in duration-500 tracking-wide text-gray-500 "
+                <span className="block h-full ease-in duration-1000 tracking-wide text-greytext "
                   ref={zeroCont1}>
                   <h3>
                     Breakdowns, failures, and repairs are all things of the past.
@@ -373,14 +373,14 @@ export default function Home() {
                     and hassle-free riding experience.
                   </h3>
                 </span>
-                <span className="block h-full ease-in duration-500 tracking-wide text-gray-500"
+                <span className="block h-full ease-in duration-1000 tracking-wide text-greytext"
                   ref={zeroCont2}>
                   <h3>
                     We believe in doing what is best for the environment.
                     Electric is the future, and  we&#39;re building for it right now.
                   </h3>
                 </span>
-                <span className="block h-full ease-in duration-500 tracking-wide text-gray-500"
+                <span className="block h-full ease-in duration-1000 tracking-wide text-greytext"
                   ref={zeroCont3}>
                   <br />
                   <h3>
@@ -418,7 +418,7 @@ export default function Home() {
                 </div>
                 {/* CONTENTS */}
                 <div className="h-60 w-5/6 pl-4 overflow-hidden">
-                  <span className="block h-full ease-in duration-500 text-lg tracking-wide text-gray-500 "
+                  <span className="block h-full ease-in duration-500 text-lg tracking-wide text-greytext "
                     ref={MzeroCont1}>
                     <h3>
                       Breakdowns, failures, and repairs are all things of the past.
@@ -426,14 +426,14 @@ export default function Home() {
                       and hassle-free riding experience.
                     </h3>
                   </span>
-                  <span className="block h-full ease-in duration-500 text-lg tracking-wide text-gray-500"
+                  <span className="block h-full ease-in duration-500 text-lg tracking-wide text-greytext"
                     ref={MzeroCont2}>
                     <h3>
                       We believe in doing what is best for the environment.
                       Electric is the future, and  we&#39;re building for it right now.
                     </h3>
                   </span>
-                  <span className="block h-full ease-in duration-500 text-lg tracking-wide text-gray-500"
+                  <span className="block h-full ease-in duration-500 text-lg tracking-wide text-greytext"
                     ref={MzeroCont3}>
                     <br />
                     <h3>
@@ -468,7 +468,7 @@ export default function Home() {
                 <h2 className=' font-oswald font-light text-4xl tracking-wide'>Performance</h2>
                 <div className="underline w-10 h-0.5 rounded-xl my-2 ml-32 bg-highlight"></div>
               </div>
-              <div className="contents tracking-wide text-right text-gray-500">
+              <div className="contents tracking-wide text-right text-greytext">
                 <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[4] = el)}>Electric is now fast.</h2>
                 <h1 className='text-3xl font-light mb-8' ref={(el) => (performanceAnim.current[0] = el)}>Top Speed of <span className='font-medium'>135</span> kmph</h1>
                 <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[5] = el)}>Week long charge.</h2>
@@ -491,7 +491,7 @@ export default function Home() {
                   <h2 className=' font-oswald font-light text-4xl tracking-wide'>Performance</h2>
                   <div className="underline w-10 h-0.5 rounded-xl my-2 ml-32 bg-highlight"></div>
                 </div>
-                <div className="contents tracking-wide text-right text-gray-500">
+                <div className="contents tracking-wide text-right text-greytext">
                   <h2 className='text-white text-lg'>Electric is now fast.</h2>
                   <h1 className='text-2xl font-light mb-3'>Top Speed of 135 kmph</h1>
                   <h2 className='text-white text-lg'>Week long charge.</h2>
