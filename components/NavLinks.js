@@ -4,6 +4,8 @@ import { IoMdClose } from 'react-icons/io'
 import Link from 'next/link'
 import scrollLock from 'scroll-lock';
 import { gsap } from "gsap/dist/gsap.js";
+import * as Scroll from 'react-scroll';
+import { Link as Linky } from 'react-scroll'
 
 function NavLinks(props) {
 
@@ -43,9 +45,10 @@ function NavLinks(props) {
                 <Link href={'/culture'}>
                     <h1 className='text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl'>Culture</h1>
                 </Link>
-                <Link href={'/home'}>
+                <Linky activeClass="active" to="footer" spy={true} smooth={true} offset={50}
+                    duration={1000} delay={0} onClick={cloaseNavLinks}>
                     <h1 className='text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl'>Contact</h1>
-                </Link>
+                </Linky>
                 <Link href={'https://apply.workable.com/raptee-energy/'}>
                     <h1 className='text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl'>Career</h1>
                 </Link>

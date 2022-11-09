@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function Footer() {
     return (
-        <section className="bg-black w-screen flex justify-around flex-wrap">
+        <section className="bg-black w-screen flex justify-around flex-wrap" id="footer">
             {/* ADDRESS */}
             <div className='py-10 px-2 w-56'>
                 <div className="title">
