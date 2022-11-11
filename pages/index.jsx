@@ -42,7 +42,7 @@ export default function Home() {
   const [about3, setAbout3] = useState('grey')
   const [scrollPosition, setScrollPosition] = useState(0);
 
-  // MOBILE
+  // MOBILE - zero section
   const MzeroWord1 = useRef()
   const MzeroWord2 = useRef()
   const MzeroWord3 = useRef()

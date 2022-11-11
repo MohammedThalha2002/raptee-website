@@ -5,6 +5,29 @@ import Link from 'next/link'
 function Footer() {
     return (
         <section className="bg-black w-screen flex justify-around flex-wrap" id="footer">
+            {/* NEWSLETTER */}
+            <div className='py-10 w-80'>
+                <div className="title">
+                    <h2 className=' font-oswald font-light text-2xl tracking-wide sm:text-xl'>NEWSLETTER</h2>
+                    <div className="underline w-10 h-0.5 rounded-xl my-2 mr-32 bg-highlight"></div>
+                </div>
+                <div className='flex w-full my-4'>
+                    <div>
+                        <input type="text" id="first_name" className="bg-black border-2 border-white text-white
+                        text-xs rounded-3xl block p-2.5 " placeholder="First Name" required />
+                    </div>
+                    <div>
+                        <input type="text" id="last_name" className="bg-black border-2 border-white text-white
+                        text-xs rounded-3xl block p-2.5 ml-4" placeholder="Last Name" required />
+                    </div>
+                </div>
+                <div>
+                    <input type="email" id="email" className="bg-black border-2 border-white text-white
+                        text-xs rounded-3xl w-full block p-2.5 my-4" placeholder="Email" required />
+                </div>
+                <button className='bg-black border-2 border-white text-white
+                        text-xs rounded-3xl block py-2.5 px-12 my-4'>SEND</button>
+            </div>
             {/* ADDRESS */}
             <div className='py-10 px-2 w-56'>
                 <div className="title">
@@ -71,27 +94,15 @@ function Footer() {
                     </Link>
                 </div>
             </div>
-            {/* SUPPORT */}
-            <div className='py-10 px-2 w-52'>
-                <div className="title">
-                    <h2 className=' font-oswald font-light text-2xl tracking-wide sm:text-xl'>SUPPORT US</h2>
-                    <div className="underline w-10 h-0.5 rounded-xl my-2 mr-32 bg-highlight"></div>
-                </div>
-                <div className='mt-6 tracking-wide sm:text-sm'>
-                    <h3>We are on continuous </h3>
-                    <h3>lookout for investors who</h3>
-                    <h3>share our passion</h3>
-                    <h3>towards motorcycles and</h3>
-                    <h3>help us achieve our goal</h3>
-                    <h3>of sustainable mobility</h3>
-                </div>
-            </div>
             {/* ADDRESS */}
             <div className='py-10 px-2 w-52'>
+                <div className="underline w-10 h-0.5 rounded-xl my-2 mr-32 bg-highlight"></div>
                 <div className='tracking-wide sm:text-sm'>
                     <h2 className='my-2'>Privacy Policy</h2>
                     <h2 className='my-2'>Refund Policy</h2>
                     <h2 className='my-2'>Terms of Services</h2>
+                    <h2 className='my-2'>About Us</h2>
+                    <h2 className='my-2'>Blog</h2>
                 </div>
                 <div className="underline w-10 h-0.5 rounded-xl my-2 mr-32 bg-highlight"></div>
             </div>
