@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react'
-import NavBar from '../components/NavBar'
+import NavBar from '../components/widgets/NavBar'
 import Image from 'next/image'
-import { caurosel } from '../components/carousel'
-import Footer from '../components/Footer'
+import { caurosel } from '../components/widgets/carousel'
+import Footer from '../components/widgets/Footer'
 import { gsap } from "gsap/dist/gsap.js";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import scrollLock from 'scroll-lock';

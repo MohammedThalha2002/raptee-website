@@ -1,5 +1,5 @@
 import React from 'react'
-import BottomLoaderZeroSec from '../../BottomLoaderZeroSec'
+import BottomLoaderZeroSec from '../../widgets/BottomLoaderZeroSec'
 
 function ZeroSection(props) {
     return (
@@ -57,7 +57,7 @@ function ZeroSection(props) {
                 </div>
             </section>
             {/* ZERO SECTION - MOBILE*/}
-            <section className='bg-black h-150vh hidden sm:block'>
+            <section className='bg-black h-180vh hidden sm:block'>
                 <div className="h-full flex">
                     {/* titles and contents */}
                     <section className='h-screen bg-black sticky top-0'>
@@ -93,7 +93,6 @@ function ZeroSection(props) {
                                 </span>
                                 <span className="block h-full ease-in duration-500 text-lg tracking-wide text-greytext"
                                     ref={props.MzeroCont3}>
-                                    <br />
                                     <h3>
                                         No more needless part replacements. No more taking your vehicle to the
                                         service centre every few months.

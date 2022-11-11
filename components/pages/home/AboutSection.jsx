@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import BottomLoader from '../../BottomLoader'
+import BottomLoader from '../../widgets/BottomLoader'
 
 function AboutSection(props) {
     return (
@@ -46,7 +46,9 @@ function AboutSection(props) {
                         <span style={{ color: 'white' }}>- proving that switching to electric is not a sacrifice.</span>
                         <span style={{ color: 'white' }}>They are intelligent, powerful, energy-efficient and loaded with cutting-edge technology to augment every single ride you take.</span>
                     </div>
-                    <div className='h-72 bg-aboutbg bg-cover bg-no-repeat bg-center ease-in duration-500'>
+                    <div className='overflow-hidden'>
+                        <div className='h-72 bg-aboutbg bg-cover scale-110 bg-no-repeat bg-center ease-in duration-500'>
+                        </div>
                     </div>
                 </div>
             </section>

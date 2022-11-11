@@ -1,6 +1,6 @@
 import React from 'react'
-import BottomLoader from '../../BottomLoader'
-import ReserveBtn from '../../ReserveBtn'
+import BottomLoader from '../../widgets/BottomLoader'
+import ReserveBtn from '../../widgets/ReserveBtn'
 import Image from 'next/image'
 
 function EvolutionSection(props) {
@@ -32,7 +32,7 @@ function EvolutionSection(props) {
             <section className='bg-black hidden sm:block'>
                 <div className='relative'>
                     <div className='h-40rem w-full
-                bg-homebg bg-cover bg-no-repeat bg-left ease-in duration-500 '>
+                bg-homebg bg-cover bg-no-repeat bg-left ease-in duration-500'>
                         <div className="absolute left-4 top-20 pt-2">
                             <div className="content text-left flex flex-col items-start">
                                 <h3 className='text-xl font-oswald tracking-wide'>Join the</h3>

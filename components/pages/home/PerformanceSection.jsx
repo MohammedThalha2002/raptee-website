@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import ReserveBtn from '../../ReserveBtn'
+import ReserveBtn from '../../widgets/ReserveBtn'
 
 function PerformanceSection(props) {
     return (

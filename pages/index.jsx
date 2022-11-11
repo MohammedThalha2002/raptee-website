@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import NavBar from '../components/NavBar'
-import SideActiveIndicator from '../components/SideActiveIndicatorHome'
-import Footer from '../components/Footer'
+import NavBar from '../components/widgets/NavBar'
+import SideActiveIndicator from '../components/widgets/SideActiveIndicatorHome'
+import Footer from '../components/widgets/Footer'
 import scrollLock from 'scroll-lock';
 //
 import EvolutionSection from '../components/pages/home/EvolutionSection'
