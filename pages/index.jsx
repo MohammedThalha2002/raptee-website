@@ -8,6 +8,8 @@ import BottomLoader from '../components/BottomLoader'
 import Footer from '../components/Footer'
 import CommingSoon from '../components/CommingSoon'
 import scrollLock from 'scroll-lock';
+//
+import EvolutionSection from '../components/pages/home/EvolutionSection'
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from "gsap/dist/gsap.js";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -259,46 +261,7 @@ export default function Home() {
           <div className='h-24 w-4 bg-transparent absolute pointer-events-none' ref={NavRef}></div>
         </section>
         {/*  */}
-        {/* Evoloution SECTION  - DESKTOP*/}
-        <section className='bg-black h-screen snap-center relative sm:hidden' id='homepage-id' ref={evolSection}>
-          <div className=' h-12 '></div>
-          <div>
-            <Image
-              src="/images/4.png"
-              width="1920"
-              height="1080"
-              priority={true}
-            />
-            <div className="absolute right-0 top-20 pr-14 pt-2">
-              <div className="content text-right flex flex-col items-end" ref={(el) => (titlesAnim.current[0] = el)}>
-                <h3 className='text-2xl font-oswald tracking-wide'>Join the</h3>
-                <h1 className='text-7xl font-oswald tracking-wide'>EV-olution</h1>
-                <div className="underline w-14 h-0.5 rounded-xl my-2 mx-1 bg-highlight"></div>
-              </div>
-            </div>
-            <ReserveBtn name={"Reserve Now"} route={false} link={'https://pages.razorpay.com/pl_EAjfop8xakIQaU/view'}>
-            </ReserveBtn>
-            <BottomLoader></BottomLoader>
-          </div>
-        </section>
-        {/* Evoloution SECTION  - MOBILE */}
-        <section className='bg-black hidden sm:block'>
-          <div className='relative'>
-            <div className='h-40rem w-full
-                bg-homebg bg-cover bg-no-repeat bg-left ease-in duration-500 '>
-              <div className="absolute left-4 top-20 pt-2">
-                <div className="content text-left flex flex-col items-start">
-                  <h3 className='text-xl font-oswald tracking-wide'>Join the</h3>
-                  <h1 className='text-4xl font-oswald tracking-wide'>EV-olution</h1>
-                  <div className="underline w-14 h-0.5 rounded-xl my-2 mx-1 bg-highlight"></div>
-                </div>
-              </div>
-            </div>
-            <ReserveBtn name={"Reserve Now"} route={false} link={'https://pages.razorpay.com/pl_EAjfop8xakIQaU/view'}>
-            </ReserveBtn>
-          </div>
-        </section>
-        {/*  */}
+        <EvolutionSection evolSection={evolSection} titlesAnim={titlesAnim}></EvolutionSection>
         {/*  */}
         {/* ABOUT SECTION - DESKTOP*/}
         <section className='bg-black aspect-16/8 snap-center relative sm:hidden' id='about-id' ref={aboutSection}>
