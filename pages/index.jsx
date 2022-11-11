@@ -347,7 +347,7 @@ export default function Home() {
         </section>
         {/*  */}
         {/* ZERO SECTION DESKTOP */}
-        <section className='bg-black h-150vh relative sm:hidden' id='zero-id' ref={zeroSection}>
+        <section className='bg-black h-180vh relative sm:hidden' id='zero-id' ref={zeroSection}>
           <div className="h-full flex">
             {/* titles and contents */}
             <section className='h-screen w-2/6 bg-black sticky top-0'>
