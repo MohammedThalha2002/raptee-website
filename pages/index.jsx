@@ -1,15 +1,14 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import NavBar from '../components/NavBar'
 import SideActiveIndicator from '../components/SideActiveIndicatorHome'
-import BottomLoaderZeroSec from '../components/BottomLoaderZeroSec'
-import ReserveBtn from '../components/ReserveBtn'
-import BottomLoader from '../components/BottomLoader'
 import Footer from '../components/Footer'
-import CommingSoon from '../components/CommingSoon'
 import scrollLock from 'scroll-lock';
 //
 import EvolutionSection from '../components/pages/home/EvolutionSection'
+import AboutSection from '../components/pages/home/AboutSection'
+import ZeroSection from '../components/pages/home/ZeroSection'
+import PerformanceSection from '../components/pages/home/PerformanceSection'
+//
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from "gsap/dist/gsap.js";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -41,7 +40,6 @@ export default function Home() {
   const [about1, setAbout1] = useState('grey')
   const [about2, setAbout2] = useState('grey')
   const [about3, setAbout3] = useState('grey')
-  const [about4, setAbout4] = useState('grey')
   const [scrollPosition, setScrollPosition] = useState(0);
 
   // MOBILE
@@ -263,217 +261,21 @@ export default function Home() {
         {/*  */}
         <EvolutionSection evolSection={evolSection} titlesAnim={titlesAnim}></EvolutionSection>
         {/*  */}
-        {/* ABOUT SECTION - DESKTOP*/}
-        <section className='bg-black aspect-16/8 snap-center relative sm:hidden' id='about-id' ref={aboutSection}>
-          <div className="flex h-full">
-            {/* SIDE CONTENTS */}
-            <div className='w-2/5 flex flex-col mt-16 pl-20 pr-20'>
-              <div className="title mb-14" ref={(el) => (titlesAnim.current[1] = el)}>
-                <h2 className=' font-oswald font-light text-4xl tracking-wide'>Our Story</h2>
-                <div className="underline w-10 h-0.5 rounded-xl my-2 bg-highlight"></div>
-              </div>
-              <div ref={(el) => (parasAnim.current[0] = el)}>
-                <div className="contents text-2xl tracking-wide text-gray-500">
-                  <h2 style={{ color: about1 }} ref={about1Ref} >We at Raptee are driven by an innovative spirit to redefine electric mobility.</h2>
-                  <h2 style={{ color: about2 }} ref={about2Ref} >Our motorcycles are intuitive and engineered to outperform conventionally powered vehicles - proving that switching to electric is not a sacrifice.</h2>
-                  <h2 style={{ color: about3 }} ref={about3Ref} >They are intelligent, powerful, energy-efficient and loaded with cutting-edge technology to augment every single ride you take.</h2>
-                </div>
-              </div>
-            </div>
-            <div className='w-3/5'>
-              <Image
-                src="/images/5.png"
-                width={1204}
-                height={950}
-                priority={true}
-              />
-            </div>
-          </div>
-          <BottomLoader></BottomLoader>
-        </section>
-        {/* ABOUT PAGE - MOBILE */}
-        <section className='bg-black hidden sm:block'>
-          <div className='flex flex-col'>
-            <div className="title mb-8 mt-16 pl-4">
-              <h2 className=' font-oswald font-light text-4xl tracking-wide'>Our Story</h2>
-              <div className="underline w-10 h-0.5 rounded-xl my-2 bg-highlight"></div>
-            </div>
-            <div className="text-base w-10/12 pl-4">
-              <span style={{ color: 'white' }}>We at Raptee are driven by an innovative spirit to redefine electric mobility.</span>
-              <span style={{ color: 'white' }}>Our motorcycles are intuitive and engineered to outperform conventionally powered vehicles</span>
-              <span style={{ color: 'white' }}>- proving that switching to electric is not a sacrifice.</span>
-              <span style={{ color: 'white' }}>They are intelligent, powerful, energy-efficient and loaded with cutting-edge technology to augment every single ride you take.</span>
-            </div>
-            <div className='h-72 bg-aboutbg bg-cover bg-no-repeat bg-center ease-in duration-500'>
-            </div>
-          </div>
-        </section>
+        <AboutSection aboutSection={aboutSection} titlesAnim={titlesAnim} parasAnim={parasAnim}
+          about1={about1} about2={about2} about3={about3} about1Ref={about1Ref} about2Ref={about2Ref}
+          about3Ref={about3Ref}>
+        </AboutSection>
         {/*  */}
-        {/* ZERO SECTION DESKTOP */}
-        <section className='bg-black h-180vh relative sm:hidden' id='zero-id' ref={zeroSection}>
-          <div className="h-full flex">
-            {/* titles and contents */}
-            <section className='h-screen w-2/6 bg-black sticky top-0'>
-              <div className="title mt-32 h-28 pl-20" ref={(el) => (titlesAnim.current[2] = el)}>
-                <h2 className=' font-oswald font-light text-4xl tracking-wide'>Zero</h2>
-                <div className="h-12 overflow-hidden">
-                  <span className='block h-full font-oswald ease-in duration-500 font-light text-4xl tracking-wide'
-                    ref={zeroWord1}>Hassle</span>
-                  <span className='block h-full font-oswald ease-in duration-500 font-light text-4xl tracking-wide'
-                    ref={zeroWord2}>Emissions</span>
-                  <span className='block h-full font-oswald ease-in duration-500 font-light text-4xl tracking-wide'
-                    ref={zeroWord3}>Maintenance</span>
-                </div>
-                <div className="underline w-10 h-0.5 rounded-xl my-2 bg-highlight"></div>
-              </div>
-              {/* CONTENTS */}
-              <div className="h-80 w-96 mt-10 pl-20 overflow-hidden text-2xl" ref={(el) => (parasAnim.current[1] = el)}>
-                <span className="block h-full ease-in duration-1000 tracking-wide text-greytext "
-                  ref={zeroCont1}>
-                  <h3>
-                    Breakdowns, failures, and repairs are all things of the past.
-                    We promise not only a futuristic motorcycle, but also a futuristic
-                    and hassle-free riding experience.
-                  </h3>
-                </span>
-                <span className="block h-full ease-in duration-1000 tracking-wide text-greytext"
-                  ref={zeroCont2}>
-                  <h3>
-                    We believe in doing what is best for the environment.
-                    Electric is the future, and  we&#39;re building for it right now.
-                  </h3>
-                </span>
-                <span className="block h-full ease-in duration-1000 tracking-wide text-greytext"
-                  ref={zeroCont3}>
-                  <br />
-                  <h3>
-                    No more needless part replacements. No more taking your vehicle to the
-                    service centre every few months.Sit back and relax while we look after your motorcycle.
-                    Rather, while the motorcycle looks after itself.
-                  </h3>
-                </span>
-              </div>
-            </section>
-            {/* Image section */}
-            <section className='h-screen w-4/6 sticky top-0
-                bg-zerobg1 bg-contain bg-no-repeat bg-center ease-in duration-500' ref={zeroImg}>
-              <BottomLoaderZeroSec></BottomLoaderZeroSec>
-            </section>
-          </div>
-        </section>
-        {/* ZERO SECTION - MOBILE*/}
-        <section className='bg-black h-150vh hidden sm:block'>
-          <div className="h-full flex">
-            {/* titles and contents */}
-            <section className='h-screen bg-black sticky top-0'>
-              <div className='h-40vh'>
-                <div className="title mt-10 h-28 pl-4">
-                  <h2 className=' font-oswald font-light text-4xl tracking-wide'>Zero</h2>
-                  <div className="h-10 overflow-hidden">
-                    <span className='block h-full font-oswald ease-in duration-500 font-light text-3xl tracking-wide'
-                      ref={MzeroWord1}>Hassle</span>
-                    <span className='block h-full font-oswald ease-in duration-500 font-light text-3xl tracking-wide'
-                      ref={MzeroWord2}>Emissions</span>
-                    <span className='block h-full font-oswald ease-in duration-500 font-light text-3xl tracking-wide'
-                      ref={MzeroWord3}>Maintenance</span>
-                  </div>
-                  <div className="underline w-10 h-0.5 rounded-xl my-2 bg-highlight"></div>
-                </div>
-                {/* CONTENTS */}
-                <div className="h-60 w-5/6 pl-4 overflow-hidden">
-                  <span className="block h-full ease-in duration-500 text-lg tracking-wide text-greytext "
-                    ref={MzeroCont1}>
-                    <h3>
-                      Breakdowns, failures, and repairs are all things of the past.
-                      We promise not only a futuristic motorcycle, but also a futuristic
-                      and hassle-free riding experience.
-                    </h3>
-                  </span>
-                  <span className="block h-full ease-in duration-500 text-lg tracking-wide text-greytext"
-                    ref={MzeroCont2}>
-                    <h3>
-                      We believe in doing what is best for the environment.
-                      Electric is the future, and  we&#39;re building for it right now.
-                    </h3>
-                  </span>
-                  <span className="block h-full ease-in duration-500 text-lg tracking-wide text-greytext"
-                    ref={MzeroCont3}>
-                    <br />
-                    <h3>
-                      No more needless part replacements. No more taking your vehicle to the
-                      service centre every few months.
-                      Sit back and relax while we look after your motorcycle.
-                      Rather, while the motorcycle looks after itself.
-                    </h3>
-                  </span>
-                </div>
-              </div>
-              {/* Image section */}
-              <section className='h-60vh sticky top-0
-                bg-zerobg1 bg-cover bg-no-repeat bg-center ease-in duration-500' ref={MzeroImg}>
-              </section>
-            </section>
-          </div>
-        </section>
-        {/* PERFORMANCE DESKTOP*/}
-        <section className='bg-black aspect-16/8 snap-center relative sm:hidden' id='performance-id' ref={performSection}>
-          <div className="flex h-full">
-            <div className='w-2/3 relative flex items-end' ref={performImg}>
-              <Image
-                src="/images/6.png"
-                width={1450}
-                height={1080}
-                priority={true}
-              />
-            </div>
-            <div className='w-2/5 flex flex-col justify-center items-end pl-0 pr-20'>
-              <div className="title mb-14" ref={(el) => (titlesAnim.current[3] = el)}>
-                <h2 className=' font-oswald font-light text-4xl tracking-wide'>Performance</h2>
-                <div className="underline w-10 h-0.5 rounded-xl my-2 ml-32 bg-highlight"></div>
-              </div>
-              <div className="contents tracking-wide text-right text-greytext">
-                <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[4] = el)}>Electric is now fast.</h2>
-                <h1 className='text-3xl font-light mb-8' ref={(el) => (performanceAnim.current[0] = el)}>Top Speed of <span className='font-medium'>135</span> kmph</h1>
-                <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[5] = el)}>Week long charge.</h2>
-                <h1 className='text-3xl font-light mb-8' ref={(el) => (performanceAnim.current[1] = el)}><span className='font-medium'>150</span> km Real World Range</h1>
-                <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[6] = el)}>First off the traffic line.</h2>
-                <h1 className='text-3xl font-light mb-8' ref={(el) => (performanceAnim.current[2] = el)}>0-60 kmph in &#60; <span className='font-medium'>3.5</span> secs<span className='text-2xl'>*</span></h1>
-                <h2 className='text-white text-lg' ref={(el) => (titlesAnim.current[7] = el)}>Get to your destination quicker.</h2>
-                <h1 className='text-3xl font-light mb-8' ref={(el) => (performanceAnim.current[3] = el)}>0-80% charge in <span className='font-medium'>45</span> mins<span className='text-2xl'>*</span></h1>
-              </div>
-            </div>
-          </div>
-          <ReserveBtn name={'Tech Story'} route={true} link={'/techstory'}></ReserveBtn>
-        </section>
-        {/* PERFORMANCE MOBILE */}
-        <section className='bg-black hidden sm:block'>
-          <div className='relative'>
-            <div className="flex flex-col h-full">
-              <div className='mt-8 flex flex-col justify-start items-end pr-4'>
-                <div className="title mb-8">
-                  <h2 className=' font-oswald font-light text-4xl tracking-wide'>Performance</h2>
-                  <div className="underline w-10 h-0.5 rounded-xl my-2 ml-32 bg-highlight"></div>
-                </div>
-                <div className="contents tracking-wide text-right text-greytext">
-                  <h2 className='text-white text-lg'>Electric is now fast.</h2>
-                  <h1 className='text-2xl font-light mb-3'>Top Speed of 135 kmph</h1>
-                  <h2 className='text-white text-lg'>Week long charge.</h2>
-                  <h1 className='text-2xl font-light mb-3'>150 km Real World Range</h1>
-                  <h2 className='text-white text-lg'>First off the traffic line.</h2>
-                  <h1 className='text-2xl font-light mb-3'>0-60 kmph in &#60; 3.5 secs<span className='text-xl'>*</span></h1>
-                  <h2 className='text-white text-lg'>Get to your destination quicker.</h2>
-                  <h1 className='text-2xl font-light mb-3'>0-80% charge in 45 mins<span className='text-xl'>*</span></h1>
-                </div>
-              </div>
-              <div className='overflow-hidden'>
-                <div className='w-full h-96
-                bg-performbg bg-cover bg-no-repeat bg-center scale-150 ease-in duration-500'>
-                </div>
-              </div>
-            </div>
-            <ReserveBtn name={'Tech Story'} route={true} link={'/techstory'}></ReserveBtn>
-          </div>
-        </section>
+        <ZeroSection zeroSection={zeroSection} titlesAnim={titlesAnim} parasAnim={parasAnim}
+          zeroCont1={zeroCont1} zeroCont2={zeroCont2} zeroCont3={zeroCont3} zeroImg={zeroImg}
+          zeroWord1={zeroWord1} zeroWord2={zeroWord2} zeroWord3={zeroWord3}
+          MzeroCont1={MzeroCont1} MzeroCont2={MzeroCont2} MzeroCont3={MzeroCont3} MzeroImg={MzeroImg}
+          MzeroWord1={MzeroWord1} MzeroWord2={MzeroWord2} MzeroWord3={MzeroWord3}>
+        </ZeroSection>
+        {/*  */}
+        <PerformanceSection performSection={performSection} titlesAnim={titlesAnim} performanceAnim={performanceAnim}
+          performImg={performImg}>
+        </PerformanceSection>
         {/* FOOTER */}
         <Footer></Footer>
       </main>
