@@ -3,7 +3,7 @@ import Footer from '../components/widgets/Footer'
 import { useEffect, useRef, useState } from 'react'
 import SideActiveIndicatorTechStory from '../components/widgets/SideActiveIndicatorTechStory'
 //
-import TechHome from '../components/pages/techstory/techHome'
+import TechHome from '../components/pages/techstory/TechHome'
 import VcuSection from '../components/pages/techstory/VcuSection'
 import BmsSection from '../components/pages/techstory/BmsSection'
 import MotorSection from '../components/pages/techstory/MotorSection'
