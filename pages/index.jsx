@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Script from 'next/script'
 import NavBar from '../components/widgets/NavBar'
 import SideActiveIndicator from '../components/widgets/SideActiveIndicatorHome'
 import Footer from '../components/widgets/Footer'
@@ -246,6 +247,17 @@ export default function Home() {
 
   return (
     <div className='bg-black'>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-PKHFT82G5P"></Script>
+      <Script strategy="lazyOnload">
+        {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-PKHFT82G5P', {
+                    page_path: window.location.pathname,
+                    });
+                `}
+      </Script>
       <Head>
         <title>Raptee | E-Vehicle</title>
         <meta name="description" content="An E-Vehicle website - RAPTEE" />
