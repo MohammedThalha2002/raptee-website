@@ -247,8 +247,8 @@ export default function Home() {
 
   return (
     <div className='bg-black'>
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-PKHFT82G5P"></Script>
-      <Script strategy="lazyOnload">
+      <Script id="google-analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-PKHFT82G5P"></Script>
+      <Script id="analytics" strategy="lazyOnload">
         {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
