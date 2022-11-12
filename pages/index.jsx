@@ -260,7 +260,7 @@ export default function Home() {
       </Script>
       <Head>
         <title>Raptee | E-Vehicle</title>
-        <meta name="description" content="An E-Vehicle website - RAPTEE" />
+        <meta name="description" content="An E-Vehicle website - RAPTEE. Raptee Motors" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preload" href="/fonts/Nebula-Regular.otf" as="font" type="font/otf" crossorigin />
       </Head>

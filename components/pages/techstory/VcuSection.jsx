@@ -30,6 +30,7 @@ function VcuSection(props) {
                             width={1200}
                             height={900}
                             priority={true}
+                            alt='Raptee Motors'
                         />
                     </div>
                 </div>

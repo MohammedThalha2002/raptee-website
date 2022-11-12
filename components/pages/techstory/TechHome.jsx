@@ -13,6 +13,7 @@ function TechHome(props) {
                         width="1920"
                         height="1080"
                         priority={true}
+                        alt='Raptee Motors'
                     />
                     <div className="absolute left-0 top-20 pl-20 pt-6 ">
                         <div className="content text-left">

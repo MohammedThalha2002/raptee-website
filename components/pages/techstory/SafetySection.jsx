@@ -30,6 +30,7 @@ function SafetySection(props) {
                             width={1920}
                             height={1080}
                             priority={true}
+                            alt='Raptee Motors'
                         />
                     </div>
                 </div>

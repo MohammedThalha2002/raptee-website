@@ -14,6 +14,7 @@ function PerformanceSection(props) {
                             width={1450}
                             height={1080}
                             priority={true}
+                            alt='Raptee Motors'
                         />
                     </div>
                     <div className='w-2/5 flex flex-col justify-center items-end pl-0 pr-20'>

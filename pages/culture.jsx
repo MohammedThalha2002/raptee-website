@@ -51,6 +51,7 @@ function Culture() {
                                 height={12}
                                 width={16}
                                 priority={true}
+                                alt='Raptee Motors'
                             />
                         </div>
                         <div className='absolute w-1/30 top-30rem sm:top-60 left-1/80 sm:left-1/90'>
@@ -60,6 +61,7 @@ function Culture() {
                                 width={16}
                                 height={16}
                                 priority={true}
+                                alt='Raptee Motors'
                             />
                         </div>
                         <div className='absolute w-1/3 top-44rem sm:top-10rem left-1/96 sm:left-1/70'>
@@ -69,6 +71,7 @@ function Culture() {
                                 width={16}
                                 height={16}
                                 priority={true}
+                                alt='Raptee Motors'
                             />
                         </div>
                         <div className='w-2/3 sm:w-4/5 mt-16 pl-1/5'>
@@ -105,7 +108,7 @@ function Culture() {
                                         layout='fixed'
                                         height={240}
                                         width={160}
-                                        alt='images'
+                                        alt='Raptee Motors'
                                     />
                                 </div>
                             ))}
@@ -119,6 +122,7 @@ function Culture() {
                             layout='responsive'
                             height={1080}
                             width={1920}
+                            alt='Raptee Motors'
                         />
                     </div>
                     <div className='pl-1/13 ease-in duration-200'>
@@ -134,6 +138,7 @@ function Culture() {
                                 layout='responsive'
                                 height={1080}
                                 width={1920}
+                                alt='Raptee Motors'
                             />
                         </div>
                         <div className='w-1/20 h-40 sm:h-12 bg-greydiv flex flex-col justify-end p-2 sm:p-1 ease-in duration-200 hover:scale-110'>
@@ -146,6 +151,7 @@ function Culture() {
                                 layout='responsive'
                                 height={1080}
                                 width={1920}
+                                alt='Raptee Motors'
                             />
                         </div>
                     </div>
@@ -162,6 +168,7 @@ function Culture() {
                                 layout='responsive'
                                 height={1080}
                                 width={1920}
+                                alt='Raptee Motors'
                             />
                         </div>
                         <div className='w-1/25 aspect-video flex items-end'>
@@ -191,6 +198,7 @@ function Culture() {
                                 layout='responsive'
                                 height={1080}
                                 width={1920}
+                                alt='Raptee Motors'
                             />
                         </div>
                     </div>

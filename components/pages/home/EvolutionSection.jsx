@@ -15,6 +15,7 @@ function EvolutionSection(props) {
                         width="1920"
                         height="1080"
                         priority={true}
+                        alt='Raptee Motors'
                     />
                     <div className="absolute right-0 top-20 pr-14 pt-2">
                         <div className="content text-right flex flex-col items-end" ref={(el) => (props.titlesAnim.current[0] = el)}>

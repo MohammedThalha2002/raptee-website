@@ -36,6 +36,7 @@ function BmsSection(props) {
                             width={1205}
                             height={1000}
                             priority={true}
+                            alt='Raptee Motors'
                         />
                     </div>
                 </div>
