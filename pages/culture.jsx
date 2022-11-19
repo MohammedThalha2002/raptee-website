@@ -5,6 +5,8 @@ import { caurosel } from '../components/widgets/carousel'
 import Footer from '../components/widgets/Footer'
 import { gsap } from "gsap/dist/gsap.js";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import scrollLock from 'scroll-lock';
 gsap.registerPlugin(ScrollTrigger)
 
@@ -34,6 +36,7 @@ function Culture() {
 
     return (
         <div className='w-full'>
+            <ToastContainer />
             <NavBar mobile={false}></NavBar>
             <div className='w-full'>
                 <section className='bg-black relative'>

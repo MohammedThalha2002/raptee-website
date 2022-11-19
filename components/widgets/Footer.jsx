@@ -1,8 +1,45 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useForm, ValidationError } from '@formspree/react';
+import { toast } from 'react-toastify';
 
 function Footer() {
+
+    function ContactForm() {
+        const [state, handleSubmit] = useForm("xbjbbdro");
+        if (state.succeeded) {
+            toast.success("Thanks for your Submission!", {
+                toastId: 'success1',
+            })
+            return (
+                <div className='flex justify-center items-center'>
+                    <p>Thanks for your submission</p>
+                </div>
+            )
+        }
+        return (
+            <form onSubmit={handleSubmit}>
+                <div className='flex w-full my-4'>
+                    <div>
+                        <input type="text" id="first_name" name='first_name' className="bg-black border-2 border-white text-white
+                        text-xs rounded-3xl block p-2.5 " placeholder="First Name" required />
+                    </div>
+                    <div>
+                        <input type="text" id="last_name" name='last_name' className="bg-black border-2 border-white text-white
+                        text-xs rounded-3xl block p-2.5 ml-4" placeholder="Last Name" required />
+                    </div>
+                </div>
+                <div>
+                    <input type="email" id="email" name='email' className="bg-black border-2 border-white text-white
+                        text-xs rounded-3xl w-full block p-2.5 my-4" placeholder="Email" required />
+                </div>
+                <button type="submit" disabled={state.submitting} className='bg-black border-2 border-white text-white
+                        text-xs rounded-3xl block py-2.5 px-12 my-4'>SEND</button>
+            </form>
+        )
+    }
+
     return (
         <section className="bg-black w-screen flex justify-around flex-wrap" id="footer">
             {/* NEWSLETTER */}
@@ -11,22 +48,7 @@ function Footer() {
                     <h2 className=' font-oswald font-light text-2xl tracking-wide sm:text-xl'>NEWSLETTER</h2>
                     <div className="underline w-10 h-0.5 rounded-xl my-2 mr-32 bg-highlight"></div>
                 </div>
-                <div className='flex w-full my-4'>
-                    <div>
-                        <input type="text" id="first_name" className="bg-black border-2 border-white text-white
-                        text-xs rounded-3xl block p-2.5 " placeholder="First Name" required />
-                    </div>
-                    <div>
-                        <input type="text" id="last_name" className="bg-black border-2 border-white text-white
-                        text-xs rounded-3xl block p-2.5 ml-4" placeholder="Last Name" required />
-                    </div>
-                </div>
-                <div>
-                    <input type="email" id="email" className="bg-black border-2 border-white text-white
-                        text-xs rounded-3xl w-full block p-2.5 my-4" placeholder="Email" required />
-                </div>
-                <button className='bg-black border-2 border-white text-white
-                        text-xs rounded-3xl block py-2.5 px-12 my-4'>SEND</button>
+                <ContactForm></ContactForm>
             </div>
             {/* ADDRESS */}
             <div className='py-10 px-2 w-56'>

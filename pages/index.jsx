@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Script from 'next/script'
 import NavBar from '../components/widgets/NavBar'
-import SideActiveIndicator from '../components/widgets/SideActiveIndicatorHome'
 import Footer from '../components/widgets/Footer'
+import SideActiveIndicator from '../components/widgets/SideActiveIndicatorHome'
 import scrollLock from 'scroll-lock';
 //
 import EvolutionSection from '../components/pages/home/EvolutionSection'
@@ -11,6 +11,8 @@ import ZeroSection from '../components/pages/home/ZeroSection'
 import PerformanceSection from '../components/pages/home/PerformanceSection'
 //
 import { useEffect, useRef, useState } from 'react'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { gsap } from "gsap/dist/gsap.js";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
@@ -239,7 +241,6 @@ export default function Home() {
     sectionObserver.observe(performSection.current)
     window.addEventListener('scroll', handleScroll, { passive: true });
 
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
     }
@@ -265,6 +266,7 @@ export default function Home() {
         <link rel="preload" href="/fonts/Nebula-Regular.otf" as="font" type="font/otf" crossorigin />
       </Head>
       <main className='bg-black'>
+        <ToastContainer />
         <NavBar mobile={mobile}></NavBar>
         <SideActiveIndicator index={sectionIndex}></SideActiveIndicator>
         <section className='sticky top-35rem z-50 ml-32'>

@@ -11,6 +11,8 @@ import CcsSection from '../components/pages/techstory/CcsSection'
 import SafetySection from '../components/pages/techstory/SafetySection'
 //
 import scrollLock from 'scroll-lock';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { gsap } from "gsap/dist/gsap.js";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
@@ -103,6 +105,7 @@ function Techstory() {
 
     return (
         <div className='bg-black'>
+            <ToastContainer />
             <NavBar mobile={false}></NavBar>
             <SideActiveIndicatorTechStory index={sectionIndex}></SideActiveIndicatorTechStory>
             {/*  */}
