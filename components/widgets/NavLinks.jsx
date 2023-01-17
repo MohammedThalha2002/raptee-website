@@ -29,7 +29,7 @@ function NavLinks(props) {
         sm:w-2/3"
       ref={props.reference}
     >
-      <div className="flex flex-col items-end">
+      <div className="flex flex-col h-full items-end">
         <div className="flex items-center">
           <h4>Close</h4>
           <IconContext.Provider
@@ -41,50 +41,52 @@ function NavLinks(props) {
             <IoMdClose onClick={cloaseNavLinks} className="cursor-pointer" />
           </IconContext.Provider>
         </div>
-        <Link href={"/home"}>
-          <h1 className="text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
-            Home
-          </h1>
-        </Link>
-        <Link href={"/techstory"}>
-          <h1 className="text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
-            Tech Story
-          </h1>
-        </Link>
-        <Link href={"/home"}>
-          <h1 className="text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
-            OEM Solutions
-          </h1>
-        </Link>
-        <Link href={"/culture"}>
-          <h1 className="text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
-            Culture
-          </h1>
-        </Link>
-        <Linky
-          activeClass="active"
-          to="footer"
-          spy={true}
-          smooth={true}
-          offset={50}
-          duration={1000}
-          delay={0}
-          onClick={cloaseNavLinks}
-        >
-          <h1 className="text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
-            Contact
-          </h1>
-        </Linky>
-        <Link href={"https://apply.workable.com/raptee-energy/"}>
-          <h1 className="text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
-            Career
-          </h1>
-        </Link>
-        <Link href={"https://medium.com/@contact_97913"}>
-          <h1 className="text-3xl sm:text-xl my-8 cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
-            Blogs
-          </h1>
-        </Link>
+        <div className="flex flex-col justify-evenly h-full items-end">
+          <Link href={"/home"}>
+            <h1 className="text-3xl sm:text-xl cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
+              Home
+            </h1>
+          </Link>
+          <Link href={"/techstory"}>
+            <h1 className="text-3xl sm:text-xl cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
+              Tech Story
+            </h1>
+          </Link>
+          <Link href={"/home"}>
+            <h1 className="text-3xl sm:text-xl cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
+              OEM Solutions
+            </h1>
+          </Link>
+          <Link href={"/culture"}>
+            <h1 className="text-3xl sm:text-xl cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
+              Culture
+            </h1>
+          </Link>
+          <Linky
+            activeClass="active"
+            to="footer"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={1000}
+            delay={0}
+            onClick={cloaseNavLinks}
+          >
+            <h1 className="text-3xl sm:text-xl cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
+              Contact
+            </h1>
+          </Linky>
+          <Link href={"https://apply.workable.com/raptee-energy/"}>
+            <h1 className="text-3xl sm:text-xl cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
+              Career
+            </h1>
+          </Link>
+          <Link href={"https://medium.com/@contact_97913"}>
+            <h1 className="text-3xl sm:text-xl cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
+              Blogs
+            </h1>
+          </Link>
+        </div>
       </div>
     </nav>
   );
