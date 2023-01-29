@@ -24,7 +24,7 @@ function EvolutionSection(props) {
                             <div className="underline w-14 h-0.5 rounded-xl my-2 mx-1 bg-highlight"></div>
                         </div>
                     </div>
-                    <ReserveBtn name={"Reserve Now"} route={false} link={'https://pages.razorpay.com/pl_EAjfop8xakIQaU/view'}>
+                    <ReserveBtn name={"Enquire Now"} route={false} link={'https://6bsocgdg2tv.typeform.com/to/L7qWu6fY'}>
                     </ReserveBtn>
                     <BottomLoader></BottomLoader>
                 </div>
@@ -42,7 +42,7 @@ function EvolutionSection(props) {
                             </div>
                         </div>
                     </div>
-                    <ReserveBtn name={"Reserve Now"} route={false} link={'https://pages.razorpay.com/pl_EAjfop8xakIQaU/view'}>
+                    <ReserveBtn name={"Enquire Now"} route={false} link={'https://6bsocgdg2tv.typeform.com/to/L7qWu6fY'}>
                     </ReserveBtn>
                 </div>
             </section>
