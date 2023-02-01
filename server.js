@@ -1,4 +1,6 @@
-// server.js
+// server.js 
+//  ===> run => npm run build before zipping
+
 const { createServer } = require('http')
 const { parse } = require('url')
 const next = require('next')

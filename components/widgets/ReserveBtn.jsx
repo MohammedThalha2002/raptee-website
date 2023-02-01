@@ -24,7 +24,7 @@ function ReserveBtn(props) {
       className="text-center absolute bottom-32 left-1/2 -translate-x-1/2
     sm:bottom-12"
     >
-      <PreBookingsClosed />
+      {/* <PreBookingsClosed /> */}
       <button
         onClick={() => handleClick()}
         className="rounded-none border-solid border
