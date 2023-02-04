@@ -81,7 +81,7 @@ function NavLinks(props) {
               Career
             </h1>
           </Link>
-          <Link href={"https://medium.com/@contact_97913"}>
+          <Link href={"https://medium.com/raptee-energy"}>
             <h1 className="text-3xl sm:text-xl cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
               Blogs
             </h1>

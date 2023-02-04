@@ -75,7 +75,7 @@ function Footer() {
       <div className="py-10 w-80">
         <div className="title">
           <h2 className=" font-oswald font-light text-2xl tracking-wide sm:text-xl">
-            NEWSLETTER
+            EXCLUSIVE LIST
           </h2>
           <div className="underline w-10 h-0.5 rounded-xl my-2 mr-32 bg-highlight"></div>
         </div>
@@ -173,7 +173,7 @@ function Footer() {
           <h2 className="my-2">Refund Policy</h2>
           <h2 className="my-2">Terms of Services</h2>
           <h2 className="my-2">About Us</h2>
-          <Link href={"https://medium.com/@contact_97913"}>
+          <Link href={"https://medium.com/raptee-energy"}>
             <h2 className="my-2 cursor-pointer">Blog</h2>
           </Link>
         </div>
