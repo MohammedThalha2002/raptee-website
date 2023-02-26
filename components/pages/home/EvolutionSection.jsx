@@ -20,6 +20,7 @@ function EvolutionSection(props) {
             height="1080"
             priority={true}
             alt="Raptee Motors"
+            className="scale-[0.8]"
           />
           <div className="absolute right-0 top-20 pr-14 pt-2">
             <div

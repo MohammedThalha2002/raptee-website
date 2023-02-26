@@ -1,0 +1,189 @@
+import Link from "next/link";
+import React from "react";
+import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+
+const data = [
+  {
+    id: 1,
+    img: "/images/updates/1.png",
+    title:
+      "THIS JANUARY, RAPTEE WAS PART OF THE INDIA'S SUSTAINABILITY PANEL AT DAVOS, SWITZERLAND",
+    desc: `Our CEO, Dinesh Arjun, represented as a speaker for the Sustainability Panel at
+            Davos to shed light on the importance of sustainability in current times.
+            While they discussed the topic of 'Climate Change and Innovation,'
+            we could not help but notice how diverse the panel was.`,
+    link: "https://medium.com/raptee-energy/world-economic-forum-heres-what-happened-at-davos-2023-69e2b297d6d3",
+    alt: "Raptee India was at Davos 2023, World Economic forum",
+  },
+  {
+    id: 2,
+    img: "/images/updates/2.png",
+    title:
+      "WE BECAME THE FIRST OEM COMPANY TO RECEIVE A GRANT FROM ARAI AT DELHI, INDIA",
+    desc: `Our CEO, Dinesh Arjun, represented as a speaker for the Sustainability Panel
+     at Davos to shed light on the importance of sustainability in current times. While they discussed the topic of
+     'Climate Change and Innovation,' we could not help but notice how diverse the panel was.`,
+    link: "https://www.linkedin.com/posts/peddia_congratulations-to-all-the-10-companies-selected-activity-7021857930278748160-6DsT?utm_source=share&utm_medium=member_desktop",
+    alt: "Raptee, Chennai EV manufacturers first OEM company in India to receive grant from ARAI ",
+  },
+  {
+    id: 3,
+    img: "/images/updates/3.png",
+    title:
+      "WE EXHIBITED IN THE PRESENCE OF MR. PIYUSH GOYAL & MR. SOM PARKASH, HON'BLE MINISTERS OF COMMERCE & INDUSTRY",
+    desc: `On national startup day, we had the honor to exhibit in the grace of Piyush Goyal,
+     Hon'ble Minister of Commerce and Industry, consumer affairs, food & public distribution,
+      & Shri Som Parkash, Hon'ble Union minister of state for commerce & industry,
+       along with representatives from DPIIT.`,
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7034051277252698112",
+    alt: "Raptee EV company exhibiting for Mr. Piyush Goyal, Hon'ble Minister of Commerce and Industry, consumer affairs, food & public distribution, & Shri Som Parkash, Hon'ble Union minister of state for commerce & industry & DPIIT.",
+  },
+  {
+    id: 4,
+    img: "/images/updates/4.png",
+    title:
+      "LATE LAST YEAR, WE WON THE 'ASPIRATIONAL INNOVATIVE STARTUP OF THE YEAR 2022' AWARD",
+    desc: `Raptee was awarded the 'Aspirational Innovative Startup of the Year 2022" powered by the Federation Of Indian Chambers Of Commerce (FCCI) & Industry and The Indian Express. As a startup with a team that thrives at the thought of innovation,
+     this acknowledgment has strengthened our resolve more than ever.`,
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7007336007679303680",
+    alt: "Chennai EV company, Raptee wins Innovative Startup of the year award",
+  },
+];
+
+function UpdatesSection() {
+  const slideLeftDesktop = () => {
+    var slider = document.getElementById("slider-desktop");
+    slider.scrollLeft = slider.scrollLeft - window.innerWidth / 2;
+  };
+
+  const slideRightDesktop = () => {
+    var slider = document.getElementById("slider-desktop");
+    slider.scrollLeft = slider.scrollLeft + window.innerWidth / 2;
+  };
+  const slideLeftMobile = () => {
+    var slider = document.getElementById("slider-mobile");
+    slider.scrollLeft = slider.scrollLeft - window.innerWidth * 0.8;
+  };
+
+  const slideRightMobile = () => {
+    var slider = document.getElementById("slider-mobile");
+    slider.scrollLeft = slider.scrollLeft + window.innerWidth * 0.8;
+  };
+
+  return (
+    <section>
+      {/* DESKTOP VERSION */}
+      <div className=" w-full h-[32rem] bg-black flex flex-col p-4  sm:hidden">
+        <div className="ml-6 mt-2">
+          <h1 className="text-4xl ml-10 mb-4 font-oswald">WHAT ARE WE UPTO?</h1>
+          <div className="relative flex items-center">
+            <MdChevronLeft
+              className="opacity-50 cursor-pointer hover:opacity-100"
+              onClick={slideLeftDesktop}
+              size={40}
+            />
+            <div
+              id="slider-desktop"
+              className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
+            >
+              {data.map((item, index) => (
+                <Link key={index} href={item.link} passHref>
+                  <a target="_blank" rel="noopener noreferrer">
+                    <div className="inline-block p-2 mr-10 relative cursor-pointer hover:scale-105 ease-in-out duration-300">
+                      <img
+                        className="w-[40rem]"
+                        src={item.img}
+                        alt={item.alt}
+                      />
+                      <div className="w-[40rem] h-[8rem] p-2 px-4 bg-black opacity-80 absolute bottom-0">
+                        <h1
+                          className="w-full text-xl font-oswald tracking-widest"
+                          style={{
+                            wordWrap: "break-word",
+                            whiteSpace: "normal",
+                          }}
+                        >
+                          {item.title}
+                        </h1>
+                        <p
+                          style={{
+                            wordWrap: "break-word",
+                            whiteSpace: "normal",
+                          }}
+                          className="w-full text-xs"
+                        >
+                          {item.desc}
+                          <span className="underline">Learn more...</span>
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </Link>
+              ))}
+            </div>
+            <MdChevronRight
+              className="opacity-50 cursor-pointer hover:opacity-100"
+              onClick={slideRightDesktop}
+              size={40}
+            />
+          </div>
+        </div>
+      </div>
+      {/* MOBILE VERSION */}
+      <div className=" w-full h-[28rem] bg-black flex flex-col p-2 sm:block">
+        <div className="">
+          <h1 className="text-2xl ml-10 pt-2 font-oswald">WHAT ARE WE UPTO?</h1>
+          <div className="relative flex items-center">
+            <MdChevronLeft
+              className="opacity-50 cursor-pointer hover:opacity-100"
+              onClick={slideLeftMobile}
+              size={40}
+            />
+            <div
+              id="slider-mobile"
+              className="w-full h-full overflow-x-scroll scroll snap-x whitespace-nowrap scroll-smooth scrollbar-hide"
+            >
+              {data.map((item, index) => (
+                <Link key={index} href={item.link} passHref>
+                  <a target="_blank" rel="noopener noreferrer">
+                    <div className="inline-block p-2 relative cursor-pointer">
+                      <img className="w-full snap-center" src={item.img} alt={item.alt} />
+                      <div className="w-full h-[8rem] py-2 bg-black opacity-80">
+                        <h1
+                          className="w-full text-base font-oswald tracking-widest"
+                          style={{
+                            wordWrap: "break-word",
+                            whiteSpace: "normal",
+                          }}
+                        >
+                          {item.title}
+                        </h1>
+                        <p
+                          style={{
+                            wordWrap: "break-word",
+                            whiteSpace: "normal",
+                          }}
+                          className="w-full text-xs mt-2"
+                        >
+                          {item.desc}
+                          <span className="underline"> Learn more...</span>
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </Link>
+              ))}
+            </div>
+            <MdChevronRight
+              className="opacity-50 cursor-pointer hover:opacity-100"
+              onClick={slideRightMobile}
+              size={40}
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default UpdatesSection;

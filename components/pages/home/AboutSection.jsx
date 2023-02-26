@@ -29,6 +29,7 @@ function AboutSection(props) {
                             height={950}
                             priority={true}
                             alt='Raptee Motors'
+                            className="scale-[0.8]"
                         />
                     </div>
                 </div>
