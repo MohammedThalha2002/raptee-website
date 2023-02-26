@@ -36,7 +36,7 @@ const data = [
      Hon'ble Minister of Commerce and Industry, consumer affairs, food & public distribution,
       & Shri Som Parkash, Hon'ble Union minister of state for commerce & industry,
        along with representatives from DPIIT.`,
-    link: "https://www.linkedin.com/feed/update/urn:li:activity:7034051277252698112",
+    link: "https://www.instagram.com/p/CnjmfC6s1kd/?igshid=NmE0MzVhZDY=",
     alt: "Raptee EV company exhibiting for Mr. Piyush Goyal, Hon'ble Minister of Commerce and Industry, consumer affairs, food & public distribution, & Shri Som Parkash, Hon'ble Union minister of state for commerce & industry & DPIIT.",
   },
   {
