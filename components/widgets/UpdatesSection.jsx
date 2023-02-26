@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+import { useRef } from "react";
 
 const data = [
   {
@@ -51,22 +52,25 @@ const data = [
 ];
 
 function UpdatesSection() {
+  const desktopSlider = useRef();
+  const mobileSlider = useRef();
+
   const slideLeftDesktop = () => {
-    var slider = document.getElementById("slider-desktop");
+    let slider = desktopSlider.current;
     slider.scrollLeft = slider.scrollLeft - window.innerWidth / 2;
   };
 
   const slideRightDesktop = () => {
-    var slider = document.getElementById("slider-desktop");
+    let slider = desktopSlider.current;
     slider.scrollLeft = slider.scrollLeft + window.innerWidth / 2;
   };
   const slideLeftMobile = () => {
-    var slider = document.getElementById("slider-mobile");
+    let slider = mobileSlider.current;
     slider.scrollLeft = slider.scrollLeft - window.innerWidth * 0.8;
   };
 
   const slideRightMobile = () => {
-    var slider = document.getElementById("slider-mobile");
+    let slider = mobileSlider.current;
     slider.scrollLeft = slider.scrollLeft + window.innerWidth * 0.8;
   };
 
@@ -83,7 +87,7 @@ function UpdatesSection() {
               size={40}
             />
             <div
-              id="slider-desktop"
+              ref={desktopSlider}
               className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
             >
               {data.map((item, index) => (
@@ -130,7 +134,7 @@ function UpdatesSection() {
         </div>
       </div>
       {/* MOBILE VERSION */}
-      <div className=" w-full h-[28rem] bg-black flex flex-col p-2 sm:block">
+      <div className=" w-full h-[28rem] bg-black p-2 hidden sm:block">
         <div className="">
           <h1 className="text-2xl ml-10 pt-2 font-oswald">WHAT ARE WE UPTO?</h1>
           <div className="relative flex items-center">
@@ -140,14 +144,18 @@ function UpdatesSection() {
               size={40}
             />
             <div
-              id="slider-mobile"
+              ref={mobileSlider}
               className="w-full h-full overflow-x-scroll scroll snap-x whitespace-nowrap scroll-smooth scrollbar-hide"
             >
               {data.map((item, index) => (
                 <Link key={index} href={item.link} passHref>
                   <a target="_blank" rel="noopener noreferrer">
                     <div className="inline-block p-2 relative cursor-pointer">
-                      <img className="w-full snap-center" src={item.img} alt={item.alt} />
+                      <img
+                        className="w-full snap-center"
+                        src={item.img}
+                        alt={item.alt}
+                      />
                       <div className="w-full h-[8rem] py-2 bg-black opacity-80">
                         <h1
                           className="w-full text-base font-oswald tracking-widest"
