@@ -1,23 +1,3 @@
-// https://i.postimg.cc/HsmPwfQq/1.jpg
-// https://i.postimg.cc/qRRpvN7G/2.jpg
-// https://i.postimg.cc/FFC7345R/3.jpg
-// https://i.postimg.cc/TYWYb5J7/4.jpg
-// https://i.postimg.cc/jqBnBb81/5.jpg
-// https://i.postimg.cc/1zy9bCh2/6.jpg
-// https://i.postimg.cc/HnrWBrDL/7.jpg
-// https://i.postimg.cc/GtmTr300/8.jpg
-// https://i.postimg.cc/Mp76Pk41/9.jpg
-// https://i.postimg.cc/V5ywg4W7/10.jpg
-// https://i.postimg.cc/FKP7p5dD/11.jpg
-// https://i.postimg.cc/VkWSSbYy/12.jpg
-// https://i.postimg.cc/LXnh0CjR/13.jpg
-// https://i.postimg.cc/q7BN2MRN/14.jpg
-// https://i.postimg.cc/LXwhdtVP/15.jpg
-// https://i.postimg.cc/vHRD3vTF/16.jpg
-// https://i.postimg.cc/664yrP9f/17.jpg
-// https://i.postimg.cc/7YghcTJC/18.jpg
-// https://i.postimg.cc/2Sryf8n0/19.jpg
-
 
 export const caurosel = [
     {

@@ -34,7 +34,7 @@ function NavLinks(props) {
           <h4>Close</h4>
           <IconContext.Provider
             value={{
-              color: "#E0B317",
+              color: "#08999F",
               size: "2rem",
             }}
           >

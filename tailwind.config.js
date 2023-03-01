@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        highlight: "#E0B317",
-        "highlight-low": "#5D4A0A",
+        highlight: "#08999F",
+        "highlight-low": "#96FBFF",
         navlinksbg: "#424242",
         greydiv: "#999999",
         greytext: "#626262",

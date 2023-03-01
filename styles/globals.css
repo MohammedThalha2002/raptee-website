@@ -8,7 +8,7 @@
 
 
 :root {
-  --highlight-color: #E0B317;
+  --highlight-color: #08999F;
 }
 
 html,
@@ -58,7 +58,7 @@ a {
 }
 
 #img-slider::-webkit-scrollbar-thumb {
-  background: #E0B317;
+  background: var(--highlight-color);
   border-radius: 4rem;
 }
 
