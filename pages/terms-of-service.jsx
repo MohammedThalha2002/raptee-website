@@ -119,19 +119,19 @@ function TermsOfService() {
           quantities and are subject to return or exchange only according to our
           Return Policy. We have made every effort to display as accurately as
           possible the colors and images of our products that appear at the
-          store. We cannot guarantee that your computer monitor's display of any
-          color will be accurate. We reserve the right, but are not obligated,
-          to limit the sales of our products or Services to any person,
-          geographic region or jurisdiction. We may exercise this right on a
-          case-by-case basis. We reserve the right to limit the quantities of
-          any products or services that we offer. All descriptions of products
-          or product pricing are subject to change at anytime without notice, at
-          the sole discretion of us. We reserve the right to discontinue any
-          product at any time. Any offer for any product or service made on this
-          site is void where prohibited. We do not warrant that the quality of
-          any products, services, information, or other material purchased or
-          obtained by you will meet your expectations, or that any errors in the
-          Service will be corrected.
+          store. We cannot guarantee that your computer monitor&apos;s display
+          of any color will be accurate. We reserve the right, but are not
+          obligated, to limit the sales of our products or Services to any
+          person, geographic region or jurisdiction. We may exercise this right
+          on a case-by-case basis. We reserve the right to limit the quantities
+          of any products or services that we offer. All descriptions of
+          products or product pricing are subject to change at anytime without
+          notice, at the sole discretion of us. We reserve the right to
+          discontinue any product at any time. Any offer for any product or
+          service made on this site is void where prohibited. We do not warrant
+          that the quality of any products, services, information, or other
+          material purchased or obtained by you will meet your expectations, or
+          that any errors in the Service will be corrected.
         </h3>
       </div>
       {/* 8 */}
@@ -195,10 +195,10 @@ function TermsOfService() {
           liable for any harm or damages related to the purchase or use of
           goods, services, resources, content, or any other transactions made in
           connection with any third-party websites. Please review carefully the
-          third-party's policies and practices and make sure you understand them
-          before you engage in any transaction. Complaints, claims, concerns, or
-          questions regarding third-party products should be directed to the
-          third-party.
+          third-party&apos;s policies and practices and make sure you understand
+          them before you engage in any transaction. Complaints, claims,
+          concerns, or questions regarding third-party products should be
+          directed to the third-party.
         </h3>
       </div>
     </section>
