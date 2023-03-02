@@ -69,7 +69,7 @@ function Footer() {
 
   return (
     <section className="bg-black w-screen flex flex-col ">
-      <UpdatesSection/>
+      <UpdatesSection />
       <div
         className="bg-black w-screen flex justify-around flex-wrap"
         id="footer"
@@ -82,7 +82,7 @@ function Footer() {
             </h2>
             <div className="underline w-10 h-0.5 rounded-xl my-2 mr-32 bg-highlight"></div>
           </div>
-          <ContactForm/>
+          <ContactForm />
         </div>
         {/* ADDRESS */}
         <div className="py-10 px-2 w-56">
@@ -172,9 +172,13 @@ function Footer() {
         <div className="py-10 px-2 w-52">
           <div className="underline w-10 h-0.5 rounded-xl my-2 mr-32 bg-highlight"></div>
           <div className="tracking-wide sm:text-sm">
-            <h2 className="my-2">Privacy Policy</h2>
+            <Link href={"/privacy-policy"}>
+              <h2 className="my-2 cursor-pointer">Privacy Policy</h2>
+            </Link>
             <h2 className="my-2">Refund Policy</h2>
-            <h2 className="my-2">Terms of Services</h2>
+            <Link href={"/terms-of-service"}>
+              <h2 className="my-2 cursor-pointer">Terms of Services</h2>
+            </Link>
             <h2 className="my-2">About Us</h2>
             <Link href={"https://medium.com/raptee-energy"}>
               <h2 className="my-2 cursor-pointer">Blog</h2>
