@@ -6,6 +6,32 @@ import { useRef } from "react";
 const data = [
   {
     id: 1,
+    img: "/images/updates/5.png",
+    title:
+      "OUR CEO, DINESH ARJUN, WAS PART OF THE PANEL DISCUSSION AT UMAGINE CHENNAI",
+    desc: `We were part of the panel discussion at Umagine Chennai,
+     one of India's most prominent tech summits. The panel discussion was on how
+      'Tamilnadu is emerging as a leader in Electric vehicle(EV) technology in South Asia'
+       by panellists Dinesh Arjun: CEO - Raptee; Moderator T.R Kesavan: TAFE - President- MCCI 
+       & Group President; Balasubramanian N: VP - Renault Nissan; Sunjay Kapur: President, Sona Comstar;
+        Horst Hammerer: CEO - Avla Marketing.`,
+    link: "https://www.instagram.com/p/CqNsMGmNpRj/?utm_source=ig_web_copy_link",
+    alt: "Raptee India at panel discussion at Umagine Chennai",
+  },
+  {
+    id: 2,
+    img: "/images/updates/6.png",
+    title:
+      "WE APPOINTED OUR OFFICIAL CHIEF BUSINESS OFFICER, MR. JAYAPRADEEP VASUDEVAN",
+    desc: `Meet Mr. Jayapradeep Vasudevan, commonly called Mr. JP. He comes with 25 years
+     of work experience in the automobile industry, most recently as India's Business Head 
+     at Royal Enfield. Apart from bringing his experience to the table, you know what else
+      really makes him cool? It's his down-to-earth demeanour and his out-of-box ideas.`,
+    link: "https://www.instagram.com/p/CpUMrtIv_RR/?utm_source=ig_web_copy_link",
+    alt: "Raptee - OUR OFFICIAL CHIEF BUSINESS OFFICER, MR. JAYAPRADEEP VASUDEVAN",
+  },
+  {
+    id: 3,
     img: "/images/updates/1.png",
     title:
       "THIS JANUARY, RAPTEE WAS PART OF THE INDIA'S SUSTAINABILITY PANEL AT DAVOS, SWITZERLAND",
@@ -17,7 +43,7 @@ const data = [
     alt: "Raptee India was at Davos 2023, World Economic forum",
   },
   {
-    id: 2,
+    id: 4,
     img: "/images/updates/2.png",
     title:
       "WE BECAME THE FIRST OEM COMPANY TO RECEIVE A GRANT FROM ARAI AT DELHI, INDIA",
@@ -28,7 +54,7 @@ const data = [
     alt: "Raptee, Chennai EV manufacturers first OEM company in India to receive grant from ARAI ",
   },
   {
-    id: 3,
+    id: 5,
     img: "/images/updates/3.png",
     title:
       "WE EXHIBITED IN THE PRESENCE OF MR. PIYUSH GOYAL & MR. SOM PARKASH, HON'BLE MINISTERS OF COMMERCE & INDUSTRY",
@@ -40,7 +66,7 @@ const data = [
     alt: "Raptee EV company exhibiting for Mr. Piyush Goyal, Hon'ble Minister of Commerce and Industry, consumer affairs, food & public distribution, & Shri Som Parkash, Hon'ble Union minister of state for commerce & industry & DPIIT.",
   },
   {
-    id: 4,
+    id: 6,
     img: "/images/updates/4.png",
     title:
       "LATE LAST YEAR, WE WON THE 'ASPIRATIONAL INNOVATIVE STARTUP OF THE YEAR 2022' AWARD",
@@ -99,7 +125,7 @@ function UpdatesSection() {
                         src={item.img}
                         alt={item.alt}
                       />
-                      <div className="w-[40rem] h-[8rem] p-2 px-4 bg-black opacity-80 absolute bottom-0">
+                      <div className="w-[40rem] h-[10rem] p-2 px-4 bg-black opacity-80 absolute bottom-0">
                         <h1
                           className="w-full text-xl font-oswald tracking-widest"
                           style={{
