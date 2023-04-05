@@ -121,16 +121,18 @@ function UpdatesSection() {
                   <a target="_blank" rel="noopener noreferrer">
                     <div className="inline-block p-2 mr-10 relative cursor-pointer hover:scale-105 ease-in-out duration-300">
                       <img
-                        className="w-[40rem]"
+                        className="w-[42rem]"
                         src={item.img}
                         alt={item.alt}
                       />
-                      <div className="w-[40rem] h-[10rem] p-2 px-4 bg-black opacity-80 absolute bottom-0">
+                      <div className="w-[42rem] h-[8rem] p-2 px-4 bg-black opacity-80 absolute bottom-0">
                         <h1
-                          className="w-full text-xl font-oswald tracking-widest"
+                          className="w-full font-oswald tracking-widest"
                           style={{
                             wordWrap: "break-word",
                             whiteSpace: "normal",
+                            fontSize: "17px",
+                            lineHeight: "20px",
                           }}
                         >
                           {item.title}
