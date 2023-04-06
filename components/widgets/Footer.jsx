@@ -109,13 +109,9 @@ function Footer() {
           </div>
           <div className="mt-6 tracking-wide sm:text-sm">
             <h3>Ph. No: +91 8925061646</h3>
-            <h3>contact@rapteemotors.com</h3>
+            <h3>contact@raptee.com</h3>
           </div>
           <div className="flex justify-between mt-4">
-            {/* Linkedin: https://www.linkedin.com/company/rapteeenergy/?viewAsMember=true
-                    Instagram: https://www.instagram.com/rapteeenergy/
-                    twitter: https://twitter.com/RapteeEnergy
-                    Facebook: https://www.facebook.com/rapteemotors */}
             <Link
               href={
                 "https://www.linkedin.com/company/rapteeenergy/?viewAsMember=true"
