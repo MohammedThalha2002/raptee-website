@@ -273,10 +273,10 @@ export default function Home() {
                 `}
       </Script>
       <Head>
-        <title>Raptee | E-Vehicle</title>
+        <title>Raptee | E-motorcycle</title>
         <meta
           name="description"
-          content="An E-Vehicle website - RAPTEE. Raptee Motors"
+          content="An E-motorcycle website - RAPTEE. Raptee Motors"
         />
         <link rel="icon" href="/favicon.ico" />
         <link
