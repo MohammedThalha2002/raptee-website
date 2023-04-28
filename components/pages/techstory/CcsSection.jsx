@@ -17,10 +17,10 @@ function CcsSection(props) {
                             <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
                         </div>
                         <div className="contents text-xl tracking-wide text-greytext">
-                            <h3 ref={(el) => (props.parasAnim.current[4] = el)}>
+                            <p ref={(el) => (props.parasAnim.current[4] = el)}>
                                 Our motorcycles are the first two-wheelers to support the CCS 2 charging standard, which
                                 lets you use any existing public charging station to power your vehicle.
-                            </h3>
+                            </p>
                         </div>
                     </div>
                     <div className='absolute flex items-end'>
@@ -29,7 +29,7 @@ function CcsSection(props) {
                             width={1920}
                             height={1080}
                             priority={true}
-                            alt='Raptee Motors'
+                            alt='Motor for electric motorcycle -high-voltage drive-train - traction control bike'
                         />
                     </div>
                 </div>
@@ -40,14 +40,14 @@ function CcsSection(props) {
                 <div className='flex relative flex-col'>
                     <div className='mb-8'>
                         <div className="text-left pl-4 pr-8">
-                            <h3 className='text-3xl font-light font-oswald 
-                                    tracking-wide my-4'>Charge anywhere.</h3>
+                            <h2 className='text-3xl font-light font-oswald 
+                                    tracking-wide my-4'>Charge anywhere.</h2>
                             <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
                             <div className="contents text-lg tracking-wide text-greytext">
-                                <h3>
+                                <p>
                                     Our motorcycles are the first two-wheelers to support the CCS 2 charging standard, which
                                     lets you use any existing public charging station to power your vehicle.
-                                </h3>
+                                </p>
                             </div>
                         </div>
                     </div>

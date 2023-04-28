@@ -51,32 +51,32 @@ function ZeroSection(props) {
                 className="block h-full ease-in duration-1000 tracking-wide text-greytext "
                 ref={props.zeroCont1}
               >
-                <h3>
+                <p>
                   Breakdowns, failures, and repairs are all things of the past.
                   We promise not only a futuristic motorcycle, but also a
                   futuristic and hassle-free riding experience.
-                </h3>
+                </p>
               </span>
               <span
                 className="block h-full ease-in duration-1000 tracking-wide text-greytext"
                 ref={props.zeroCont2}
               >
-                <h3>
+                <p>
                   We believe in doing what is best for the environment. Electric
                   is the future, and we&#39;re building for it right now.
-                </h3>
+                </p>
               </span>
               <span
                 className="block h-full ease-in duration-1000 tracking-wide text-greytext"
                 ref={props.zeroCont3}
               >
                 <br />
-                <h3>
+                <p>
                   No more needless part replacements. No more taking your
                   vehicle to the service centre every few months.Sit back and
                   relax while we look after your motorcycle. Rather, while the
                   motorcycle looks after itself.
-                </h3>
+                </p>
               </span>
             </div>
           </section>
@@ -84,6 +84,9 @@ function ZeroSection(props) {
           <section
             className="h-screen w-4/6 sticky top-0
                 bg-zerobg1 bg-contain bg-no-repeat bg-center ease-in duration-500"
+            aria-label="Zero hassle futuristic E-motorcycle - engineered to perfection
+            - Maintenance-free bike - Innovation at its best
+            - Sustainable electric motorcycle - CCS2 charging standard"
             ref={props.zeroImg}
           >
             <BottomLoaderZeroSec></BottomLoaderZeroSec>

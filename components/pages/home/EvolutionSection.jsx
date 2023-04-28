@@ -19,7 +19,7 @@ function EvolutionSection(props) {
             width="1920"
             height="1080"
             priority={true}
-            alt="Raptee Motors"
+            alt="EV-olution of electric motorcycles - New-gen innovation bike"
             className="scale-[0.8]"
           />
           <div className="absolute right-0 top-20 pr-14 pt-2">

@@ -18,7 +18,7 @@ function BmsSection(props) {
                             <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
                         </div>
                         <div className="contents text-xl tracking-wide text-greytext">
-                            <h3 ref={(el) => (props.parasAnim.current[2] = el)}>
+                            <p ref={(el) => (props.parasAnim.current[2] = el)}>
                                 State-of-the-art ML algorithms analyze variance in cell behaviour and choose the best
                                 charging approach to reduce loss and boost efficiency, thus extending your motorcycle&#39;s
                                 range.
@@ -27,7 +27,7 @@ function BmsSection(props) {
                                 cycles, which results in a stable system providing many years of reliable service.
                                 Active balancing directs excess current from a cell approaching its charging limit to the
                                 next cell with a lower charge, ensuring that all cells are charged to their maximum limit.
-                            </h3>
+                            </p>
                         </div>
                     </div>
                     <div className='w-2/3 h-full flex items-end relative sm:hidden'>
@@ -36,7 +36,8 @@ function BmsSection(props) {
                             width={1205}
                             height={1000}
                             priority={true}
-                            alt='Raptee Motors'
+                            alt='Smart battery motorcycle - Safest electric vehicle - ML algorithm'
+                            className="scale-[0.9]"
                         />
                     </div>
                 </div>
@@ -47,11 +48,11 @@ function BmsSection(props) {
                 <div className='flex relative flex-col'>
                     <div className='my-8'>
                         <div className="text-left pl-4 pr-8">
-                            <h3 className='text-3xl font-light font-oswald 
-                                    tracking-wide my-4'>BMS: Zeus to the Batteries.</h3>
+                            <h2 className='text-3xl font-light font-oswald 
+                                    tracking-wide my-4'>BMS: Zeus to the Batteries.</h2>
                             <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
                             <div className="contents text-lg tracking-wide text-greytext">
-                                <h3>
+                                <p>
                                     State-of-the-art ML algorithms analyze variance in cell behaviour and choose the best
                                     charging approach to reduce loss and boost efficiency, thus extending your motorcycle&#39;s
                                     range.
@@ -60,7 +61,7 @@ function BmsSection(props) {
                                     cycles, which results in a stable system providing many years of reliable service.
                                     Active balancing directs excess current from a cell approaching its charging limit to the
                                     next cell with a lower charge, ensuring that all cells are charged to their maximum limit.
-                                </h3>
+                                </p>
                             </div>
                         </div>
                     </div>

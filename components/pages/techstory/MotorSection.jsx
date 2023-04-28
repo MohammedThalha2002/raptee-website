@@ -16,7 +16,7 @@ function MotorSection(props) {
                             <div className="underline w-8 h-0.5 rounded-xl my-2 bg-highlight"></div>
                         </div>
                         <div className="contents text-xl tracking-wide text-greytext">
-                            <h3 ref={(el) => (props.parasAnim.current[3] = el)}>
+                            <p ref={(el) => (props.parasAnim.current[3] = el)}>
                                 Raptee&#39;s Electric Drivetrain (RED) is a high-powered software driven vehicle developed in
                                 house to adapt to various driving conditions for the Indian roads. It is backed by the
                                 control logics of the VCU that can be adjusted to the rider&#39;s needs, be it ECO mode with
@@ -24,7 +24,7 @@ function MotorSection(props) {
                                 With a motor controller developed to suit our high voltage drivetrain, RED can extract the
                                 most out of the permanent magnet synchronous motor we use, in the most efficient
                                 manner
-                            </h3>
+                            </p>
                         </div>
                     </div>
                     <div className='w-2/3 h-full flex items-end relative sm:hidden'>
@@ -33,7 +33,7 @@ function MotorSection(props) {
                             width={1920}
                             height={1080}
                             priority={true}
-                            alt='Raptee Motors'
+                            alt='Motor for electric motorcycle - high-voltage drive-train - traction control bike'
                         />
                     </div>
                 </div>

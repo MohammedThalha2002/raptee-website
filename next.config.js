@@ -5,15 +5,16 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/home',
-        destination: '/',
+        source: "/home",
+        destination: "/",
         permanent: true,
       },
-    ]
+    ];
   },
   images: {
-    domains: ['i.postimg.cc', 'postimg.cc']
-  }
-}
+    domains: ["i.postimg.cc", "postimg.cc"],
+    unoptimized: true,
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

@@ -284,7 +284,7 @@ export default function Home() {
           href="/fonts/Nebula-Regular.otf"
           as="font"
           type="font/otf"
-          crossOrigin
+          crossOrigin="true"
         />
       </Head>
       <main className="bg-black">
@@ -297,50 +297,52 @@ export default function Home() {
             ref={NavRef}
           ></div>
         </section>
-        {/*  */}
-        <EvolutionSection
-          evolSection={evolSection}
-          titlesAnim={titlesAnim}
-        ></EvolutionSection>
-        {/*  */}
-        <AboutSection
-          aboutSection={aboutSection}
-          titlesAnim={titlesAnim}
-          parasAnim={parasAnim}
-          about1={about1}
-          about2={about2}
-          about3={about3}
-          about1Ref={about1Ref}
-          about2Ref={about2Ref}
-          about3Ref={about3Ref}
-        ></AboutSection>
-        {/*  */}
-        <ZeroSection
-          zeroSection={zeroSection}
-          titlesAnim={titlesAnim}
-          parasAnim={parasAnim}
-          zeroCont1={zeroCont1}
-          zeroCont2={zeroCont2}
-          zeroCont3={zeroCont3}
-          zeroImg={zeroImg}
-          zeroWord1={zeroWord1}
-          zeroWord2={zeroWord2}
-          zeroWord3={zeroWord3}
-          MzeroCont1={MzeroCont1}
-          MzeroCont2={MzeroCont2}
-          MzeroCont3={MzeroCont3}
-          MzeroImg={MzeroImg}
-          MzeroWord1={MzeroWord1}
-          MzeroWord2={MzeroWord2}
-          MzeroWord3={MzeroWord3}
-        ></ZeroSection>
-        {/*  */}
-        <PerformanceSection
-          performSection={performSection}
-          titlesAnim={titlesAnim}
-          performanceAnim={performanceAnim}
-          performImg={performImg}
-        ></PerformanceSection>
+        <article itemScope itemType="https://www.scheme.org/Home">
+          {/*  */}
+          <EvolutionSection
+            evolSection={evolSection}
+            titlesAnim={titlesAnim}
+          ></EvolutionSection>
+          {/*  */}
+          <AboutSection
+            aboutSection={aboutSection}
+            titlesAnim={titlesAnim}
+            parasAnim={parasAnim}
+            about1={about1}
+            about2={about2}
+            about3={about3}
+            about1Ref={about1Ref}
+            about2Ref={about2Ref}
+            about3Ref={about3Ref}
+          ></AboutSection>
+          {/*  */}
+          <ZeroSection
+            zeroSection={zeroSection}
+            titlesAnim={titlesAnim}
+            parasAnim={parasAnim}
+            zeroCont1={zeroCont1}
+            zeroCont2={zeroCont2}
+            zeroCont3={zeroCont3}
+            zeroImg={zeroImg}
+            zeroWord1={zeroWord1}
+            zeroWord2={zeroWord2}
+            zeroWord3={zeroWord3}
+            MzeroCont1={MzeroCont1}
+            MzeroCont2={MzeroCont2}
+            MzeroCont3={MzeroCont3}
+            MzeroImg={MzeroImg}
+            MzeroWord1={MzeroWord1}
+            MzeroWord2={MzeroWord2}
+            MzeroWord3={MzeroWord3}
+          ></ZeroSection>
+          {/*  */}
+          <PerformanceSection
+            performSection={performSection}
+            titlesAnim={titlesAnim}
+            performanceAnim={performanceAnim}
+            performImg={performImg}
+          ></PerformanceSection>
+        </article>
         {/* FOOTER */}
         <Footer></Footer>
       </main>

@@ -26,6 +26,7 @@ function ReserveBtn(props) {
     >
       {/* <PreBookingsClosed /> */}
       <button
+        type="submit"
         onClick={() => handleClick()}
         className="rounded-none border-solid border
             border-highlight px-3 py-2 hover:bg-highlight-low "

@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "bundle": "next build && next export",
     "start": "NODE_ENV=production node server.js",
     "lint": "next lint",
     "deploy": "vercel deploy"

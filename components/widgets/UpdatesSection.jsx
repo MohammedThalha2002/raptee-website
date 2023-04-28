@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { useRef } from "react";
+import Image from "next/image";
 
 const data = [
   {
@@ -119,12 +120,18 @@ function UpdatesSection() {
               {data.map((item, index) => (
                 <Link key={index} href={item.link} passHref>
                   <a target="_blank" rel="noopener noreferrer">
-                    <div className="inline-block p-2 mr-8 relative cursor-pointer hover:scale-105 ease-in-out duration-300">
+                    <div className="inline-block w-[41rem] h-[25rem] p-2 mr-8 relative cursor-pointer hover:scale-105 ease-in-out duration-300">
                       <img
                         className="w-[41rem]"
                         src={item.img}
                         alt={item.alt}
                       />
+                      {/* <Image
+                        src={item.img}
+                        layout="fill"
+                        priority={true}
+                        alt={item.alt}
+                      /> */}
                       <div className="w-[41rem] h-[8rem] p-2 px-4 bg-black opacity-80 absolute bottom-0">
                         <h1
                           className="w-full font-oswald tracking-widest"
