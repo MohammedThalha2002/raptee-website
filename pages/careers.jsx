@@ -1,16 +1,19 @@
-import React from 'react'
+import React from "react";
 
 function Careers() {
   return (
     <div
       style={{
+        background: "#ffffff",
         border: 0,
+        padding: 0,
+        boxSizing: "border-box",
       }}
     >
       <iframe
         src="https://apply.workable.com/raptee-energy/"
         style={{
-          background: "#000",
+          background: "#ffffff",
           border: "none",
           display: "block",
           height: "100vh",
@@ -18,7 +21,7 @@ function Careers() {
         }}
       ></iframe>
     </div>
-  )
+  );
 }
 
-export default Careers
+export default Careers;
