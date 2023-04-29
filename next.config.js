@@ -11,6 +11,14 @@ const nextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: "/careers/:path*",
+        destination: `/careers`,
+      },
+    ];
+  },
   images: {
     domains: ["i.postimg.cc", "postimg.cc"],
     unoptimized: true,
