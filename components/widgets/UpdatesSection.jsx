@@ -106,7 +106,7 @@ function UpdatesSection() {
       {/* DESKTOP VERSION */}
       <div className=" w-full h-[32rem] bg-black flex flex-col p-4  sm:hidden">
         <div className="ml-6 mt-2">
-          <h1 className="text-4xl ml-10 mb-4 font-oswald">WHAT ARE WE UPTO?</h1>
+          <h2 className="text-4xl ml-10 mb-4 font-oswald">WHAT ARE WE UPTO?</h2>
           <div className="relative flex items-center">
             <MdChevronLeft
               className="opacity-50 cursor-pointer hover:opacity-100"
@@ -126,14 +126,8 @@ function UpdatesSection() {
                         src={item.img}
                         alt={item.alt}
                       />
-                      {/* <Image
-                        src={item.img}
-                        layout="fill"
-                        priority={true}
-                        alt={item.alt}
-                      /> */}
                       <div className="w-[41rem] h-[8rem] p-2 px-4 bg-black opacity-80 absolute bottom-0">
-                        <h1
+                        <h3
                           className="w-full font-oswald tracking-widest"
                           style={{
                             wordWrap: "break-word",
@@ -143,7 +137,7 @@ function UpdatesSection() {
                           }}
                         >
                           {item.title}
-                        </h1>
+                        </h3>
                         <p
                           style={{
                             wordWrap: "break-word",

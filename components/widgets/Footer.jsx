@@ -77,9 +77,9 @@ function Footer() {
         {/* NEWSLETTER */}
         <div className="py-10 w-80">
           <div className="title">
-            <h2 className=" font-oswald font-light text-2xl tracking-wide sm:text-xl">
+            <h3 className=" font-oswald font-light text-2xl tracking-wide sm:text-xl">
               EXCLUSIVE LIST
-            </h2>
+            </h3>
             <div className="underline w-10 h-0.5 rounded-xl my-2 mr-32 bg-highlight"></div>
           </div>
           <ContactForm />
@@ -87,29 +87,29 @@ function Footer() {
         {/* ADDRESS */}
         <div className="py-10 px-2 w-56">
           <div className="title">
-            <h2 className=" font-oswald font-light text-2xl tracking-wide sm:text-xl">
+            <h3 className=" font-oswald font-light text-2xl tracking-wide sm:text-xl">
               HEAD OFFICE
-            </h2>
+            </h3>
             <div className="underline w-10 h-0.5 rounded-xl my-2 mr-32 bg-highlight"></div>
           </div>
           <div className="mt-6 tracking-wide sm:text-sm">
-            <h3>NO 9, Ganapathy Nagar</h3>
-            <h3>1st St, Navarathna Garden,</h3>
-            <h3>Ekkatuthangal, Chennai,</h3>
-            <h3>Tamil Nadu 600032</h3>
+            <p>NO 9, Ganapathy Nagar</p>
+            <p>1st St, Navarathna Garden,</p>
+            <p>Ekkatuthangal, Chennai,</p>
+            <p>Tamil Nadu 600032</p>
           </div>
         </div>
         {/* CONATCT */}
         <div className="py-10 px-2 w-52">
           <div className="title">
-            <h2 className=" font-oswald font-light text-2xl tracking-wide sm:text-xl">
+            <h3 className=" font-oswald font-light text-2xl tracking-wide sm:text-xl">
               CONTACT
-            </h2>
+            </h3>
             <div className="underline w-10 h-0.5 rounded-xl my-2 mr-32 bg-highlight"></div>
           </div>
           <div className="mt-6 tracking-wide sm:text-sm">
-            <h3>Ph. No: +91 8925061646</h3>
-            <h3>contact@raptee.com</h3>
+            <p>Ph. No: +91 8925061646</p>
+            <p>contact@raptee.com</p>
           </div>
           <div className="flex justify-between mt-4">
             <Link
@@ -169,15 +169,15 @@ function Footer() {
           <div className="underline w-10 h-0.5 rounded-xl my-2 mr-32 bg-highlight"></div>
           <div className="tracking-wide sm:text-sm">
             <Link href={"/privacy-policy"}>
-              <h2 className="my-2 cursor-pointer">Privacy Policy</h2>
+              <h4 className="my-2 cursor-pointer">Privacy Policy</h4>
             </Link>
-            <h2 className="my-2">Refund Policy</h2>
+            <h4 className="my-2">Refund Policy</h4>
             <Link href={"/terms-of-service"}>
-              <h2 className="my-2 cursor-pointer">Terms of Services</h2>
+              <h4 className="my-2 cursor-pointer">Terms of Services</h4>
             </Link>
-            <h2 className="my-2">About Us</h2>
+            <h4 className="my-2">About Us</h4>
             <Link href={"https://medium.com/raptee-energy"}>
-              <h2 className="my-2 cursor-pointer">Blog</h2>
+              <h4 className="my-2 cursor-pointer">Blog</h4>
             </Link>
           </div>
           <div className="underline w-10 h-0.5 rounded-xl my-2 mr-32 bg-highlight"></div>
