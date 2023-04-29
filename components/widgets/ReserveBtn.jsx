@@ -29,11 +29,9 @@ function ReserveBtn(props) {
         type="submit"
         onClick={() => handleClick()}
         className="rounded-none border-solid border
-            border-highlight px-3 py-2 hover:bg-highlight-low "
+            border-highlight px-3 py-2 hover:bg-highlight-low  text-gray-300 hover:text-black"
       >
-        <h2 className=" text-gray-300 tracking-widest font-mont">
-          {props.name}
-        </h2>
+        <h2 className=" tracking-widest font-mont">{props.name}</h2>
       </button>
     </div>
   );
