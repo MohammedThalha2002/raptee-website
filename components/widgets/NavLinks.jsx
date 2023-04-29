@@ -42,7 +42,7 @@ function NavLinks(props) {
           </IconContext.Provider>
         </div>
         <div className="flex flex-col justify-evenly h-full items-end">
-          <Link href={"/home"}>
+          <Link href={"/"}>
             <h1 className="text-3xl sm:text-xl cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
               Home
             </h1>
@@ -52,7 +52,7 @@ function NavLinks(props) {
               Tech Story
             </h1>
           </Link>
-          <Link href={"/home"}>
+          <Link href={"/"}>
             <h1 className="text-3xl sm:text-xl cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
               OEM Solutions
             </h1>
@@ -76,7 +76,7 @@ function NavLinks(props) {
               Contact
             </h1>
           </Linky>
-          <Link href={"https://apply.workable.com/raptee-energy/"}>
+          <Link href={"https://careers.raptee.com/"}>
             <h1 className="text-3xl sm:text-xl cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
               Career
             </h1>
