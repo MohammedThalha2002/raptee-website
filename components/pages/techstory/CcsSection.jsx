@@ -23,13 +23,14 @@ function CcsSection(props) {
                             </p>
                         </div>
                     </div>
-                    <div className='absolute flex items-end'>
+                    <div className='absolute'>
                         <Image
                             src="/images/11.png"
                             width={1920}
                             height={1080}
                             priority={true}
                             alt='Motor for electric motorcycle -high-voltage drive-train - traction control bike'
+                            // className="scale-[0.9]"
                         />
                     </div>
                 </div>

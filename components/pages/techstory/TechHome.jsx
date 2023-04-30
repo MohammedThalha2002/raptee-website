@@ -18,7 +18,7 @@ function TechHome(props) {
             height="1080"
             priority={true}
             alt="Technology redefining the future of mobility - electric E-bike"
-            className="scale-[0.9]"
+            // className="scale-[0.9]"
           />
           <div className="absolute left-0 top-20 pl-20 pt-6 ">
             <div className="content text-left">
