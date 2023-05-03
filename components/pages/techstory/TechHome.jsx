@@ -66,6 +66,7 @@ function TechHome(props) {
               </h4>
             </div>
           </div>
+
           {/* <BottomLoader></BottomLoader> */}
         </div>
       </section>
