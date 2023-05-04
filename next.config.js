@@ -11,24 +11,24 @@ const nextConfig = {
       },
     ];
   },
-  async rewrites() {
-    return {
-      beforeFiles: [
-        // if the host is `app.acme.com`,
-        // this rewrite will be applied
-        {
-          source: "/:path*",
-          has: [
-            {
-              type: "host",
-              value: "careers.raptee.com",
-            },
-          ],
-          destination: "/careers/:path*",
-        },
-      ],
-    };
-  },
+  // async rewrites() {
+  //   return {
+  //     beforeFiles: [
+  //       // if the host is `app.acme.com`,
+  //       // this rewrite will be applied
+  //       {
+  //         source: "/:path*",
+  //         has: [
+  //           {
+  //             type: "host",
+  //             value: "careers.raptee.com",
+  //           },
+  //         ],
+  //         destination: "/careers/:path*",
+  //       },
+  //     ],
+  //   };
+  // },
   images: {
     domains: ["i.postimg.cc", "postimg.cc"],
     unoptimized: true,
