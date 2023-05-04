@@ -23,10 +23,6 @@ const nextConfig = {
               type: "host",
               value: "careers.raptee.com",
             },
-            {
-              type: "host",
-              value: "careers.rapteemotors.com",
-            },
           ],
           destination: "/careers/:path*",
         },
