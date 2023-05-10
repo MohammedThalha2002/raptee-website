@@ -171,7 +171,6 @@ function Footer() {
             <Link href={"/privacy-policy"}>
               <h4 className="my-2 cursor-pointer">Privacy Policy</h4>
             </Link>
-            <h4 className="my-2">Refund Policy</h4>
             <Link href={"/terms-of-service"}>
               <h4 className="my-2 cursor-pointer">Terms of Services</h4>
             </Link>

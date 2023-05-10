@@ -52,14 +52,19 @@ function NavLinks(props) {
               Tech Story
             </h1>
           </Link>
-          <Link href={"/"}>
-            <h1 className="text-3xl sm:text-xl cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
-              OEM Solutions
-            </h1>
-          </Link>
           <Link href={"/culture"}>
             <h1 className="text-3xl sm:text-xl cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
               Culture
+            </h1>
+          </Link>
+          <Link href={"https://careers.raptee.com/"}>
+            <h1 className="text-3xl sm:text-xl cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
+              Career
+            </h1>
+          </Link>
+          <Link href={"https://medium.com/raptee-energy"}>
+            <h1 className="text-3xl sm:text-xl cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
+              Blogs
             </h1>
           </Link>
           <Linky
@@ -76,16 +81,6 @@ function NavLinks(props) {
               Contact
             </h1>
           </Linky>
-          <Link href={"https://careers.raptee.com/"}>
-            <h1 className="text-3xl sm:text-xl cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
-              Career
-            </h1>
-          </Link>
-          <Link href={"https://medium.com/raptee-energy"}>
-            <h1 className="text-3xl sm:text-xl cursor-pointer ease-in duration-100 hover:text-4xl sm:hover:text-2xl">
-              Blogs
-            </h1>
-          </Link>
         </div>
       </div>
     </nav>

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://raptee.com
+
+# Sitemaps
+Sitemap: https://raptee.com/sitemap.xml

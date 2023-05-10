@@ -273,7 +273,7 @@ export default function Home() {
                 `}
       </Script>
       <Head>
-        <title>Raptee | E-motorcycle</title>
+        <title>Raptee | Building The New-Gen Motorcycles in India</title>
         <meta
           name="description"
           content="An E-motorcycle website - RAPTEE. Raptee Motors"
