@@ -12,6 +12,7 @@ module.exports = {
         navlinksbg: "#424242",
         greydiv: "#999999",
         greytext: "#626262",
+        lgreytext: "#A6A6A6",
       },
       height: {
         "30rem": "30rem",
