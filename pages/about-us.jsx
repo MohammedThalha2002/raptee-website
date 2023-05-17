@@ -14,14 +14,14 @@ function AboutUs() {
         </div>
         <div className="w-[40%] px-8 flex justify-center items-center">
           <p className="w-[90%] mt-[55%] tracking-wide leading-[2.8rem] text-lgreytext text-[2rem] text-justify">
-            This isn't your typical 'About Us' redirect but rather a true
+            This isn&apos;t your typical &apos;About Us&apos; redirect but rather a true
             narrative that drives us to revolutionize the future of the
             automotive sector. When the concept of Raptee was initially coined
             in 2019, the sole intention was to build a motorcycle that was
             effortless. Reminiscing, though we may not have known how this would
             pan out back in the day, we did see that we wanted to make a
             difference. A difference that transforms the contemporary concept of
-            motorcycling in today's time. A change that inexorably ties
+            motorcycling in today&apos;s time. A change that inexorably ties
             innovation and sustainability together. We wanted to do what we did
             best, mindfully innovate!
           </p>
@@ -49,13 +49,13 @@ function AboutUs() {
         </div>
         <div className="w-[45%]">
           <p className="w-[90%] tracking-wide leading-[2.8rem] text-lgreytext text-[2rem] text-justify">
-            Someone once said, 'A team of engineers can position to alter the
-            world and not just study it,' and we believe it stands true. Raptee
+            Someone once said, &apos;A team of engineers can position to alter the
+            world and not just study it,&apos; and we believe it stands true. Raptee
             is a full stack electric motorcycle startup with a very strong
             technical moat. The company is founded by four engineers from
             Chennai (Ex Tesla, Wipro), working on bringing a no-compromise
             electric motorcycle to an otherwise scooter-only EV market. In
-            recent times, we've received 4 Cr in grants from ARAI. We at Raptee
+            recent times, we&apos;ve received 4 Cr in grants from ARAI. We at Raptee
             are on a mission to craft a motorcycle that is more than just an EV;
             instead, an augmented machine built with an adaptive
             machine-learning algorithm to bring you an effortless experience.
