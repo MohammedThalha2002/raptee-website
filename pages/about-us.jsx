@@ -1,6 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import Head from "next/head";
+import NavBar from "../components/widgets/NavBar";
+import Footer from "../components/widgets/Footer";
 import SideActiveIndicatorAboutUs from "../components/widgets/SideActiveIndicatorAboutUs";
 
 function AboutUs() {
@@ -68,6 +70,7 @@ function AboutUs() {
           crossOrigin="true"
         />
       </Head>
+      <NavBar mobile={false}></NavBar>
       <SideActiveIndicatorAboutUs index={sectionIndex} />
       {/* WHO ARE WE - 1 */}
       <section
@@ -228,6 +231,8 @@ function AboutUs() {
           </div>
         </div>
       </section>
+      {/* FOOTER */}
+      <Footer></Footer>
     </main>
   );
 }
