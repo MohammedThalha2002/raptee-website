@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import Head from "next/head";
 import NavBar from "../components/widgets/NavBar";
 import Image from "next/image";
 import { caurosel } from "../components/widgets/carousel";
@@ -39,6 +40,21 @@ function Culture() {
 
   return (
     <div className="w-full">
+      <Head>
+        <title>Raptee | Culture</title>
+        <meta
+          name="about us page"
+          content="An E-motorcycle website - RAPTEE. Raptee Motors"
+        />
+        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="preload"
+          href="/fonts/Nebula-Regular.otf"
+          as="font"
+          type="font/otf"
+          crossOrigin="true"
+        />
+      </Head>
       <ToastContainer />
       <NavBar mobile={false}></NavBar>
       <div className="w-full">
